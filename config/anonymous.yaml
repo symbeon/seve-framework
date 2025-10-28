@@ -1,0 +1,37 @@
+anonymization_enabled: true
+anonymous_identity:
+  created_at: '2025-10-28T17:50:31.105933'
+  entity_id: a8d37b51cfaa3af4eca490e566821d7f
+  expires_at: '2025-11-27T17:50:31.105933'
+  pseudonym: symbeon_entity_a8d37b51
+api_host: 0.0.0.0
+api_port: 8000
+api_workers: 1
+audit_logging_enabled: true
+batch_size: 32
+cors_enabled: true
+custom_settings:
+  cdn_privacy: true
+  distributed_hosting: true
+  dns_privacy: true
+  encrypted_communications: true
+  identity_rotation_days: 30
+  location_obfuscation: true
+  metadata_protection: true
+  metadata_stripping: true
+  perfect_forward_secrecy: true
+  tracking_prevention: true
+  vpn_required: true
+  zero_knowledge_storage: true
+data_retention_days: 7
+debug: false
+ethics_level: maximum
+ethics_validation_enabled: true
+gpu_enabled: true
+guardflow_enabled: true
+log_level: INFO
+max_workers: 4
+memory_limit_mb: 4096
+mode: hybrid
+privacy_level: maximum
+pseudonymization_enabled: true

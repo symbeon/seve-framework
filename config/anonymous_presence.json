@@ -1,0 +1,46 @@
+{
+  "github": {
+    "repository": "symbeon/seve-framework",
+    "organization": "symbeon",
+    "description": "Symbiotic Ethical Vision Engine - Universal AI Framework",
+    "topics": [
+      "ai",
+      "ethics",
+      "privacy",
+      "computer-vision",
+      "open-source"
+    ],
+    "visibility": "public",
+    "anonymous_contributors": true
+  },
+  "website": {
+    "domain": "seve-framework.ai",
+    "title": "SEVE Framework - Ethical AI for Everyone",
+    "description": "Universal AI framework with integrated ethics and privacy",
+    "contact": "eon@symbeon-tech.com",
+    "privacy_policy": "privacy-by-design",
+    "no_tracking": true
+  },
+  "social_media": {
+    "twitter": "@SEVEFramework",
+    "linkedin": "SEVE Framework",
+    "youtube": "SEVE Framework",
+    "reddit": "r/SEVEFramework",
+    "discord": "SEVE Community",
+    "anonymous_posting": true
+  },
+  "documentation": {
+    "docs_url": "https://docs.seve-framework.ai",
+    "api_reference": "https://api.seve-framework.ai",
+    "examples": "https://examples.seve-framework.ai",
+    "tutorials": "https://tutorials.seve-framework.ai",
+    "anonymous_authors": true
+  },
+  "community": {
+    "forum": "https://community.seve-framework.ai",
+    "discord": "https://discord.gg/seve-framework",
+    "reddit": "https://reddit.com/r/SEVEFramework",
+    "stack_overflow": "seve-framework",
+    "anonymous_participation": true
+  }
+}
