@@ -1,0 +1,61 @@
+# SEVE Framework - Requirements
+# Symbiotic Ethical Vision Engine
+
+# Core Dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+pillow>=8.3.0
+
+# Deep Learning
+torch>=1.9.0
+torchvision>=0.10.0
+transformers>=4.20.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+pandas>=1.3.0
+
+# Web Framework
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+
+# Async Support
+aiofiles>=0.7.0
+python-multipart>=0.0.5
+httpx>=0.24.0
+
+# Security & Cryptography
+cryptography>=3.4.0
+
+# Configuration & Data
+pyyaml>=6.0
+loguru>=0.6.0
+
+# Communication & Messaging
+asyncio-mqtt>=0.11.0
+
+# Database & Caching
+redis>=4.0.0
+sqlalchemy>=1.4.0
+alembic>=1.7.0
+
+# Optional GPU Support (uncomment if needed)
+# cupy-cuda11x>=9.0.0
+# nvidia-ml-py3>=7.352.0
+
+# Development Dependencies (uncomment for development)
+# pytest>=6.2.0
+# pytest-asyncio>=0.18.0
+# pytest-cov>=2.12.0
+# black>=21.0.0
+# isort>=5.9.0
+# flake8>=3.9.0
+# mypy>=0.910
+# pre-commit>=2.15.0
+
+# Documentation Dependencies (uncomment for docs)
+# sphinx>=4.0.0
+# sphinx-rtd-theme>=1.0.0
+# myst-parser>=0.15.0
+# sphinxcontrib-mermaid>=0.7.0

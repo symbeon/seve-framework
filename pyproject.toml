@@ -1,71 +1,249 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "seve-framework"
-version = "1.0.0"
-description = "SEVE (Symbeon Ethical Vision Engine) - Framework de IA Ética para Checkout Inteligente"
+version = "3.0.0"
+description = "Symbiotic Ethical Vision Engine - Universal Adaptive Intelligence Framework"
 readme = "README.md"
-requires-python = ">=3.10"
-license = { file = "LICENSE" }
+license = {file = "LICENSE_Symbeon_Vault.md"}
 authors = [
-    { name = "Symbeon Tech", email = "research@symbeon.ai" },
-    { name = "GuardFlow Team", email = "dev@guardflow.com" }
+    {name = "Symbeon Tech", email = "research@symbeon-tech.com"},
+    {name = "EON Team", email = "eon@symbeon-tech.com"}
 ]
-keywords = ["SEVE", "SYMBEON", "ethical AI", "ESG", "vision", "checkout", "empathy", "personality"]
+maintainers = [
+    {name = "Symbeon Tech", email = "research@symbeon-tech.com"}
+]
+keywords = [
+    "artificial-intelligence",
+    "computer-vision", 
+    "ethical-ai",
+    "privacy-by-design",
+    "adaptive-intelligence",
+    "symbiotic-ai",
+    "universal-framework"
+]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Education",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "License :: Other/Proprietary License",
     "Programming Language :: Python :: 3",
-    "Intended Audience :: Science/Research",
-    "Intended Audience :: Developers",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: GPU",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "opencv-python>=4.5.0",
+    "pillow>=8.3.0",
+    "torch>=1.9.0",
+    "torchvision>=0.10.0",
+    "transformers>=4.20.0",
+    "scikit-learn>=1.0.0",
+    "pandas>=1.3.0",
+    "fastapi>=0.68.0",
+    "uvicorn>=0.15.0",
+    "pydantic>=1.8.0",
+    "aiofiles>=0.7.0",
+    "python-multipart>=0.0.5",
+    "httpx>=0.24.0",
+    "cryptography>=3.4.0",
+    "pyyaml>=6.0",
+    "loguru>=0.6.0",
+    "asyncio-mqtt>=0.11.0",
+    "redis>=4.0.0",
+    "sqlalchemy>=1.4.0",
+    "alembic>=1.7.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "cupy-cuda11x>=9.0.0",
+    "nvidia-ml-py3>=7.352.0",
+]
+dev = [
+    "pytest>=6.2.0",
+    "pytest-asyncio>=0.18.0",
+    "pytest-cov>=2.12.0",
+    "black>=21.0.0",
+    "isort>=5.9.0",
+    "flake8>=3.9.0",
+    "mypy>=0.910",
+    "pre-commit>=2.15.0",
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "myst-parser>=0.15.0",
+    "sphinxcontrib-mermaid>=0.7.0",
+]
+all = [
+    "seve-framework[gpu,dev,docs]"
 ]
 
 [project.urls]
-Homepage = "https://github.com/symbeon/seve-framework"
-Documentation = "https://docs.symbeon.ai/seve"
-Repository = "https://github.com/symbeon/seve-framework"
-Issues = "https://github.com/symbeon/seve-framework/issues"
+Homepage = "https://symbeon-tech.com"
+Documentation = "https://docs.seve-framework.ai"
+Repository = "https://github.com/symbeon-tech/seve-framework"
+"Bug Tracker" = "https://github.com/symbeon-tech/seve-framework/issues"
+"Source Code" = "https://github.com/symbeon-tech/seve-framework"
+"Download" = "https://github.com/symbeon-tech/seve-framework/releases"
+"Changelog" = "https://github.com/symbeon-tech/seve-framework/blob/main/CHANGELOG.md"
+"License" = "https://github.com/symbeon-tech/seve-framework/blob/main/LICENSE_Symbeon_Vault.md"
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
-    "pytest-asyncio>=0.21",
-    "black>=23.0",
-    "isort>=5.12",
-    "flake8>=6.0",
-    "mypy>=1.7",
-]
-docs = [
-    "sphinx>=7.0",
-    "sphinx-rtd-theme>=1.3",
-    "myst-parser>=2.0",
-]
+[project.scripts]
+seve = "seve_framework.cli:main"
+seve-demo = "seve_framework.demo:run_demo"
+seve-config = "seve_framework.config:setup_config"
+seve-test = "seve_framework.test:run_tests"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+[project.gui-scripts]
+seve-gui = "seve_framework.gui:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["seve_framework*", "seve_universal*"]
 
-[tool.pytest.ini_options]
-minversion = "7.0"
-addopts = "-q --tb=short"
-testpaths = ["tests"]
-pythonpath = ["src"]
+[tool.setuptools.package-data]
+seve_framework = [
+    "config/*.yaml",
+    "config/*.json", 
+    "models/*.pth",
+    "models/*.onnx",
+    "data/*.json",
+    "data/*.csv",
+    "templates/*.html",
+    "static/*.css",
+    "static/*.js",
+]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
 
 [tool.isort]
 profile = "black"
+multi_line_output = 3
 line_length = 88
+known_first_party = ["seve_framework", "seve_universal"]
+known_third_party = ["numpy", "torch", "fastapi", "pydantic"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.8"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
 
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
+[[tool.mypy.overrides]]
+module = [
+    "cv2.*",
+    "torch.*",
+    "transformers.*",
+    "sklearn.*",
+    "redis.*",
+    "sqlalchemy.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+    "gpu: marks tests that require GPU",
+    "ethics: marks tests related to ethical validation",
+    "vision: marks tests related to computer vision",
+    "empathy: marks tests related to empathy engine",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/migrations/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["B011"]
+
+[tool.ruff.isort]
+known-first-party = ["seve_framework", "seve_universal"]
