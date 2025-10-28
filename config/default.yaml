@@ -1,0 +1,42 @@
+# SEVE Framework - Default Configuration
+# Symbiotic Ethical Vision Engine
+
+# Core Settings
+mode: "hybrid"  # universal, vision_specific, hybrid
+debug: false
+log_level: "INFO"
+
+# Privacy Settings
+privacy_level: "standard"  # minimal, standard, high, maximum
+anonymization_enabled: true
+pseudonymization_enabled: true
+data_retention_days: 30
+
+# Ethics Settings
+ethics_level: "standard"  # basic, standard, strict, maximum
+ethics_validation_enabled: true
+guardflow_enabled: true
+audit_logging_enabled: true
+
+# Performance Settings
+max_workers: 4
+batch_size: 32
+gpu_enabled: true
+memory_limit_mb: 4096
+
+# API Settings
+api_host: "0.0.0.0"
+api_port: 8000
+api_workers: 1
+cors_enabled: true
+
+# Database Settings
+database_url: null
+redis_url: null
+
+# Model Settings
+model_cache_dir: "./models"
+model_download_enabled: true
+
+# Custom Settings
+custom_settings: {}

@@ -1,0 +1,45 @@
+# SEVE Framework - User Configuration
+# Symbiotic Ethical Vision Engine
+# This file contains user-specific settings that override defaults
+
+# Core Settings
+debug: true
+log_level: "DEBUG"
+
+# Privacy Settings
+privacy_level: "high"
+anonymization_enabled: true
+pseudonymization_enabled: true
+data_retention_days: 7
+
+# Ethics Settings
+ethics_level: "strict"
+ethics_validation_enabled: true
+guardflow_enabled: true
+audit_logging_enabled: true
+
+# Performance Settings
+max_workers: 8
+batch_size: 64
+gpu_enabled: true
+memory_limit_mb: 8192
+
+# API Settings
+api_host: "localhost"
+api_port: 8080
+api_workers: 2
+cors_enabled: true
+
+# Database Settings
+database_url: "sqlite:///seve_framework.db"
+redis_url: "redis://localhost:6379"
+
+# Model Settings
+model_cache_dir: "./user_models"
+model_download_enabled: true
+
+# Custom Settings
+custom_settings:
+  demo_mode: true
+  experimental_features: true
+  verbose_logging: true
