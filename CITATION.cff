@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "SEVE Framework: Symbeon Ethical Vision Engine"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Symbeon"
+    given-names: "Tech"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "GuardFlow"
+    given-names: "Team"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+abstract: "SEVE (Symbeon Ethical Vision Engine) is a comprehensive ethical AI framework for intelligent checkout systems, combining computer vision, ESG compliance, emotional analysis, and adaptive personalization."
+keywords:
+  - ethical AI
+  - computer vision
+  - ESG compliance
+  - emotional computing
+  - checkout systems
+  - adaptive systems
+  - human-computer interaction
+license: "Other"
+license-url: "https://symbeon.ai/licensing"
+repository-code: "https://github.com/symbeon/seve-framework"
+url: "https://docs.symbeon.ai/seve"
+date-released: 2025-10-28
+version: "1.0.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.0000000"
+  - type: url
+    value: "https://github.com/symbeon/seve-framework"
+preferred-citation:
+  type: software
+  title: "SEVE Framework: Symbeon Ethical Vision Engine"
+  authors:
+    - family-names: "Symbeon"
+      given-names: "Tech"
+    - family-names: "GuardFlow"
+      given-names: "Team"
+  year: 2025
+  url: "https://github.com/symbeon/seve-framework"
+  license: "Proprietary"
+  repository: "https://github.com/symbeon/seve-framework"
