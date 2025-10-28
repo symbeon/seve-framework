@@ -1,0 +1,301 @@
+{
+  "executive_summary": {
+    "total_revenue_5_years": 697500000,
+    "total_profit_5_years": 465500000,
+    "peak_market_cap": 4500000000.0,
+    "peak_token_price": 5.0,
+    "total_funding_needed": 87000000
+  },
+  "financial_projections": [
+    {
+      "year": 1,
+      "revenue": 20500000,
+      "costs": 13000000,
+      "net_profit": 7500000,
+      "token_price": 0.05,
+      "market_cap": 7500000.0,
+      "circulating_supply": 150000000
+    },
+    {
+      "year": 2,
+      "revenue": 52000000,
+      "costs": 25000000,
+      "net_profit": 27000000,
+      "token_price": 0.2,
+      "market_cap": 70000000.0,
+      "circulating_supply": 350000000
+    },
+    {
+      "year": 3,
+      "revenue": 80000000,
+      "costs": 42000000,
+      "net_profit": 38000000,
+      "token_price": 1.0,
+      "market_cap": 550000000.0,
+      "circulating_supply": 550000000
+    },
+    {
+      "year": 4,
+      "revenue": 215000000,
+      "costs": 63000000,
+      "net_profit": 152000000,
+      "token_price": 2.5,
+      "market_cap": 1875000000.0,
+      "circulating_supply": 750000000
+    },
+    {
+      "year": 5,
+      "revenue": 330000000,
+      "costs": 89000000,
+      "net_profit": 241000000,
+      "token_price": 5.0,
+      "market_cap": 4500000000.0,
+      "circulating_supply": 900000000
+    }
+  ],
+  "tokenomics": {
+    "total_supply": 1000000000,
+    "distribution": {
+      "year_1": {
+        "team": 100000000,
+        "development": 100000000,
+        "community": 250000000,
+        "partnership": 100000000,
+        "reserve": 20000000,
+        "total_circulating": 570000000
+      },
+      "year_2": {
+        "team": 200000000,
+        "development": 200000000,
+        "community": 250000000,
+        "partnership": 150000000,
+        "reserve": 40000000,
+        "total_circulating": 840000000
+      },
+      "year_3": {
+        "team": 200000000,
+        "development": 300000000,
+        "community": 250000000,
+        "partnership": 150000000,
+        "reserve": 60000000,
+        "total_circulating": 960000000
+      },
+      "year_4": {
+        "team": 200000000,
+        "development": 300000000,
+        "community": 250000000,
+        "partnership": 150000000,
+        "reserve": 80000000,
+        "total_circulating": 980000000
+      },
+      "year_5": {
+        "team": 200000000,
+        "development": 300000000,
+        "community": 250000000,
+        "partnership": 150000000,
+        "reserve": 100000000,
+        "total_circulating": 1000000000
+      }
+    },
+    "vesting_schedules": {
+      "team": "24 months",
+      "development": "36 months",
+      "community": "12 months",
+      "partnership": "18 months",
+      "reserve": "60 months"
+    }
+  },
+  "roi_scenarios": {
+    "Conservative": {
+      "year_1_price": 0.03,
+      "year_3_price": 0.5,
+      "year_5_price": 2.0,
+      "roi_3_year": 1567,
+      "roi_5_year": 6567
+    },
+    "Moderate": {
+      "year_1_price": 0.05,
+      "year_3_price": 1.0,
+      "year_5_price": 5.0,
+      "roi_3_year": 1900,
+      "roi_5_year": 9900
+    },
+    "Optimistic": {
+      "year_1_price": 0.08,
+      "year_3_price": 2.0,
+      "year_5_price": 10.0,
+      "roi_3_year": 2400,
+      "roi_5_year": 12400
+    }
+  },
+  "funding_roadmap": {
+    "phase_1": {
+      "name": "Seed Round",
+      "target": "$2M",
+      "valuation": "$20M",
+      "duration": "3 months",
+      "use_of_funds": [
+        "Smart contract development",
+        "Initial team expansion",
+        "Legal and compliance setup",
+        "Marketing and community building"
+      ]
+    },
+    "phase_2": {
+      "name": "Private Sale",
+      "target": "$5M",
+      "valuation": "$50M",
+      "duration": "2 months",
+      "use_of_funds": [
+        "Protocol development",
+        "Security audits",
+        "Testnet launch",
+        "Partnership development"
+      ]
+    },
+    "phase_3": {
+      "name": "Public Sale (IDO)",
+      "target": "$10M",
+      "valuation": "$100M",
+      "duration": "1 month",
+      "use_of_funds": [
+        "Mainnet launch",
+        "Exchange listings",
+        "Global marketing",
+        "Team expansion"
+      ]
+    },
+    "phase_4": {
+      "name": "Series A",
+      "target": "$20M",
+      "valuation": "$500M",
+      "duration": "6 months",
+      "use_of_funds": [
+        "International expansion",
+        "Enterprise partnerships",
+        "R&D investment",
+        "Acquisition opportunities"
+      ]
+    },
+    "phase_5": {
+      "name": "Series B",
+      "target": "$50M",
+      "valuation": "$2B",
+      "duration": "12 months",
+      "use_of_funds": [
+        "Global market penetration",
+        "Strategic acquisitions",
+        "Advanced R&D",
+        "IPO preparation"
+      ]
+    }
+  },
+  "revenue_streams": [
+    {
+      "name": "Token Sale (ICO/IDO)",
+      "year_1": 15000000,
+      "year_2": 0,
+      "year_3": 0,
+      "year_4": 0,
+      "year_5": 0,
+      "growth_rate": 0.0
+    },
+    {
+      "name": "Licensing Revenue",
+      "year_1": 2000000,
+      "year_2": 10000000,
+      "year_3": 25000000,
+      "year_4": 50000000,
+      "year_5": 100000000,
+      "growth_rate": 0.5
+    },
+    {
+      "name": "Protocol Fees",
+      "year_1": 500000,
+      "year_2": 5000000,
+      "year_3": 15000000,
+      "year_4": 30000000,
+      "year_5": 60000000,
+      "growth_rate": 0.4
+    },
+    {
+      "name": "Services Revenue",
+      "year_1": 3000000,
+      "year_2": 15000000,
+      "year_3": 30000000,
+      "year_4": 60000000,
+      "year_5": 120000000,
+      "growth_rate": 0.6
+    },
+    {
+      "name": "DeFi Revenue",
+      "year_1": 0,
+      "year_2": 2000000,
+      "year_3": 10000000,
+      "year_4": 25000000,
+      "year_5": 50000000,
+      "growth_rate": 0.8
+    },
+    {
+      "name": "Venture Capital",
+      "year_1": 0,
+      "year_2": 20000000,
+      "year_3": 0,
+      "year_4": 50000000,
+      "year_5": 0,
+      "growth_rate": 0.0
+    }
+  ],
+  "cost_structure": {
+    "Development": [
+      5000000,
+      8000000,
+      12000000,
+      18000000,
+      25000000
+    ],
+    "Marketing": [
+      2000000,
+      5000000,
+      10000000,
+      15000000,
+      20000000
+    ],
+    "Operations": [
+      1000000,
+      2000000,
+      3000000,
+      5000000,
+      8000000
+    ],
+    "Legal & Compliance": [
+      500000,
+      1000000,
+      1500000,
+      2000000,
+      3000000
+    ],
+    "Infrastructure": [
+      1000000,
+      2000000,
+      4000000,
+      6000000,
+      10000000
+    ],
+    "Personnel": [
+      3000000,
+      6000000,
+      10000000,
+      15000000,
+      20000000
+    ],
+    "Other": [
+      500000,
+      1000000,
+      1500000,
+      2000000,
+      3000000
+    ]
+  },
+  "generated_at": "2025-10-28T18:04:41.272725"
+}
