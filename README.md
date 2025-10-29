@@ -36,6 +36,12 @@
 
 The **SEVE Framework** is a universal ethical AI framework that combines **Artificial Intelligence**, **Computer Vision**, **Automated Ethics**, and **Blockchain** to create responsible, private, and decentralized intelligent systems.
 
+### **Philosophical Foundation**
+
+The SEVE Framework is the **computational translation** and **technological extension** of the **SiD Framework** (Symbiosis in Development), established since 1999. SEVE acts as the operational engine that materializes SiD's holistic sustainability principles through measurable, auditable technological actions.
+
+📚 **[Learn more about SiD ↔ SEVE Integration →](./docs/SID_SEVE_INTEGRATION.md)**
+
 ### **Why SEVE?**
 
 ✅ **Ethics-First Design**: Automatic ethical decision validation via GuardFlow  
@@ -43,18 +49,24 @@ The **SEVE Framework** is a universal ethical AI framework that combines **Artif
 ✅ **Blockchain-Native**: Smart contracts for governance, licensing, and tokenomics  
 ✅ **Decentralized**: DAO for community governance  
 ✅ **Adaptive**: Hybrid framework that adapts to any domain  
+✅ **SiD-Aligned**: Implements ELSI framework (Energy & Materials, Life, Society, Individual)  
 ✅ **Production-Ready**: Tested, documented, and ready for deployment  
 
 ---
 
 ## ✨ **Key Features**
 
-### 🔬 **Framework Core**
-- **SEVE-Core**: Modular and extensible core
-- **SEVE-Vision**: Computer vision with privacy protection
-- **SEVE-Sense**: Multi-sensor fusion and multimodal processing
-- **SEVE-Ethics**: GuardFlow for automated ethical validation
-- **SEVE-Link**: Secure and decentralized connectivity
+### 🔬 **Framework Core** (Aligned with SiD ELSI Framework)
+
+| Module | Function | SiD Layer |
+|--------|----------|-----------|
+| **SEVE-Core** | Modular and extensible core | **Individual (I)** |
+| **SEVE-Vision** | Computer vision with privacy protection | **Energy & Materials (E)** |
+| **SEVE-Sense** | Multi-sensor fusion and multimodal processing | **Energy & Materials (E)** |
+| **SEVE-Ethics** | GuardFlow for automated ethical validation | **Society (S)** |
+| **SEVE-Link** | Secure and decentralized connectivity | **Life (L)** |
+
+📊 **[See complete SiD ↔ SEVE correlation matrix →](./docs/SID_SEVE_INTEGRATION.md#3-matriz-de-simetria-funcional-elsi--seve)**
 
 ### ⛓️ **Blockchain Integration**
 - **SEVE Token (ERC-20)**: Utility token with staking and governance
@@ -171,14 +183,15 @@ npm run deploy:polygon
 
 ## 📚 **Complete Documentation**
 
-### 🚀 **Operational Guides** ⭐
-
-- **[📖 Documentation Index](docs/INDEX.md)** - Complete index of all documentation
-- **[🚀 Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** - Local, testnet, and production deployment
-- **[🧪 Testnet Playbook](docs/TESTNET_PLAYBOOK.md)** - Reusable testnet playbook
-- **[⚙️ Environment Setup](docs/ENV_SETUP.md)** - Complete `.env` configuration
-- **[🌐 RPC Providers](docs/RPC_PROVIDERS.md)** - Infura, Alchemy, and public RPCs
-- **[🔒 Security Checklist](docs/SECURITY_CHECKLIST.md)** - Security validations
+For comprehensive documentation, visit:
+- 📚 **[Systematic Knowledge Base](docs/SYSTEMATIC_KNOWLEDGE_BASE.md)** ⭐ **CENTRAL REFERENCE** - Complete consolidation of all discoveries, strategies, and technical foundations
+- ✅ **[Technical Validation & Alignment](docs/TECHNICAL_VALIDATION_ALIGNMENT.md)** ⭐ - EON-Framework validation, scientific plausibility confirmed
+- 📄 **[Complete White Paper](docs/SEVE_COMPLETE_WHITEPAPER.md)** ⭐ - Full framework vision, architecture, ethics, and applications
+- 🧩 **[Module Classification by Niche](docs/MODULE_CLASSIFICATION_BY_NICHE.md)** - Licensing-ready vertical modules
+- 📖 [Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md)
+- 🏗️ [Architecture Guide](docs/ARCHITECTURE.md)
+- 🚀 [Deployment Guide](docs/DEPLOYMENT_GUIDE.md)
+- 📋 [API Reference](docs/technical/architecture/)
 
 ### 📘 **Technical Documentation**
 
@@ -435,6 +448,12 @@ If you find this project useful, consider:
 
 O **SEVE Framework** é um framework universal de IA ética que combina **Inteligência Artificial**, **Computer Vision**, **Ética Automatizada** e **Blockchain** para criar sistemas inteligentes responsáveis, privados e descentralizados.
 
+### **Fundamentação Filosófica**
+
+O SEVE Framework é a **tradução computacional** e **extensão tecnológica** do **SiD Framework** (Symbiosis in Development), estabelecido desde 1999. O SEVE atua como motor operacional que materializa os princípios holísticos de sustentabilidade do SiD através de ações tecnológicas mensuráveis e auditáveis.
+
+📚 **[Saiba mais sobre a Integração SiD ↔ SEVE →](./docs/SID_SEVE_INTEGRATION.md)**
+
 ### **Por que SEVE?**
 
 ✅ **Ética-First Design**: Validação automática de decisões éticas via GuardFlow  
@@ -448,12 +467,17 @@ O **SEVE Framework** é um framework universal de IA ética que combina **Inteli
 
 ## ✨ **Características Principais**
 
-### 🔬 **Framework Core**
-- **SEVE-Core**: Núcleo modular e extensível
-- **SEVE-Vision**: Computer vision com proteção de privacidade
-- **SEVE-Sense**: Multi-sensor fusion e processamento multimodal
-- **SEVE-Ethics**: GuardFlow para validação ética automatizada
-- **SEVE-Link**: Conectividade segura e descentralizada
+### 🔬 **Framework Core** (Alinhado ao Framework ELSI do SiD)
+
+| Módulo | Função | Camada SiD |
+|--------|--------|------------|
+| **SEVE-Core** | Núcleo modular e extensível | **Individual (I)** |
+| **SEVE-Vision** | Computer vision com proteção de privacidade | **Energy & Materials (E)** |
+| **SEVE-Sense** | Multi-sensor fusion e processamento multimodal | **Energy & Materials (E)** |
+| **SEVE-Ethics** | GuardFlow para validação ética automatizada | **Society (S)** |
+| **SEVE-Link** | Conectividade segura e descentralizada | **Life (L)** |
+
+📊 **[Ver matriz completa de correlação SiD ↔ SEVE →](./docs/SID_SEVE_INTEGRATION.md#3-matriz-de-simetria-funcional-elsi--seve)**
 
 ### ⛓️ **Integração Blockchain**
 - **SEVE Token (ERC-20)**: Token utilitário com staking e governança
@@ -570,14 +594,13 @@ npm run deploy:polygon
 
 ## 📚 **Documentação Completa**
 
-### 🚀 **Guias Operacionais** ⭐
-
-- **[📖 Índice de Documentação](docs/INDEX.md)** - Índice completo de toda documentação
-- **[🚀 Guia de Deploy](docs/DEPLOYMENT_GUIDE.md)** - Deploy local, testnet e produção
-- **[🧪 Testnet Playbook](docs/TESTNET_PLAYBOOK.md)** - Playbook reutilizável para testnets
-- **[⚙️ Setup de Ambiente](docs/ENV_SETUP.md)** - Configuração completa de `.env`
-- **[🌐 Provedores RPC](docs/RPC_PROVIDERS.md)** - Infura, Alchemy e RPCs públicos
-- **[🔒 Checklist de Segurança](docs/SECURITY_CHECKLIST.md)** - Validações de segurança
+Para a documentação completa, veja:
+- 📄 **[White Paper Completo](docs/SEVE_COMPLETE_WHITEPAPER.md)** ⭐ - Visão, arquitetura, ética e aplicações
+- 🧩 **[Classificação de Módulos por Nicho](docs/MODULE_CLASSIFICATION_BY_NICHE.md)** - Módulos verticais prontos para licenciamento
+- 📖 [Documentação Técnica](docs/TECHNICAL_DOCUMENTATION.md)
+- 🏗️ [Guia de Arquitetura](docs/ARCHITECTURE.md)
+- 🚀 [Guia de Deploy](docs/DEPLOYMENT_GUIDE.md)
+- 📋 [API Reference](docs/technical/architecture/)
 
 ### 📘 **Documentação Técnica**
 

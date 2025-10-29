@@ -5,6 +5,12 @@
 
 O **SEVE Framework** (Symbiotic Ethical Vision Engine) é um framework revolucionário de inteligência artificial que combina capacidades de visão computacional avançada com princípios éticos fundamentais. Desenvolvido pela Symbeon Tech, o SEVE representa uma nova abordagem para IA responsável, onde a tecnologia amplifica o potencial humano enquanto defende valores éticos essenciais.
 
+### **Fundamentação Metodológica**
+
+O SEVE Framework é a **tradução computacional** e **extensão tecnológica** do **SiD Framework** (Symbiosis in Development), implementando os princípios holísticos de sustentabilidade sistêmica através de tecnologia auditável e mensurável.
+
+📚 **[Consulte a documentação completa de integração SiD ↔ SEVE →](./SID_SEVE_INTEGRATION.md)**
+
 ### **🎯 Objetivos Principais**
 
 - **Ética Integrada**: GuardFlow ético embutido em todas as operações
