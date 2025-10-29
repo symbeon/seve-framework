@@ -1,0 +1,9 @@
+{
+  "SEVEToken": {
+    "contract": "SEVEToken",
+    "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionHash": "0xdd93e9bf9436631e575001cab49100394e6e71874b463bd190956703665c4f51",
+    "network": "hardhat",
+    "timestamp": "2025-10-29T02:34:07.183Z"
+  }
+}

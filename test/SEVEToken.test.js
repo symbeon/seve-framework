@@ -12,13 +12,13 @@ describe("SEVEToken", function () {
     
     const SEVEToken = await ethers.getContractFactory("SEVEToken");
     seveToken = await SEVEToken.deploy();
-    await seveToken.deployed();
+    await seveToken.waitForDeployment();
   });
 
   describe("Deployment", function () {
     it("Should set the correct total supply", async function () {
       const totalSupply = await seveToken.totalSupply();
-      expect(totalSupply).to.equal(ethers.utils.parseEther("1000000000")); // 1 billion tokens
+      expect(totalSupply).to.equal(ethers.parseEther("1000000000")); // 1 billion tokens
     });
 
     it("Should set the correct name and symbol", async function () {
@@ -33,7 +33,7 @@ describe("SEVEToken", function () {
 
   describe("Staking", function () {
     it("Should allow users to stake tokens", async function () {
-      const stakeAmount = ethers.utils.parseEther("1000");
+      const stakeAmount = ethers.parseEther("1000");
       
       await seveToken.stake(stakeAmount);
       
@@ -42,7 +42,7 @@ describe("SEVEToken", function () {
     });
 
     it("Should calculate staking rewards correctly", async function () {
-      const stakeAmount = ethers.utils.parseEther("1000");
+      const stakeAmount = ethers.parseEther("1000");
       
       await seveToken.stake(stakeAmount);
       
@@ -51,15 +51,15 @@ describe("SEVEToken", function () {
       await network.provider.send("evm_mine");
       
       const rewards = await seveToken.calculateStakingRewards(owner.address);
-      const expectedRewards = stakeAmount.mul(10).div(100); // 10% APY
+      const expectedRewards = (stakeAmount * 10n) / 100n; // 10% APY
       
-      expect(rewards).to.be.closeTo(expectedRewards, ethers.utils.parseEther("1"));
+      expect(rewards).to.be.closeTo(expectedRewards, ethers.parseEther("1"));
     });
   });
 
   describe("Governance Staking", function () {
     it("Should allow users to stake for governance", async function () {
-      const stakeAmount = ethers.utils.parseEther("500");
+      const stakeAmount = ethers.parseEther("500");
       
       await seveToken.stakeForGovernance(stakeAmount);
       
@@ -68,14 +68,14 @@ describe("SEVEToken", function () {
     });
 
     it("Should calculate voting power correctly", async function () {
-      const stakeAmount = ethers.utils.parseEther("1000");
-      const governanceAmount = ethers.utils.parseEther("500");
+      const stakeAmount = ethers.parseEther("1000");
+      const governanceAmount = ethers.parseEther("500");
       
       await seveToken.stake(stakeAmount);
       await seveToken.stakeForGovernance(governanceAmount);
       
       const votingPower = await seveToken.getVotingPower(owner.address);
-      expect(votingPower).to.equal(stakeAmount.add(governanceAmount));
+      expect(votingPower).to.equal(stakeAmount + governanceAmount);
     });
   });
 });
