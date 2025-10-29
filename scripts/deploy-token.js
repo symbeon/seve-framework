@@ -5,17 +5,18 @@ async function main() {
   
   const SEVEToken = await hre.ethers.getContractFactory("SEVEToken");
   const seveToken = await SEVEToken.deploy();
+  await seveToken.waitForDeployment();
   
-  await seveToken.deployed();
+  const seveTokenAddress = await seveToken.getAddress();
   
-  console.log("✅ SEVE Token deployed to:", seveToken.address);
-  console.log("📊 Transaction hash:", seveToken.deployTransaction.hash);
+  console.log("✅ SEVE Token deployed to:", seveTokenAddress);
+  console.log("📊 Transaction hash:", seveToken.deploymentTransaction().hash);
   
   // Save deployment info
   const deploymentInfo = {
     contract: "SEVEToken",
-    address: seveToken.address,
-    transactionHash: seveToken.deployTransaction.hash,
+    address: seveTokenAddress,
+    transactionHash: seveToken.deploymentTransaction().hash,
     network: hre.network.name,
     timestamp: new Date().toISOString()
   };
