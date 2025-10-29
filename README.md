@@ -80,6 +80,33 @@ A SEVE DAO permite:
 - Verificação formal de contratos
 - Monitoramento contínuo de segurança
 
+## 📚 Documentação Completa
+
+### 🚀 **Guia Rápido**
+- **[Índice de Documentação](docs/INDEX.md)** - Índice completo de toda documentação
+- **[Guia de Deploy](docs/DEPLOYMENT_GUIDE.md)** ⭐ - Deploy local, testnet e produção
+- **[Testnet Playbook](docs/TESTNET_PLAYBOOK.md)** ⭐ - Playbook reutilizável para testnets
+
+### 🔧 **Configuração**
+- **[Setup de Ambiente](docs/ENV_SETUP.md)** ⭐ - Configuração completa de `.env`
+- **[Provedores RPC](docs/RPC_PROVIDERS.md)** ⭐ - Infura, Alchemy e RPCs públicos
+- **[Checklist de Segurança](docs/SECURITY_CHECKLIST.md)** 🔒 - Validações de segurança
+
+### 📊 **Estratégia e Negócio**
+- **[Estratégia Blockchain](BLOCKCHAIN_PROTOCOL_STRATEGY.md)** - Protocolo completo
+- **[Análise de Custos](COST_ANALYSIS.md)** - Custos e alternativas gratuitas
+- **[Posicionamento Anônimo](ANONYMOUS_POSITIONING_STRATEGY.md)** - Privacidade
+
+### 🔍 **Busca Rápida**
+Precisa de ajuda específica? Veja:
+- **Deploy**: [Guia de Deploy](docs/DEPLOYMENT_GUIDE.md)
+- **Configuração**: [ENV Setup](docs/ENV_SETUP.md)
+- **Testnet**: [Testnet Playbook](docs/TESTNET_PLAYBOOK.md)
+- **RPC**: [Provedores RPC](docs/RPC_PROVIDERS.md)
+- **Segurança**: [Checklist de Segurança](docs/SECURITY_CHECKLIST.md)
+
+---
+
 ## 📄 Licença
 
 Symbeon-Vault License - Veja LICENSE_Symbeon_Vault.md
