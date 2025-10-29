@@ -1,0 +1,153 @@
+# 📚 Índice de Documentação - SEVE Framework
+
+Documentação completa e organizada para desenvolvimento, deploy e operação do SEVE Framework e outros projetos do ecossistema.
+
+## 🚀 **Guia Rápido de Início**
+
+### Primeiros Passos
+1. **[Instalação](./INSTALLATION.md)** - Configuração inicial do ambiente
+2. **[Setup de Ambiente](./ENV_SETUP.md)** - Configuração de variáveis de ambiente
+3. **[Quick Start](../README.md)** - Início rápido com exemplos
+
+---
+
+## 📖 **Documentação por Categoria**
+
+### **🛠️ Operacional**
+
+#### Deploy e Infraestrutura
+- **[Guia de Deploy](./DEPLOYMENT_GUIDE.md)** ⭐
+  - Deploy local (Hardhat Node)
+  - Deploy em testnet (Sepolia, Mumbai, BSC)
+  - Deploy em produção (Mainnet)
+  - Verificação de contratos
+  - Troubleshooting completo
+
+- **[Testnet Playbook](./TESTNET_PLAYBOOK.md)** ⭐
+  - Playbook reutilizável para testnets
+  - Seleção de rede
+  - Obtenção de fundos de teste (faucets)
+  - Workflows padronizados
+  - Aplicável a qualquer projeto Hardhat/EVM
+
+- **[Provedores RPC](./RPC_PROVIDERS.md)** ⭐
+  - Infura vs Alchemy vs RPCs Públicos
+  - Configuração e comparação
+  - Guia de escolha do provedor
+  - Templates de configuração Hardhat
+
+- **[Setup de Ambiente](./ENV_SETUP.md)** ⭐
+  - Template completo de `.env`
+  - Segurança e boas práticas
+  - Validação de configurações
+  - Troubleshooting comum
+
+#### Segurança
+- **[Checklist de Segurança](./SECURITY_CHECKLIST.md)** 🔒
+  - Pré-deploy em testnet
+  - Pré-deploy em produção
+  - Auditoria de contratos
+  - Gestão de chaves
+
+---
+
+### **📘 Técnica**
+
+#### Arquitetura
+- **[Visão Geral da Arquitetura](./ARCHITECTURE.md)** - Sistema completo
+- **[Módulos do Framework](./MODULES.md)** - Componentes principais
+- **[Smart Contracts](../contracts/)** - Contratos Solidity
+
+#### Desenvolvimento
+- **[Guia de Contribuição](../CONTRIBUTING.md)** - Como contribuir
+- **[Padrões de Código](./CODING_STANDARDS.md)** - Convenções
+- **[Testes](./TESTING.md)** - Estratégias e práticas
+
+---
+
+### **📊 Estratégia e Negócio**
+
+- **[Estratégia Blockchain](../BLOCKCHAIN_PROTOCOL_STRATEGY.md)** - Protocolo completo
+- **[Posicionamento Anônimo](../ANONYMOUS_POSITIONING_STRATEGY.md)** - Privacidade
+- **[Análise de Custos](../COST_ANALYSIS.md)** - Custos e alternativas gratuitas
+- **[Plano de Lançamento](../LAUNCH_STRATEGY.md)** - Estratégia de lançamento
+- **[Plano de Marketing](../MARKETING_PLAN.md)** - Marketing e comunicação
+
+---
+
+### **🔧 Ferramentas da Equipe EON**
+
+- **[DOCSYNC](../docsync.yaml)** - Sincronização automática de documentação
+- **[GIDEN](../giden.yaml)** - Geração inteligente de documentação
+
+---
+
+## 🎯 **Fluxos de Trabalho Comuns**
+
+### **Novo Desenvolvedor**
+1. Ler [Instalação](./INSTALLATION.md)
+2. Configurar [Ambiente](./ENV_SETUP.md)
+3. Seguir [Quick Start](../README.md)
+4. Estudar [Arquitetura](./ARCHITECTURE.md)
+
+### **Primeiro Deploy em Testnet**
+1. Seguir [Testnet Playbook](./TESTNET_PLAYBOOK.md)
+2. Configurar [Provedor RPC](./RPC_PROVIDERS.md)
+3. Validar [Checklist de Segurança](./SECURITY_CHECKLIST.md)
+4. Executar [Guia de Deploy](./DEPLOYMENT_GUIDE.md)
+
+### **Deploy em Produção**
+1. Revisar [Checklist de Segurança](./SECURITY_CHECKLIST.md)
+2. Planejar com [Análise de Custos](../COST_ANALYSIS.md)
+3. Seguir [Guia de Deploy](./DEPLOYMENT_GUIDE.md) seção Mainnet
+4. Verificar contratos nos explorers
+
+---
+
+## 📝 **Templates e Exemplos**
+
+- **[Template .env](../.env.template)** - Template de ambiente
+- **[Exemplos de Deploy](../scripts/)** - Scripts de deploy
+- **[Exemplos de Uso](../examples/)** - Casos de uso práticos
+
+---
+
+## 🔍 **Busca Rápida**
+
+### Por Tipo de Ação
+- **Deploy**: [Guia de Deploy](./DEPLOYMENT_GUIDE.md)
+- **Configuração**: [Setup de Ambiente](./ENV_SETUP.md)
+- **Testnet**: [Testnet Playbook](./TESTNET_PLAYBOOK.md)
+- **RPC**: [Provedores RPC](./RPC_PROVIDERS.md)
+- **Segurança**: [Checklist de Segurança](./SECURITY_CHECKLIST.md)
+
+### Por Problema
+- **Erro HH110**: [RPC Providers](./RPC_PROVIDERS.md#rpc-públicos)
+- **Sem fundos**: [Testnet Playbook](./TESTNET_PLAYBOOK.md#obter-fundos-de-teste)
+- **Problemas com .env**: [ENV Setup](./ENV_SETUP.md#troubleshooting)
+- **Deploy falhando**: [Deploy Guide](./DEPLOYMENT_GUIDE.md#troubleshooting)
+
+---
+
+## ✅ **Status da Documentação**
+
+- ✅ **Completo e Atualizado**: Documentação operacional principal
+- ✅ **Completo e Atualizado**: Guias de deploy
+- ✅ **Completo e Atualizado**: Playbooks reutilizáveis
+- 🔄 **Em Desenvolvimento**: Documentação técnica detalhada
+- 🔄 **Em Desenvolvimento**: Tutoriais avançados
+
+---
+
+## 📞 **Suporte**
+
+- **Issues**: [GitHub Issues](https://github.com/symbeon/seve-framework/issues)
+- **Documentação**: [Docs Site](https://docs.seve-framework.ai)
+- **Comunidade**: [Discord/Telegram](https://community.seve-framework.ai)
+
+---
+
+**Última Atualização**: 2025-01-29  
+**Mantido por**: Equipe EON - Symbeon Tech  
+**Versão do Framework**: 3.0.0
+
