@@ -90,6 +90,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 ### **📊 Estratégia e Negócio**
 
+- **[Análise de Custo de Desenvolvimento](./DEVELOPMENT_COST_ANALYSIS.md)** ⭐ **NOVO**
+  - Estimativa completa de custo empresarial
+  - Análise por fase de desenvolvimento
+  - Comparação com mercado
+  - ROI e timeline
 - **[Estratégia Blockchain](../BLOCKCHAIN_PROTOCOL_STRATEGY.md)** - Protocolo completo
 - **[Posicionamento Anônimo](../ANONYMOUS_POSITIONING_STRATEGY.md)** - Privacidade
 - **[Análise de Custos](../COST_ANALYSIS.md)** - Custos e alternativas gratuitas
