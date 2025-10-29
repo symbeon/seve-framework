@@ -101,7 +101,7 @@ class AnonymousSEVEConfig:
                 "organization": "Symbeon Tech",
                 "team": "EON Team",
                 "project": "SEVE Framework",
-                "version": "3.0.0",
+                "version": "1.0.0",
                 "purpose": "Ethical AI Development"
             }
         )

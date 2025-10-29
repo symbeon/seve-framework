@@ -1,6 +1,6 @@
 {
   "name": "seve-framework-contracts",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "SEVE Framework Smart Contracts",
   "main": "index.js",
   "scripts": {

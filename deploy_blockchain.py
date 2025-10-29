@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 SEVE Framework - Blockchain Deployment Script
-Symbiotic Ethical Vision Engine v3.0
+Symbiotic Ethical Vision Engine v1.0
 Developed by EON Team - Symbeon Tech
 
 Este script automatiza o deploy dos smart contracts do SEVE Protocol
@@ -256,22 +256,22 @@ class SEVEBlockchainDeployer:
         """Adiciona versões iniciais do SEVE Framework"""
         versions = [
             {
-                "version": "3.0.0",
+                "version": "1.0.0",
                 "price": 1000,  # 1000 SEVE tokens per year
                 "codeHash": "0x" + "a" * 64,  # Placeholder hash
-                "description": "SEVE Framework v3.0 - Initial release with full blockchain integration"
+                "description": "SEVE Framework v1.0 - Initial release with full blockchain integration"
             },
             {
-                "version": "3.1.0",
+                "version": "1.1.0",
                 "price": 1200,  # 1200 SEVE tokens per year
                 "codeHash": "0x" + "b" * 64,  # Placeholder hash
-                "description": "SEVE Framework v3.1 - Enhanced privacy and performance"
+                "description": "SEVE Framework v1.1 - Enhanced privacy and performance"
             },
             {
-                "version": "3.2.0",
+                "version": "1.2.0",
                 "price": 1500,  # 1500 SEVE tokens per year
                 "codeHash": "0x" + "c" * 64,  # Placeholder hash
-                "description": "SEVE Framework v3.2 - Advanced AI capabilities and multi-chain support"
+                "description": "SEVE Framework v1.2 - Advanced AI capabilities and multi-chain support"
             }
         ]
         

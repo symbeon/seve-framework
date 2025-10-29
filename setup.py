@@ -34,7 +34,7 @@ def read_version():
             for line in f:
                 if line.startswith('__version__'):
                     return line.split('=')[1].strip().strip('"\'')
-    return "3.0.0"
+    return "1.0.0"
 
 # Setup configuration
 setup(

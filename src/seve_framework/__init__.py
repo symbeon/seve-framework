@@ -38,7 +38,7 @@ except ImportError:
     UniversalEthicsEngine = None
     UniversalEmpathyEngine = None
 
-__version__ = "3.0.0"
+__version__ = "1.0.0"
 __author__ = "Symbeon Tech - EON Team"
 __email__ = "research@symbeon-tech.com"
 __license__ = "Symbeon-Vault"
