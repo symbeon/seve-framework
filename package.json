@@ -1,0 +1,34 @@
+{
+  "name": "seve-framework-contracts",
+  "version": "3.0.0",
+  "description": "SEVE Framework Smart Contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy-token.js --network sepolia",
+    "deploy:mumbai": "hardhat run scripts/deploy-token.js --network mumbai",
+    "deploy:polygon": "hardhat run scripts/deploy-token.js --network polygon",
+    "deploy:arbitrum": "hardhat run scripts/deploy-token.js --network arbitrum",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "verify:mumbai": "hardhat verify --network mumbai",
+    "verify:polygon": "hardhat verify --network polygon",
+    "verify:arbitrum": "hardhat verify --network arbitrum"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^4.9.0",
+    "hardhat": "^2.17.0",
+    "dotenv": "^16.3.0"
+  },
+  "keywords": [
+    "blockchain",
+    "smart-contracts",
+    "ethereum",
+    "defi",
+    "ai",
+    "ethics"
+  ],
+  "author": "EON Team - Symbeon Tech",
+  "license": "Symbeon-Vault"
+}
