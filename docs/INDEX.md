@@ -149,5 +149,5 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 **Última Atualização**: 2025-01-29  
 **Mantido por**: Equipe EON - Symbeon Tech  
-**Versão do Framework**: 3.0.0
+**Versão do Framework**: 1.0.0
 

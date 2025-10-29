@@ -1,11 +1,12 @@
 <div align="center">
 
 # 🤝 SEVE Framework
-## Symbiotic Ethical Vision Engine v3.0
+## Symbiotic Ethical Vision Engine v1.0
 
+**Ethical, Adaptive, and Decentralized Artificial Intelligence**  
 **Inteligência Artificial Ética, Adaptativa e Descentralizada**
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/symbeon/seve-framework)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/symbeon/seve-framework)
 [![License](https://img.shields.io/badge/license-Symbeon--Vault-green.svg)](LICENSE_Symbeon_Vault.md)
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Solidity](https://img.shields.io/badge/solidity-^0.8.0-blue.svg)](https://soliditylang.org/)
@@ -14,12 +15,419 @@
 [![Documentation](https://img.shields.io/badge/docs-complete-brightgreen.svg)](docs/)
 
 [🌐 Website](https://seve-framework.ai) • 
-[📚 Documentação](https://docs.seve-framework.ai) • 
-[💬 Comunidade](https://community.seve-framework.ai) • 
+[📚 Documentation](https://docs.seve-framework.ai) • 
+[💬 Community](https://community.seve-framework.ai) • 
 [🐛 Issues](https://github.com/symbeon/seve-framework/issues) • 
 [⭐ Star](https://github.com/symbeon/seve-framework/stargazers)
 
+---
+
+**Language / Idioma**: [English](#-about) • [Português](#-sobre-o-projeto)
+
 </div>
+
+---
+
+## 🌍 ENGLISH
+
+---
+
+## 🎯 **About**
+
+The **SEVE Framework** is a universal ethical AI framework that combines **Artificial Intelligence**, **Computer Vision**, **Automated Ethics**, and **Blockchain** to create responsible, private, and decentralized intelligent systems.
+
+### **Why SEVE?**
+
+✅ **Ethics-First Design**: Automatic ethical decision validation via GuardFlow  
+✅ **Privacy by Design**: Native anonymization, pseudonymization, and data protection  
+✅ **Blockchain-Native**: Smart contracts for governance, licensing, and tokenomics  
+✅ **Decentralized**: DAO for community governance  
+✅ **Adaptive**: Hybrid framework that adapts to any domain  
+✅ **Production-Ready**: Tested, documented, and ready for deployment  
+
+---
+
+## ✨ **Key Features**
+
+### 🔬 **Framework Core**
+- **SEVE-Core**: Modular and extensible core
+- **SEVE-Vision**: Computer vision with privacy protection
+- **SEVE-Sense**: Multi-sensor fusion and multimodal processing
+- **SEVE-Ethics**: GuardFlow for automated ethical validation
+- **SEVE-Link**: Secure and decentralized connectivity
+
+### ⛓️ **Blockchain Integration**
+- **SEVE Token (ERC-20)**: Utility token with staking and governance
+- **SEVE Protocol**: Smart contracts for licensing and management
+- **SEVE DAO**: Decentralized governance through on-chain voting
+
+### 🔒 **Security and Privacy**
+- Automatic anonymization of sensitive data
+- Configurable pseudonymization
+- Complete and immutable audit trail
+- Real-time ethical compliance validation
+
+### 📊 **Tokenomics**
+- **Total Supply**: 1,000,000,000 SEVE
+- **Staking**: Rewards for protocol participation
+- **Governance**: Voting with SEVE tokens
+- **Vesting**: Programmed token release
+
+---
+
+## 🚀 **Quick Start**
+
+### **Installation**
+
+```bash
+# Clone the repository
+git clone https://github.com/symbeon/seve-framework.git
+cd seve-framework
+
+# Install Python dependencies
+pip install -e .
+
+# Install Node.js dependencies (for smart contracts)
+npm install
+
+# Compile smart contracts
+npm run compile
+
+# Run tests
+npm run test
+pytest tests/
+```
+
+### **Basic Usage (Python)**
+
+```python
+from seve_framework import SEVEFramework
+from seve_framework.vision import SEVEVision
+from seve_framework.ethics import GuardFlow
+
+# Initialize framework
+seve = SEVEFramework(config_path="config/default.yaml")
+
+# Use vision module
+vision = SEVEVision(seve.core)
+result = vision.process_image("path/to/image.jpg")
+
+# Validate ethics
+ethics = GuardFlow(seve.core)
+is_ethical = ethics.validate_action(action_data)
+```
+
+### **Smart Contract Deployment**
+
+```bash
+# Local deployment (Hardhat Node)
+npx hardhat node
+npx hardhat run scripts/deploy-token.js --network localhost
+
+# Testnet deployment (Sepolia)
+npm run deploy:sepolia
+
+# Production deployment (Polygon)
+npm run deploy:polygon
+```
+
+---
+
+## 📐 **Architecture**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    SEVE Framework v1.0                      │
+├─────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
+│  │ SEVE-Core    │  │ SEVE-Vision  │  │ SEVE-Sense   │      │
+│  │ (Core Engine)│  │ (CV Module)  │  │ (Sensors)    │      │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘      │
+│         │                  │                  │               │
+│         └──────────────────┼──────────────────┘               │
+│                            │                                  │
+│                  ┌─────────▼──────────┐                       │
+│                  │   SEVE-Ethics      │                       │
+│                  │   (GuardFlow)      │                       │
+│                  └─────────┬──────────┘                       │
+│                            │                                  │
+│                  ┌─────────▼──────────┐                       │
+│                  │   SEVE-Link        │                       │
+│                  │   (Blockchain)     │                       │
+│                  └────────────────────┘                       │
+│                            │                                  │
+│         ┌──────────────────┼──────────────────┐               │
+│         │                  │                  │               │
+│  ┌──────▼──────┐  ┌────────▼───────┐  ┌─────▼───────┐      │
+│  │ SEVE Token  │  │ SEVE Protocol  │  │ SEVE DAO    │      │
+│  │ (ERC-20)    │  │ (Smart Cont.)  │  │ (Governance)│      │
+│  └─────────────┘  └────────────────┘  └─────────────┘      │
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📚 **Complete Documentation**
+
+### 🚀 **Operational Guides** ⭐
+
+- **[📖 Documentation Index](docs/INDEX.md)** - Complete index of all documentation
+- **[🚀 Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** - Local, testnet, and production deployment
+- **[🧪 Testnet Playbook](docs/TESTNET_PLAYBOOK.md)** - Reusable testnet playbook
+- **[⚙️ Environment Setup](docs/ENV_SETUP.md)** - Complete `.env` configuration
+- **[🌐 RPC Providers](docs/RPC_PROVIDERS.md)** - Infura, Alchemy, and public RPCs
+- **[🔒 Security Checklist](docs/SECURITY_CHECKLIST.md)** - Security validations
+
+### 📘 **Technical Documentation**
+
+- **[🏗️ Architecture](docs/ARCHITECTURE.md)** - Architecture overview
+- **[📊 Overview](docs/OVERVIEW.md)** - Framework overview
+- **[🔧 Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md)** - Complete technical reference
+
+### 📊 **Strategy and Business**
+
+- **[⛓️ Blockchain Strategy](BLOCKCHAIN_PROTOCOL_STRATEGY.md)** - Complete blockchain protocol
+- **[💰 Cost Analysis](COST_ANALYSIS.md)** - Costs and free alternatives
+- **[🔐 Anonymous Positioning](ANONYMOUS_POSITIONING_STRATEGY.md)** - Privacy strategy
+- **[📈 Executive Summary](EXECUTIVE_SUMMARY.md)** - Complete executive summary
+
+### 🔍 **Quick Search**
+
+Need specific help? See:
+
+- **Deploy**: [Deployment Guide](docs/DEPLOYMENT_GUIDE.md)
+- **Configuration**: [ENV Setup](docs/ENV_SETUP.md)
+- **Testnet**: [Testnet Playbook](docs/TESTNET_PLAYBOOK.md)
+- **RPC**: [RPC Providers](docs/RPC_PROVIDERS.md)
+- **Security**: [Security Checklist](docs/SECURITY_CHECKLIST.md)
+- **Architecture**: [Architecture Documentation](docs/ARCHITECTURE.md)
+
+---
+
+## 💻 **Code Examples**
+
+### **Python - Framework Core**
+
+```python
+from seve_framework import SEVEFramework
+
+# Initialize with configuration
+seve = SEVEFramework(config_path="config/default.yaml")
+
+# Process data
+result = seve.process(data=input_data)
+```
+
+### **Solidity - Smart Contract**
+
+```solidity
+// SEVE Token
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract SEVEToken is ERC20 {
+    constructor() ERC20("SEVE Token", "SEVE") {
+        _mint(msg.sender, 1000000000 * 10**18);
+    }
+}
+```
+
+### **JavaScript - Deployment**
+
+```javascript
+const { ethers } = require("hardhat");
+
+async function main() {
+  const SEVEToken = await ethers.getContractFactory("SEVEToken");
+  const seveToken = await SEVEToken.deploy();
+  await seveToken.waitForDeployment();
+  
+  console.log("SEVE Token deployed to:", await seveToken.getAddress());
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+```
+
+---
+
+## 🔗 **Smart Contracts**
+
+### **Implemented Contracts**
+
+| Contract | Description | Status |
+|----------|-------------|--------|
+| **SEVEToken.sol** | ERC-20 token with staking and governance | ✅ Tested |
+| **SEVEProtocol.sol** | Main protocol for licensing | ✅ Tested |
+| **SEVEDAO.sol** | Decentralized autonomous organization | ✅ Tested |
+
+### **Deploy**
+
+```bash
+# Testnets
+npm run deploy:sepolia    # Ethereum Sepolia
+npm run deploy:mumbai     # Polygon Mumbai
+
+# Mainnets
+npm run deploy:polygon    # Polygon Mainnet
+npm run deploy:arbitrum  # Arbitrum One
+```
+
+### **Verification**
+
+```bash
+# Verify contracts on explorers
+npm run verify:sepolia
+npm run verify:mumbai
+npm run verify:polygon
+```
+
+---
+
+## 🧪 **Testing**
+
+### **Run Tests**
+
+```bash
+# Python tests
+pytest tests/                    # All tests
+pytest tests/ -m unit           # Unit tests only
+pytest tests/ -m integration    # Integration tests only
+pytest tests/ --cov            # With coverage
+
+# Solidity tests
+npm run test                    # Hardhat tests
+npx hardhat test                # Complete tests
+```
+
+### **Test Coverage**
+
+- **Python**: 95%+ coverage
+- **Solidity**: 95%+ coverage
+- **Integration**: Complete end-to-end tests
+
+---
+
+## 🤝 **Contributing**
+
+Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) before submitting PRs.
+
+### **Contribution Process**
+
+1. Fork the repository
+2. Create a branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'feat: Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+### **Code Standards**
+
+- **Python**: Follow PEP 8, use Black and isort
+- **Solidity**: Follow Solidity Style Guide
+- **Commits**: Use Conventional Commits
+- **Tests**: Write tests for new features
+
+---
+
+## 📊 **Project Statistics**
+
+```
+📦 Modules: 5 (Core, Vision, Sense, Ethics, Link)
+🔧 Smart Contracts: 3 (Token, Protocol, DAO)
+📚 Documentation: 10+ complete guides
+✅ Tests: 95%+ coverage
+🌐 Supported Networks: Ethereum, Polygon, Arbitrum, BSC
+🔒 Security: Audits and formal verifications
+```
+
+---
+
+## 🏛️ **Governance**
+
+The **SEVE DAO** enables:
+
+- ✅ Governance proposal creation
+- ✅ Voting with SEVE tokens
+- ✅ Automatic decision execution
+- ✅ Decentralized protocol management
+
+---
+
+## 🔒 **Security**
+
+### **Implemented Measures**
+
+- ✅ Contracts audited by experts
+- ✅ Comprehensive tests (95%+ coverage)
+- ✅ Formal contract verification
+- ✅ Continuous security monitoring
+- ✅ Privacy by Design implemented
+- ✅ GuardFlow for ethical validation
+
+### **Report Vulnerabilities**
+
+Please **DO NOT** publicly report vulnerabilities. Instead, send an email to:
+
+**security@symbeon-tech.com**
+
+---
+
+## 📄 **License**
+
+This project is licensed under the **Symbeon-Vault License** - see the [LICENSE_Symbeon_Vault.md](LICENSE_Symbeon_Vault.md) file for details.
+
+---
+
+## 👥 **Team**
+
+Developed by **EON Team - Symbeon Tech**
+
+- **Research Team**: Research and development
+- **Development Team**: Implementation and testing
+- **Security Team**: Audits and security
+- **Documentation Team**: Documentation and guides
+
+---
+
+## 🌐 **Useful Links**
+
+- **🌐 Website**: [https://seve-framework.ai](https://seve-framework.ai)
+- **📚 Documentation**: [https://docs.seve-framework.ai](https://docs.seve-framework.ai)
+- **💬 Community**: [https://community.seve-framework.ai](https://community.seve-framework.ai)
+- **🐛 Issues**: [GitHub Issues](https://github.com/symbeon/seve-framework/issues)
+- **⭐ Stars**: [GitHub Stars](https://github.com/symbeon/seve-framework/stargazers)
+- **📦 Releases**: [GitHub Releases](https://github.com/symbeon/seve-framework/releases)
+
+---
+
+## ⭐ **Support the Project**
+
+If you find this project useful, consider:
+
+- ⭐ **Giving a star** to the repository
+- 🐛 **Reporting bugs** or suggesting features
+- 💬 **Participating** in the community
+- 📣 **Sharing** with other developers
+- 🤝 **Contributing** with code or documentation
+
+---
+
+## 📈 **Roadmap**
+
+- [x] **v1.0.0** - Complete framework with blockchain
+- [x] **v1.0.1** - Complete operational documentation
+- [ ] **v1.1.0** - Integration with more blockchains
+- [ ] **v1.2.0** - Graphical interface (GUI)
+- [ ] **v2.0.0** - Complete multi-chain framework
+
+---
+
+---
+
+## 🇧🇷 PORTUGUÊS
 
 ---
 
@@ -47,7 +455,7 @@ O **SEVE Framework** é um framework universal de IA ética que combina **Inteli
 - **SEVE-Ethics**: GuardFlow para validação ética automatizada
 - **SEVE-Link**: Conectividade segura e descentralizada
 
-### ⛓️ **Blockchain Integration**
+### ⛓️ **Integração Blockchain**
 - **SEVE Token (ERC-20)**: Token utilitário com staking e governança
 - **SEVE Protocol**: Smart contracts para licenciamento e gestão
 - **SEVE DAO**: Governança descentralizada via votação on-chain
@@ -66,25 +474,25 @@ O **SEVE Framework** é um framework universal de IA ética que combina **Inteli
 
 ---
 
-## 🚀 **Quick Start**
+## 🚀 **Início Rápido**
 
 ### **Instalação**
 
 ```bash
-# Clone o repositório
+# Clonar o repositório
 git clone https://github.com/symbeon/seve-framework.git
 cd seve-framework
 
-# Instale dependências Python
+# Instalar dependências Python
 pip install -e .
 
-# Instale dependências Node.js (para smart contracts)
+# Instalar dependências Node.js (para smart contracts)
 npm install
 
-# Compile os smart contracts
+# Compilar smart contracts
 npm run compile
 
-# Execute os testes
+# Executar testes
 npm run test
 pytest tests/
 ```
@@ -128,7 +536,7 @@ npm run deploy:polygon
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    SEVE Framework v3.0                      │
+│                    SEVE Framework v1.0                      │
 ├─────────────────────────────────────────────────────────────┤
 │                                                               │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
@@ -408,11 +816,11 @@ Se você encontrar este projeto útil, considere:
 
 ## 📈 **Roadmap**
 
-- [x] **v3.0.0** - Framework completo com blockchain
-- [x] **v3.0.1** - Documentação operacional completa
-- [ ] **v3.1.0** - Integração com mais blockchains
-- [ ] **v3.2.0** - Interface gráfica (GUI)
-- [ ] **v4.0.0** - Framework multi-chain completo
+- [x] **v1.0.0** - Framework completo com blockchain
+- [x] **v1.0.1** - Documentação operacional completa
+- [ ] **v1.1.0** - Integração com mais blockchains
+- [ ] **v1.2.0** - Interface gráfica (GUI)
+- [ ] **v2.0.0** - Framework multi-chain completo
 
 ---
 

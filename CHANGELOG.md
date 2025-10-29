@@ -6,10 +6,10 @@ All notable changes to the SEVE Framework will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.0.0] - 2024-12-19
+## [1.0.0] - 2025-01-29
 
 ### Added
-- **SEVE Framework v3.0** - Complete rewrite with modular architecture
+- **SEVE Framework v1.0** - Complete rewrite with modular architecture
 - **SEVE-Core** - Central orchestration and decision-making engine
 - **SEVE-Vision** - Computer vision module with privacy-by-design
 - **SEVE-Sense** - Multi-sensor fusion capabilities
@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Access Control** - Role-based authorization
 - **Audit Trail** - Complete decision logging
 
-## [2.0.0] - 2024-11-15
+## [0.2.0] - 2024-11-15
 
 ### Added
 - **SEVE Universal Framework** - Multi-domain adaptive capabilities
@@ -53,7 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Ethics** - Enhanced ethical framework
 - **Empathy** - Improved empathy processing
 
-## [1.0.0] - 2024-10-01
+## [0.1.0] - 2024-10-01
 
 ### Added
 - **Initial SEVE Framework** - Retail-specific implementation
@@ -73,25 +73,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History Summary
 
-- **v3.0.0**: Complete modular architecture with GuardFlow ethics
-- **v2.0.0**: Universal framework with multi-domain support
-- **v1.0.0**: Initial retail-specific implementation
+- **v1.0.0**: Complete modular architecture with GuardFlow ethics (formerly v3.0.0)
+- **v0.2.0**: Universal framework with multi-domain support (formerly v2.0.0)
+- **v0.1.0**: Initial retail-specific implementation (formerly v1.0.0)
 
 ## Future Roadmap
 
-### v3.1 (Q2 2025)
+### v1.1 (Q2 2025)
 - Enhanced domain adapters
 - Expanded component capabilities
 - Academic collaborations
 - Comprehensive testing
 
-### v3.2 (Q3 2025)
+### v1.2 (Q3 2025)
 - Academic publications
 - Universal benchmarks
 - International collaborations
 - Scientific impact measurement
 
-### v4.0 (Q4 2025)
+### v2.0 (Q4 2025)
 - Industrial adoption
 - Commercial licensing
 - Global expansion

@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 class DocumentationConfig:
     """Configuração para documentação profissional"""
     project_name: str = "SEVE Framework"
-    project_version: str = "3.0.0"
+    project_version: str = "1.0.0"
     team_name: str = "EON Team - Symbeon Tech"
     docsync_config: str = "docsync.yaml"
     giden_config: str = "giden.yaml"

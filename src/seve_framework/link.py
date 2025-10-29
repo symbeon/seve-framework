@@ -263,7 +263,7 @@ class SEVELinkModule:
             "data": data,
             "context": context or {},
             "timestamp": datetime.now().isoformat(),
-            "framework_version": "3.0.0",
+            "framework_version": "1.0.0",
             "transmission_id": f"seve_{int(time.time() * 1000)}"
         }
         

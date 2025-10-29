@@ -1,7 +1,7 @@
 # 📊 Sumário Executivo - SEVE Framework Documentation
 
 **Data**: 29 de Janeiro de 2025  
-**Versão**: 3.0.0  
+**Versão**: 1.0.0  
 **Equipe**: EON - Symbeon Tech
 
 ---

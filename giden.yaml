@@ -309,7 +309,7 @@ security:
 
 # GIDEN Version and Metadata
 giden_version: "1.0.0"
-framework_version: "3.0.0"
+framework_version: "1.0.0"
 last_updated: "2025-10-29"
 maintained_by: "EON Team - Symbeon Tech"
 ai_model: "gpt-4-turbo"

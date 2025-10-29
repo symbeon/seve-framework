@@ -307,7 +307,7 @@ class SEVEHybridFramework:
     def get_capabilities(self) -> Dict[str, Any]:
         """Get framework capabilities"""
         capabilities = {
-            "version": "3.0.0",
+            "version": "1.0.0",
             "mode": self.config.mode.value,
             "v3_core_available": True,
             "universal_core_available": self.universal_core is not None,

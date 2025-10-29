@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 SEVE Framework - Hardhat Configuration
-Symbiotic Ethical Vision Engine v3.0
+Symbiotic Ethical Vision Engine v1.0
 Developed by EON Team - Symbeon Tech
 
 Configuração do Hardhat para deploy dos smart contracts SEVE
@@ -133,7 +133,7 @@ def create_package_json():
     """Cria package.json para o projeto Hardhat"""
     package_json = {
         "name": "seve-framework-contracts",
-        "version": "3.0.0",
+        "version": "1.0.0",
         "description": "SEVE Framework Smart Contracts",
         "main": "index.js",
         "scripts": {
@@ -473,7 +473,7 @@ def create_readme():
     """Cria README para o projeto de contratos"""
     readme = """# SEVE Framework - Smart Contracts
 
-## Symbiotic Ethical Vision Engine v3.0
+## Symbiotic Ethical Vision Engine v1.0
 
 Este repositório contém os smart contracts do SEVE Framework, um protocolo blockchain para IA ética.
 
