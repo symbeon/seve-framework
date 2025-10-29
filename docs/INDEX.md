@@ -53,7 +53,30 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 ### **📘 Técnica**
 
-#### Arquitetura
+#### Arquitetura e Fundamentação
+- **[Base de Conhecimento Sistemática](./SYSTEMATIC_KNOWLEDGE_BASE.md)** ⭐ **REFERÊNCIA CENTRAL**
+  - Consolidação de todas as descobertas e estratégias
+  - Fundamentos conceituais (SiD), arquitetura modular, alinhamento estratégico
+  - Provas técnicas, PI e aplicações por nicho
+  - Documento de referência principal do framework
+- **[Validação Técnica e Alinhamento](./TECHNICAL_VALIDATION_ALIGNMENT.md)** ⭐
+  - Validação completa EON-Framework
+  - Alinhamento técnico, conceitual e estratégico
+  - Plausibilidade científica confirmada
+  - Roadmap de validação experimental
+- **[White Paper Completo SEVE](./SEVE_COMPLETE_WHITEPAPER.md)** ⭐
+  - Visão completa do framework
+  - Arquitetura modular detalhada
+  - Imperativo ético e fundamentação técnica
+  - Aplicações comerciais e estratégia de PI
+- **[Integração SiD ↔ SEVE](./SID_SEVE_INTEGRATION.md)** ⭐
+  - Alinhamento estratégico com SiD Framework
+  - Matriz de correlação ELSI ↔ SEVE
+  - Fundamentação metodológica e posicionamento
+- **[Classificação de Módulos por Nicho](./MODULE_CLASSIFICATION_BY_NICHE.md)** ⭐
+  - Nomeação por nicho, sem amarrar a projetos
+  - Estrutura de licenciamento segmentado
+  - Interoperabilidade via SEVE-Link
 - **[Visão Geral da Arquitetura](./ARCHITECTURE.md)** - Sistema completo
 - **[Módulos do Framework](./MODULES.md)** - Componentes principais
 - **[Smart Contracts](../contracts/)** - Contratos Solidity
