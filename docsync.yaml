@@ -12,6 +12,7 @@ sync_config:
     - tests
     - examples
     - config
+    - docs  # include docs as source for secondary validation
   
   # Target directories for generated documentation
   target_dirs:
@@ -19,6 +20,7 @@ sync_config:
     - docs/api
     - docs/user-guides
     - docs/development
+    - docs/operations
   
   # Synchronization rules
   sync_rules:
@@ -58,6 +60,24 @@ sync_config:
       validation:
         - check_example_working
         - check_example_documentation
+
+    # Operations playbooks and guides
+    - pattern: "DEPLOYMENT_GUIDE.md"
+      template: "tutorial_template.md"
+      target: "docs/operations/deploy"
+      auto_sync: true
+    - pattern: "TESTNET_PLAYBOOK.md"
+      template: "tutorial_template.md"
+      target: "docs/operations/testnet"
+      auto_sync: true
+    - pattern: "RPC_PROVIDERS.md"
+      template: "api_template.md"
+      target: "docs/operations/providers"
+      auto_sync: true
+    - pattern: "ENV_SETUP.md"
+      template: "config_template.md"
+      target: "docs/operations/env"
+      auto_sync: true
 
 # Auto-sync settings
 auto_sync:
@@ -211,5 +231,5 @@ reporting:
 # DOCSYNC Version and Metadata
 docsync_version: "1.0.0"
 framework_version: "3.0.0"
-last_updated: "2024-12-19"
+last_updated: "2025-10-29"
 maintained_by: "EON Team - Symbeon Tech"

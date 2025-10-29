@@ -106,6 +106,20 @@ generation_rules:
     auto_generate_troubleshooting: true
     auto_generate_api_reference: true
     auto_generate_usage_patterns: true
+    
+    # Prioridade para guias operacionais
+    operational_guides:
+      enabled: true
+      files:
+        - docs/DEPLOYMENT_GUIDE.md
+        - docs/TESTNET_PLAYBOOK.md
+        - docs/RPC_PROVIDERS.md
+        - docs/ENV_SETUP.md
+      validation:
+        - completeness_check
+        - accuracy_check
+        - consistency_check
+        - troubleshooting_generation
 
 # AI-powered features
 ai_features:
@@ -139,7 +153,6 @@ ai_features:
       - structure_optimization
       - completeness_check
       - consistency_validation
-      - style_standardization
 
 # Output configuration
 output_config:
@@ -297,7 +310,7 @@ security:
 # GIDEN Version and Metadata
 giden_version: "1.0.0"
 framework_version: "3.0.0"
-last_updated: "2024-12-19"
+last_updated: "2025-10-29"
 maintained_by: "EON Team - Symbeon Tech"
 ai_model: "gpt-4-turbo"
-language_support: ["en", "pt", "es", "fr"]
+language_support: ["pt", "en", "es", "fr"]
