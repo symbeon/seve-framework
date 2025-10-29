@@ -90,7 +90,12 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 ### **📊 Estratégia e Negócio**
 
-- **[Análise de Custo de Desenvolvimento](./DEVELOPMENT_COST_ANALYSIS.md)** ⭐ **NOVO**
+- **[Checklist de Prontidão para Deploy](./DEPLOYMENT_READINESS_CHECKLIST.md)** ⭐ **NOVO**
+  - Status completo de prontidão
+  - Checklist por tipo de deploy
+  - Ações necessárias antes do deploy
+  - Score de prontidão: 92%
+- **[Análise de Custo de Desenvolvimento](./DEVELOPMENT_COST_ANALYSIS.md)** ⭐
   - Estimativa completa de custo empresarial
   - Análise por fase de desenvolvimento
   - Comparação com mercado
