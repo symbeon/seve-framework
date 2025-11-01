@@ -101,7 +101,7 @@ That's when the SEVE idea was born:
 - Must be in the **architecture design**
 - Compliance is not enough - needs to be **proactive**
 
-**Result**: GuardFlow integrated into all operations, from design.
+**Result**: Ethical validation system integrated into all operations, from design.
 
 ---
 
@@ -135,7 +135,7 @@ That's when the SEVE idea was born:
 
 ### What the Market Needs (But Doesn't Have)
 
-After consulting with **NearX** and analyzing the market, it's clear:
+After deep market analysis, it's clear:
 
 #### Current Demand
 - Professionals who understand **DeFi + AI** (very rare)
@@ -339,4 +339,7 @@ Because I believe that:
 **Created by**: [Your Name]  
 **SEVE Framework v1.0.0**  
 **Date**: October 2025
+
+
+
 
