@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-10-29T12:24:58.755229",
+  "metrics": {
+    "modules_documented": 0,
+    "classes_documented": 0,
+    "functions_documented": 0,
+    "total_lines": 0,
+    "coverage": 0,
+    "consistency": 95.0,
+    "completeness": 90.0
+  },
+  "status": "needs_improvement",
+  "generated_files": 0
+}

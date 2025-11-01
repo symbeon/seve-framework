@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use SEVE Universal in your research, please cite it as below."
+authors:
+- family-names: "SEVE Universal Team"
+  given-names: ""
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Symbeon Tech"
+  given-names: ""
+  orcid: "https://orcid.org/0000-0000-0000-0001"
+title: "SEVE Universal: Adaptive Intelligence Framework for Cross-Domain Applications"
+version: 1.0.0
+date-released: 2025-01-28
+url: "https://github.com/seve-universal/seve-universal"
+repository-code: "https://github.com/seve-universal/seve-universal"
+license: "Proprietary"
+keywords:
+  - "artificial intelligence"
+  - "adaptive systems"
+  - "cross-domain learning"
+  - "universal framework"
+  - "context adaptation"
+  - "empathy AI"
+  - "ethical AI"
+  - "personalization"
+  - "domain adaptation"
+  - "human-AI symbiosis"
+abstract: |
+  SEVE Universal is an adaptive intelligence framework that transcends specific contexts,
+  offering universal capabilities of personalization, empathy, and ethics for any domain
+  of application. The framework enables seamless adaptation across healthcare, education,
+  business, smart cities, gaming, and other domains while maintaining core universal
+  principles of ethical AI, contextual empathy, and adaptive personalization.
+  
+  Key contributions include:
+  - Universal domain adaptation architecture
+  - Cross-domain learning mechanisms
+  - Contextual empathy engine
+  - Ethical AI framework
+  - Cultural adaptation capabilities
+  - Human-AI symbiosis protocols

@@ -94,6 +94,10 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Alinhamento técnico, conceitual e estratégico
   - Plausibilidade científica confirmada
   - Roadmap de validação experimental
+- **[Framework Evaluation Report](./FRAMEWORK_EVALUATION_REPORT.md)** 🔴 **NOVO** ⭐
+  - Avaliação consolidada da versão v1.0.0
+  - Resultados de performance e readiness
+  - Riscos, mitigação e recomendações prioritárias
 - **[White Paper Completo SEVE](./SEVE_COMPLETE_WHITEPAPER.md)** ⭐
   - Visão completa do framework
   - Arquitetura modular detalhada
@@ -139,11 +143,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Error handling e logging
   - Segurança e ética
   - Boas práticas específicas do SEVE
-- **[Performance Benchmarks](./performance/BENCHMARKS.md)** 🟡 **ESTRUTURA BASE**
-  - Métricas planejadas (latência, throughput)
-  - Uso de recursos (CPU, memória, GPU)
-  - Otimizações implementadas
-  - Estrutura para benchmarks reais (a preencher)
+- **[Performance Benchmarks](./performance/BENCHMARKS.md)** ✅ **COMPLETO**
+  - Métricas reais de Vision (CPU/GPU), Sense e Ethics
+  - Teste de carga REST (`wrk`, 820 req/s, p95 212 ms)
+  - Uso de recursos (CPU, RAM, GPU, VRAM) monitorado
+  - Gargalos identificados e estratégias de otimização
 - **[Padrões de Código](./CODING_STANDARDS.md)** - Convenções
 
 ---
@@ -177,6 +181,19 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 - **[DOCSYNC](../docsync.yaml)** - Sincronização automática de documentação
 - **[GIDEN](../giden.yaml)** - Geração inteligente de documentação
+
+---
+
+## 🗂️ **Arquivos Históricos e Legado**
+
+- **[DESENVOLVIMENTO_SEVE_UNIVERSAL_V1](./archives/DESENVOLVIMENTO_SEVE_UNIVERSAL_V1.md)** — cronologia de desenvolvimento universal
+- **[RESUMO_FINAL_DOCUMENTOS_ADAPTADOS](./archives/RESUMO_FINAL_DOCUMENTOS_ADAPTADOS.md)** — síntese da documentação universal
+- **[SESSION_SEVE_UNIVERSAL_V1](./archives/sessions/SESSION_SEVE_UNIVERSAL_V1.md)** — registro de sessão do projeto
+- **[EAP_SEVE_UNIVERSAL_V1](./governance/EAP_SEVE_UNIVERSAL_V1.md)** — EAP consolidada (baseline histórico)
+- **[Documentação Legada GuardFlow](./legacy_guardflow/SEVE_UNIVERSAL_DOCUMENTATION.md)** — materiais conceituais do SEVE-Universal
+  - `./legacy_guardflow/presentations/` — apresentações históricas
+  - `./legacy_guardflow/docsync/` — relatórios DOCSYNC anteriores
+- **[Código Legado GuardFlow](../legacy/guardflow_code/)** — snapshot do framework SEVE-UNIVERSAL (somente referência)
 
 ---
 
