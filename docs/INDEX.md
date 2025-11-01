@@ -69,6 +69,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Integração com sistemas web (FastAPI, Flask, Django)
   - Integração com ERP, IoT e blockchain
   - Exemplos práticos de código
+- **[API Reference](./api/README.md)** 🔴 **NOVO** ⭐
+  - Documentação completa da API Python
+  - Endpoints REST documentados
+  - Smart Contracts (SEVEToken, SEVEProtocol, SEVEDAO)
+  - Exemplos de uso para todas as APIs
 - **[TaskMash Superescopo](./TASKMASH_SUPERSCOPE.md)** 📋 **NOVO**
   - TODO completo de documentação faltante
   - Progresso de geração via DOCSYNC
