@@ -77,6 +77,12 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Padrões e especificações (ERC-20, LGPD, GDPR, AI Act)
   - Conceitos fundamentais (Privacy by Design, ESG, SiD)
   - Atribuições e licenças completas
+- **[Base de Pesquisa Integrada](./RESEARCH_BASE_SEVE_INTEGRATION.md)** 🔬 ⭐
+  - Análise detalhada de cada referência e sua integração com SEVE
+  - Por que cada escolha foi feita (justificativa técnica e estratégica)
+  - Como cada referência contribui para objetivos do SEVE
+  - Matriz completa de integração e benefícios
+  - Base de pesquisa integrada ao core do framework
   - Fundamentação metodológica e posicionamento
 - **[Classificação de Módulos por Nicho](./MODULE_CLASSIFICATION_BY_NICHE.md)** ⭐
   - Nomeação por nicho, sem amarrar a projetos
