@@ -15,6 +15,16 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 ### **🛠️ Operacional**
 
+#### Documentação de Suporte
+- **[FAQ](./FAQ.md)** 🔴 **NOVO** ⭐
+  - Perguntas frequentes sobre instalação, configuração, licenciamento
+  - Questões sobre blockchain, ética e privacidade
+  - Dúvidas sobre integração e desenvolvimento
+- **[Troubleshooting Guide](./TROUBLESHOOTING.md)** 🔴 **NOVO** ⭐
+  - Problemas comuns e soluções
+  - Guia de diagnóstico
+  - Ferramentas de debugging
+
 #### Deploy e Infraestrutura
 - **[Guia de Deploy](./DEPLOYMENT_GUIDE.md)** ⭐
   - Deploy local (Hardhat Node)
@@ -52,6 +62,17 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 ---
 
 ### **📘 Técnica**
+
+#### Integração e Desenvolvimento
+- **[Integration Guide](./integration/INTEGRATION_GUIDE.md)** 🔴 **NOVO** ⭐
+  - Como integrar SEVE em aplicações Python
+  - Integração com sistemas web (FastAPI, Flask, Django)
+  - Integração com ERP, IoT e blockchain
+  - Exemplos práticos de código
+- **[TaskMash Superescopo](./TASKMASH_SUPERSCOPE.md)** 📋 **NOVO**
+  - TODO completo de documentação faltante
+  - Progresso de geração via DOCSYNC
+  - Priorização e estimativas
 
 #### Arquitetura e Fundamentação
 - **[Base de Conhecimento Sistemática](./SYSTEMATIC_KNOWLEDGE_BASE.md)** ⭐ **REFERÊNCIA CENTRAL**
