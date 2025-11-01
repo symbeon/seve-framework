@@ -72,6 +72,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 - **[Integração SiD ↔ SEVE](./SID_SEVE_INTEGRATION.md)** ⭐
   - Alinhamento estratégico com SiD Framework
   - Matriz de correlação ELSI ↔ SEVE
+- **[Referências e Créditos](./REFERENCES.md)** 📚
+  - Bibliotecas e frameworks utilizados (OpenZeppelin, Hardhat, PyTorch, etc.)
+  - Padrões e especificações (ERC-20, LGPD, GDPR, AI Act)
+  - Conceitos fundamentais (Privacy by Design, ESG, SiD)
+  - Atribuições e licenças completas
   - Fundamentação metodológica e posicionamento
 - **[Classificação de Módulos por Nicho](./MODULE_CLASSIFICATION_BY_NICHE.md)** ⭐
   - Nomeação por nicho, sem amarrar a projetos
