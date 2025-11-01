@@ -139,6 +139,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Error handling e logging
   - Segurança e ética
   - Boas práticas específicas do SEVE
+- **[Performance Benchmarks](./performance/BENCHMARKS.md)** 🟡 **ESTRUTURA BASE**
+  - Métricas planejadas (latência, throughput)
+  - Uso de recursos (CPU, memória, GPU)
+  - Otimizações implementadas
+  - Estrutura para benchmarks reais (a preencher)
 - **[Padrões de Código](./CODING_STANDARDS.md)** - Convenções
 
 ---
