@@ -1,0 +1,100 @@
+[project]
+name = "seve-universal"
+version = "1.0.0"
+description = "SEVE Universal - Adaptive Intelligence Framework for Any Domain"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "SEVE Universal Team", email = "research@seve-universal.ai" },
+    { name = "Symbeon Tech", email = "research@symbeon.ai" }
+]
+keywords = [
+    "SEVE", "universal", "adaptive", "AI", "empathy", "ethics", 
+    "personalization", "cross-domain", "context-aware", "research"
+]
+classifiers = [
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+]
+
+[project.urls]
+Homepage = "https://github.com/seve-universal"
+Documentation = "https://docs.seve-universal.ai"
+Repository = "https://github.com/seve-universal/seve-universal"
+Issues = "https://github.com/seve-universal/seve-universal/issues"
+
+[project.optional-dependencies]
+healthcare = [
+    "pydicom>=2.3.0",
+    "scikit-learn>=1.3.0",
+    "medical-nlp>=0.1.0",
+]
+education = [
+    "nltk>=3.8.0",
+    "spacy>=3.6.0",
+    "educational-metrics>=0.2.0",
+]
+business = [
+    "pandas>=2.0.0",
+    "scipy>=1.11.0",
+    "business-intelligence>=0.3.0",
+]
+smart-city = [
+    "geopandas>=0.13.0",
+    "folium>=0.14.0",
+    "urban-analytics>=0.1.0",
+]
+gaming = [
+    "opencv-python>=4.8.0",
+    "pygame>=2.5.0",
+    "game-ai>=0.2.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "black>=23.0",
+    "isort>=5.12",
+    "flake8>=6.0",
+    "mypy>=1.7",
+]
+docs = [
+    "sphinx>=7.0",
+    "sphinx-rtd-theme>=1.3",
+    "myst-parser>=2.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q --tb=short"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

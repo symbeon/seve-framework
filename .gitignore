@@ -350,3 +350,7 @@ production/
 # Staging files
 .staging/
 staging/
+# Legacy artifacts
+legacy/guardflow_code/SEVE-UNIVERSAL/_git_legacy/
+legacy/guardflow_code/SEVE-UNIVERSAL/_git_legacy/**
+legacy/guardflow_code/SEVE-UNIVERSAL/_git_legacy/**
