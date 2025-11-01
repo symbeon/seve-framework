@@ -78,6 +78,39 @@ sync_config:
       template: "config_template.md"
       target: "docs/operations/env"
       auto_sync: true
+    
+    # Missing documentation - Critical documents
+    - pattern: "FAQ.md"
+      template: "faq_template.md"
+      target: "docs"
+      auto_sync: false  # Manual generation for first version
+      validation:
+        - check_completeness
+        - check_links
+    
+    - pattern: "TROUBLESHOOTING.md"
+      template: "troubleshooting_template.md"
+      target: "docs"
+      auto_sync: false  # Manual generation for first version
+      validation:
+        - check_completeness
+        - check_examples
+    
+    - pattern: "INTEGRATION_GUIDE.md"
+      template: "integration_template.md"
+      target: "docs/integration"
+      auto_sync: false  # Manual generation for first version
+      validation:
+        - check_completeness
+        - check_code_examples
+    
+    - pattern: "ADR-*.md"
+      template: "adr_template.md"
+      target: "docs/adr"
+      auto_sync: false  # Manual creation per decision
+      validation:
+        - check_adr_format
+        - check_references
 
 # Auto-sync settings
 auto_sync:
@@ -164,6 +197,48 @@ templates:
         - prerequisites
         - steps
         - expected_results
+    
+    - name: "faq_template"
+      path: "templates/faq_template.md"
+      variables:
+        - faq_index
+        - faq_sections
+        - support_resources
+        - last_updated
+    
+    - name: "troubleshooting_template"
+      path: "templates/troubleshooting_template.md"
+      variables:
+        - troubleshooting_index
+        - troubleshooting_sections
+        - diagnostic_tools
+        - support_resources
+        - last_updated
+    
+    - name: "integration_template"
+      path: "templates/integration_template.md"
+      variables:
+        - integration_index
+        - integration_sections
+        - integration_examples
+        - integration_considerations
+        - support_resources
+        - last_updated
+    
+    - name: "adr_template"
+      path: "templates/adr_template.md"
+      variables:
+        - adr_number
+        - adr_title
+        - status
+        - date
+        - deciders
+        - context
+        - decision
+        - positive_consequences
+        - negative_consequences
+        - alternatives
+        - references
 
 # Workflow settings
 workflows:
