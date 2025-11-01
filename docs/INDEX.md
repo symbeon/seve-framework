@@ -124,8 +124,22 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 
 #### Desenvolvimento
 - **[Guia de Contribuição](../CONTRIBUTING.md)** - Como contribuir
+- **[Testing Guide](./TESTING.md)** 🔴 **NOVO** ⭐
+  - Estrutura completa de testes (unit, integration, E2E)
+  - Exemplos Python e Solidity
+  - Fixtures, mocks e boas práticas
+  - Cobertura e CI/CD
+- **[Migration Guide](./MIGRATION.md)** 🔴 **NOVO** ⭐
+  - Guia completo de migração entre versões
+  - Breaking changes documentados
+  - Checklist passo a passo
+- **[Best Practices Guide](./BEST_PRACTICES.md)** 🔴 **NOVO** ⭐
+  - Convenções Python e Solidity
+  - Padrões de arquitetura
+  - Error handling e logging
+  - Segurança e ética
+  - Boas práticas específicas do SEVE
 - **[Padrões de Código](./CODING_STANDARDS.md)** - Convenções
-- **[Testes](./TESTING.md)** - Estratégias e práticas
 
 ---
 
