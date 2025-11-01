@@ -346,7 +346,7 @@ Esta estratégia de posicionamento transforma seu trabalho no SEVE em uma **port
 - [ ] Otimizar perfil LinkedIn
 - [ ] Criar website pessoal básico
 - [ ] Organizar GitHub como showcase
-- [ ] Escrever primeiro artigo: "Por que criei o SEVE Framework"
+- [x] Escrever primeiro artigo: "Por que criei o SEVE Framework" ✅
 
 #### Semana 3-4: Conteúdo
 - [ ] Publicar artigo técnico sobre SEVE
