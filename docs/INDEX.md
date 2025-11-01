@@ -80,6 +80,10 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Priorização e estimativas
 
 #### Arquitetura e Fundamentação
+- **[Architecture Decision Records (ADR)](./adr/README.md)** 🔴 **NOVO** ⭐
+  - Documentação de decisões arquiteturais importantes
+  - 7 ADRs completos (PyTorch, OpenZeppelin, Não Reconhecimento Facial, etc.)
+  - Justificativas técnicas e estratégicas
 - **[Base de Conhecimento Sistemática](./SYSTEMATIC_KNOWLEDGE_BASE.md)** ⭐ **REFERÊNCIA CENTRAL**
   - Consolidação de todas as descobertas e estratégias
   - Fundamentos conceituais (SiD), arquitetura modular, alinhamento estratégico
