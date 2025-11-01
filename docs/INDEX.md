@@ -95,6 +95,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Checklist por tipo de deploy
   - Ações necessárias antes do deploy
   - Score de prontidão: 92%
+- **[Estratégia de Posicionamento Profissional](./PROFESSIONAL_POSITIONING_STRATEGY.md)** ⭐ **NOVO**
+  - Como se posicionar no mercado blockchain
+  - SEVE Framework como diferencial competitivo
+  - Caminhos de monetização profissional
+  - Roadmap de 90 dias para autoridade técnica
 - **[Análise de Custo de Desenvolvimento](./DEVELOPMENT_COST_ANALYSIS.md)** ⭐
   - Estimativa completa de custo empresarial
   - Análise por fase de desenvolvimento
