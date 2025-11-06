@@ -78,6 +78,11 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - TODO completo de documentação faltante
   - Progresso de geração via DOCSYNC
   - Priorização e estimativas
+- **[TODO: Integração Completa dos Módulos Universais](./TODO_INTEGRATION_COMPLETE.md)** 🔴 **NOVO** ⭐
+  - Plano completo de integração (61 tarefas em 5 fases)
+  - Priorização crítica/importante/desejável
+  - Métricas de progresso e critérios de conclusão
+  - Estimativas e dependências entre tarefas
 
 #### Arquitetura e Fundamentação
 - **[Architecture Decision Records (ADR)](./adr/README.md)** 🔴 **NOVO** ⭐
@@ -98,6 +103,16 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
   - Avaliação consolidada da versão v1.0.0
   - Resultados de performance e readiness
   - Riscos, mitigação e recomendações prioritárias
+- **[Análise de Impacto: Integração dos Módulos Universais](./INTEGRATION_IMPACT_ANALYSIS.md)** 🔴 **NOVO** ⭐
+  - Análise completa do impacto da integração dos módulos legados
+  - Impacto arquitetural, funcional, técnico e comercial
+  - Métricas de sucesso e recomendações prioritárias
+  - Riscos identificados e planos de mitigação
+- **[Relatório de Progresso: Integração dos Módulos Universais](./INTEGRATION_PROGRESS_REPORT.md)** 🔴 **NOVO** ⭐
+  - Status atual da integração (25% completo, Fase 1: 89%, Fase 2: 24%)
+  - Tarefas concluídas e pendentes
+  - Métricas de qualidade e progresso
+  - Próximos passos prioritários
 - **[White Paper Completo SEVE](./SEVE_COMPLETE_WHITEPAPER.md)** ⭐
   - Visão completa do framework
   - Arquitetura modular detalhada
@@ -224,6 +239,14 @@ Documentação completa e organizada para desenvolvimento, deploy e operação d
 - **[Template .env](../.env.template)** - Template de ambiente
 - **[Exemplos de Deploy](../scripts/)** - Scripts de deploy
 - **[Exemplos de Uso](../examples/)** - Casos de uso práticos
+- **[Universal Mode Guide](./universal/UNIVERSAL_MODE_GUIDE.md)** 🔴 **NOVO** ⭐
+  - Como usar HYBRID/UNIVERSAL
+  - Registro de adaptadores por domínio
+  - Empatia e Ética Universal integradas
+- **Exemplos Práticos (Universal)** 🔴 **NOVO** ⭐
+  - `examples/universal_healthcare.py`
+  - `examples/universal_education.py`
+  - `examples/universal_retail.py`
 
 ---
 

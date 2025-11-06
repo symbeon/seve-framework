@@ -14,9 +14,9 @@ from .sense import SEVESenseModule
 from .ethics import SEVEEthicsModule
 from .link import SEVELinkModule
 
-# Import Universal components
+# Import Universal components from internal package
 try:
-    from seve_universal import (
+    from .universal import (
         SEVEUniversalCore as UniversalCore,
         DomainConfig,
         DomainType,
@@ -24,10 +24,10 @@ try:
         AdaptationLevel,
         UniversalAdapterRegistry,
         UniversalEthicsEngine,
-        UniversalEmpathyEngine
+        UniversalEmpathyEngine,
     )
     UNIVERSAL_AVAILABLE = True
-except ImportError:
+except ImportError as e:
     UNIVERSAL_AVAILABLE = False
     UniversalCore = None
     DomainConfig = None
@@ -37,6 +37,9 @@ except ImportError:
     UniversalAdapterRegistry = None
     UniversalEthicsEngine = None
     UniversalEmpathyEngine = None
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.warning(f"Universal components not available: {e}")
 
 __version__ = "1.0.0"
 __author__ = "Symbeon Tech - EON Team"

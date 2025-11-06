@@ -18,6 +18,14 @@ from datetime import datetime
 
 from .config import SEVEConfig, EthicsLevel
 
+# Import Universal Ethics Engine if available
+try:
+    from .universal.ethics import UniversalEthicsEngine
+    UNIVERSAL_ETHICS_AVAILABLE = True
+except ImportError:
+    UNIVERSAL_ETHICS_AVAILABLE = False
+    UniversalEthicsEngine = None
+
 logger = logging.getLogger(__name__)
 
 class EthicalPrinciple(Enum):
@@ -106,6 +114,15 @@ class SEVEEthicsModule:
         
         # Decision history for learning
         self.decision_history: List[Dict[str, Any]] = []
+        
+        # Universal Ethics Engine (optional integration)
+        self.universal_ethics_engine: Optional[Any] = None
+        if UNIVERSAL_ETHICS_AVAILABLE and config.mode.value in ["universal", "hybrid"]:
+            try:
+                self.universal_ethics_engine = UniversalEthicsEngine()
+                logger.info("Universal Ethics Engine integrated with GuardFlow")
+            except Exception as e:
+                logger.warning(f"Could not initialize Universal Ethics Engine: {e}")
         
         logger.info(f"SEVE Ethics Module initialized with level: {self.ethics_level.value}")
     
@@ -243,7 +260,8 @@ class SEVEEthicsModule:
     async def validate_decision(
         self,
         decision_data: Dict[str, Any],
-        context: Optional[Dict[str, Any]] = None
+        context: Optional[Dict[str, Any]] = None,
+        use_universal: Optional[bool] = None
     ) -> List[EthicalAssessment]:
         """
         Validate a decision against ethical rules
@@ -251,6 +269,7 @@ class SEVEEthicsModule:
         Args:
             decision_data: Data about the decision to validate
             context: Additional context information
+            use_universal: Force use of Universal Ethics Engine (None = auto-detect)
             
         Returns:
             List of ethical assessments
@@ -258,21 +277,73 @@ class SEVEEthicsModule:
         if not self.is_initialized:
             await self.initialize()
         
+        # Determine if we should use Universal Ethics Engine
+        should_use_universal = (
+            use_universal is not None and use_universal
+        ) or (
+            use_universal is None
+            and self.universal_ethics_engine is not None
+            and self.config.mode.value in ["universal", "hybrid"]
+        )
+        
         assessments = []
         
+        # Use Universal Ethics Engine if available and requested
+        if should_use_universal and self.universal_ethics_engine:
+            try:
+                # Get domain from context if available
+                domain = None
+                if context:
+                    domain = context.get("domain") or context.get("domain_type")
+                
+                # Assess using Universal Ethics Engine
+                universal_result = await self.universal_ethics_engine.assess_universal_compliance(
+                    decision_data,
+                    context or {},
+                    domain=domain
+                )
+                
+                # Convert Universal assessments to GuardFlow format
+                for universal_assessment_dict in universal_result.get("assessments", []):
+                    # Map Universal assessment to GuardFlow format
+                    guardflow_assessment = EthicalAssessment(
+                        rule_name=universal_assessment_dict.get("rule_id", "universal_rule"),
+                        principle=EthicalPrinciple.PRIVACY,  # Default, will be mapped if needed
+                        result=ValidationResult.APPROVED if universal_assessment_dict.get("compliance_score", 0) > 0.8 else ValidationResult.REQUIRES_REVIEW,
+                        confidence=universal_assessment_dict.get("compliance_score", 0.5),
+                        reason=f"Universal assessment: {universal_assessment_dict.get('rule_id', 'unknown')}",
+                        suggested_mitigation=universal_result.get("recommendations", [""])[0] if universal_result.get("recommendations") else None,
+                        metadata={
+                            "source": "universal_ethics_engine",
+                            "universal_data": universal_assessment_dict
+                        }
+                    )
+                    assessments.append(guardflow_assessment)
+                
+                logger.debug(f"Universal Ethics Engine assessed: {len(assessments)} assessments")
+            except Exception as e:
+                logger.error(f"Error in Universal Ethics Engine assessment: {e}")
+                # Fall through to GuardFlow
+        
+        # Always run GuardFlow for critical policy enforcement
+        guardflow_assessments = []
         for rule in self.ethical_rules:
             try:
                 assessment = await self._evaluate_rule(rule, decision_data, context)
-                assessments.append(assessment)
+                guardflow_assessments.append(assessment)
             except Exception as e:
                 logger.error(f"Error evaluating rule {rule.name}: {e}")
                 continue
         
+        # Combine assessments: Universal provides broader context, GuardFlow enforces policies
+        # GuardFlow assessments take priority for critical violations
+        all_assessments = assessments + guardflow_assessments
+        
         # Log audit trail if enabled
         if self.audit_logging_enabled:
-            await self._log_audit_trail(decision_data, assessments, context)
+            await self._log_audit_trail(decision_data, all_assessments, context)
         
-        return assessments
+        return all_assessments
     
     async def _evaluate_rule(
         self,
@@ -557,7 +628,12 @@ class SEVEEthicsModule:
             "audit_logging_enabled": self.audit_logging_enabled,
             "ethical_rules_count": len(self.ethical_rules),
             "audit_trail_entries": len(self.audit_trail),
-            "policy_weights": {k.value: v for k, v in self.policy_weights.items()}
+            "policy_weights": {k.value: v for k, v in self.policy_weights.items()},
+            "universal_ethics_engine": {
+                "available": self.universal_ethics_engine is not None,
+                "enabled": self.universal_ethics_engine is not None and self.config.mode.value in ["universal", "hybrid"],
+                "metrics": self.universal_ethics_engine.get_compliance_metrics() if self.universal_ethics_engine else {}
+            }
         }
 
 # Demo function

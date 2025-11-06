@@ -20,9 +20,9 @@ from .sense import SEVESenseModule
 from .ethics import SEVEEthicsModule
 from .link import SEVELinkModule
 
-# Import Universal components if available
+# Import Universal components from integrated package
 try:
-    from seve_universal import (
+    from .universal import (
         SEVEUniversalCore,
         DomainConfig,
         DomainType,
@@ -31,7 +31,8 @@ try:
         UniversalEmpathyEngine
     )
     UNIVERSAL_AVAILABLE = True
-except ImportError:
+except ImportError as e:
+    logger.warning(f"Universal components not available: {e}")
     UNIVERSAL_AVAILABLE = False
     SEVEUniversalCore = None
     DomainConfig = None

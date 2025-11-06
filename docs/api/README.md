@@ -143,11 +143,13 @@ Processa contexto focado em visão computacional.
 
 ---
 
-#### `SEVEUniversalCore`
+#### `SEVEUniversalCore` 🔴 **ATUALIZADO**
 
-Core Universal para adaptação multi-domínio (requer `seve-universal`).
+Core Universal para adaptação multi-domínio (integrado no framework).
 
-**Localização**: `seve_universal.core.SEVEUniversalCore`
+**Localização**: `seve_framework.universal.core.SEVEUniversalCore`
+
+**📚 Documentação Completa**: [SEVEUniversalCore API Reference](./universal/SEVEUniversalCore.md)
 
 **Métodos Principais:**
 
@@ -159,6 +161,59 @@ Processa contexto Universal com adaptação de domínio.
 - `data` (Dict[str, Any]): Dados a processar
 
 **Retorno**: `Dict[str, Any]` com resultados adaptados ao domínio
+
+**Exemplo:**
+```python
+from seve_framework.universal import SEVEUniversalCore, DomainConfig, DomainType, UniversalContext
+
+config = DomainConfig(domain_type=DomainType.HEALTHCARE, domain_name="Healthcare System")
+core = SEVEUniversalCore(config)
+
+context = UniversalContext(
+    domain=DomainType.HEALTHCARE,
+    user_profile={"patient_id": "P123"},
+    environmental_data={"hospital": "General"},
+    cultural_context="brazil",
+    temporal_context={"timestamp": 1234567890},
+    metadata={}
+)
+
+result = await core.process_universal_context(context, {"patient_id": "P123", "vitals": {"heart_rate": 72}})
+```
+
+---
+
+## Componentes Universais 🔴 **NOVO**
+
+Componentes para adaptação multi-domínio e empatia computacional.
+
+### SEVE Universal Core
+
+- **[SEVEUniversalCore](./universal/SEVEUniversalCore.md)** 🔴 **NOVO**
+  - Núcleo adaptativo universal
+  - Gerenciamento de domínios e adaptadores
+  - Processamento contextual multi-domínio
+
+### Universal Empathy Engine
+
+- **[UniversalEmpathyEngine](./universal/UniversalEmpathyEngine.md)** 🔴 **NOVO**
+  - Motor de empatia computacional
+  - Detecção de pistas emocionais
+  - Adaptação cultural de respostas
+
+### Universal Ethics Engine
+
+- **[UniversalEthicsEngine](./universal/UniversalEthicsEngine.md)** 🔴 **NOVO**
+  - Motor de ética multi-domínio
+  - Avaliação de compliance global
+  - Princípios éticos universais
+
+### Domain Adapters
+
+- **[Domain Adapters](./universal/DomainAdapters.md)** 🔴 **NOVO**
+  - 8 adaptadores prontos (Healthcare, Education, Business, Smart City, Gaming, Retail, Finance, Manufacturing)
+  - Registro e gerenciamento de adaptadores
+  - Interface para adaptadores customizados
 
 ---
 
