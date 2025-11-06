@@ -45,6 +45,11 @@ Este diretório contém Architecture Decision Records (ADR) que documentam decis
   - FastAPI como framework web para APIs REST
   - Performance, async e type safety
 
+- **[ADR-008: Integração dos Módulos Universais Legados](./ADR-008-universal-integration.md)** ✅ 🔴 **NOVO**
+  - Decisão de integrar módulos universais do código legado
+  - UniversalEthicsEngine, UniversalEmpathyEngine, adaptadores de domínio
+  - Entrega de funcionalidades prometidas de "Universal Domain Adaptation"
+
 ---
 
 ## 📝 **Formato ADR**
@@ -72,6 +77,7 @@ Cada ADR segue este formato:
 | 005 | Integração com SiD Framework | ✅ Aceito | 2025-01-29 |
 | 006 | Integração Blockchain | ✅ Aceito | 2025-01-29 |
 | 007 | FastAPI vs Flask/Django | ✅ Aceito | 2025-01-29 |
+| 008 | Integração dos Módulos Universais | ✅ Aceito | 2025-01-29 |
 
 ---
 
