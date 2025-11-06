@@ -31,7 +31,8 @@ registry.register_adapter(DomainType.HEALTHCARE, HealthcareAdapter())
 adapter = registry.get_adapter(DomainType.HEALTHCARE)
 ```
 
-Métodos:
+#### Métodos
+
 - `register_adapter(domain: DomainType, adapter: DomainAdapter) -> None`
 - `register_custom_adapter(name: str, adapter: DomainAdapter) -> None`
 - `get_adapter(domain: DomainType) -> Optional[DomainAdapter]`
@@ -45,7 +46,8 @@ Métodos:
 
 ### `DomainAdapter` (ABC)
 
-Assinatura típica:
+#### Assinatura Típica
+
 ```python
 class DomainAdapter(ABC):
     def adapt_to_context(self, context: UniversalContext) -> UniversalContext: ...
@@ -58,41 +60,49 @@ class DomainAdapter(ABC):
 ## Adaptadores Disponíveis
 
 ### HealthcareAdapter
+
 - Metadados: `medical_privacy=True`, `hipaa_compliance=True`, `patient_safety=True`
 - Features: `patient_id`, `medical_history`, `vital_signs`, `diagnosis`, `treatment`
 - Regras: segurança do paciente, proteção de privacidade
 
 ### EducationAdapter
+
 - Metadados: `learning_objectives=True`, `student_privacy=True`, `educational_standards=True`
 - Features: `learning_style`, `academic_level`, `subject_matter`, `learning_progress`
 - Regras: adequação pedagógica, privacidade de estudantes
 
 ### BusinessAdapter
+
 - Metadados: conformidade corporativa e governança
 - Features: `customer_segments`, `kpis`, `operations`
 - Regras: compliance, risco operacional
 
 ### SmartCityAdapter
+
 - Metadados: dados urbanos e padrões de sustentabilidade
 - Features: `traffic`, `energy`, `sensors`
 - Regras: segurança pública, privacidade urbana
 
 ### GamingAdapter
+
 - Metadados: experiência do jogador e fairness
 - Features: `session_stats`, `player_profile`
 - Regras: anticheat, balanceamento
 
 ### RetailAdapter
+
 - Metadados: `customer_privacy=True`, `esg_compliance=True`, `inventory_management=True`
 - Features: `customer_profile`, `product_catalog`, `purchase_history`, `inventory`, `esg_scores`
 - Regras: práticas ESG, proteção de dados do cliente
 
 ### FinanceAdapter
+
 - Metadados: conformidade regulatória (KYC/AML)
 - Features: `accounts`, `transactions`, `risk_scores`
 - Regras: prevenção à fraude, risco financeiro
 
 ### ManufacturingAdapter
+
 - Metadados: segurança industrial
 - Features: `production_line`, `quality_metrics`, `maintenance`
 - Regras: segurança, qualidade, downtime
@@ -135,6 +145,7 @@ print(result["domain_result"])     # resultado de regras do domínio
 ---
 
 ## Boas Práticas
+
 - Sempre definir metadados de compliance (ex.: HIPAA, ESG) no `adapt_to_context`
 - Reduzir dados sensíveis no `extract_domain_features` (privacy by design)
 - Isolar efeitos colaterais e validar entradas em `apply_domain_rules`
@@ -142,6 +153,7 @@ print(result["domain_result"])     # resultado de regras do domínio
 ---
 
 ## Referências
+
 - `docs/MODULE_CLASSIFICATION_BY_NICHE.md`
 - `docs/TECHNICAL_VALIDATION_ALIGNMENT.md`
 - `docs/adr/ADR-008-universal-integration.md`

@@ -28,14 +28,17 @@ engine = UniversalEthicsEngine()
 #### Métodos Principais
 
 ##### `async assess_universal_compliance(data: Dict[str, Any], context: Dict[str, Any], domain: Optional[str] = None) -> Dict[str, Any]`
+
 Avalia compliance ético universal (e opcionalmente por domínio) para um determinado input.
 
 Parâmetros:
+
 - `data`: dados/processo/decisão a ser avaliado
 - `context`: contexto de execução (timestamp, explicabilidade, consentimento, etc.)
 - `domain`: domínio específico (ex.: "healthcare")
 
 Retorno (exemplo):
+
 ```python
 {
   "overall_compliance_score": 0.82,
@@ -51,9 +54,11 @@ Retorno (exemplo):
 ```
 
 ##### `register_domain_engine(domain: str, engine: DomainEthicsEngine) -> None`
+
 Registra um motor de ética específico de domínio.
 
 ##### `get_compliance_metrics() -> Dict[str, Any]`
+
 Retorna métricas agregadas (histórico, média de scores, domínios cobertos, etc.).
 
 ---
@@ -61,6 +66,7 @@ Retorna métricas agregadas (histórico, média de scores, domínios cobertos, e
 ## Classes de Suporte
 
 ### `DomainEthicsEngine`
+
 Interface para motores de ética por domínio.
 
 ```python
@@ -76,12 +82,15 @@ class HealthcareEthics(DomainEthicsEngine):
 ```
 
 ### `EthicalRule`
+
 Regra ética com princípio, severidade e descrição.
 
 ### `EthicalAssessment`
+
 Resultado de avaliação de uma regra com score, violações e recomendações.
 
 ### Enums
+
 - `EthicalPrinciple`: PRIVACY, TRANSPARENCY, FAIRNESS, ACCOUNTABILITY, AUTONOMY
 - `EthicalComplianceLevel`: OPTIONAL, LOW, MEDIUM, HIGH, CRITICAL
 
@@ -90,6 +99,7 @@ Resultado de avaliação de uma regra com score, violações e recomendações.
 ## Exemplos
 
 ### Avaliação básica
+
 ```python
 engine = UniversalEthicsEngine()
 
@@ -104,6 +114,7 @@ print(result["recommendations"])          # ["Habilitar criptografia at rest"]
 ```
 
 ### Avaliação com domínio
+
 ```python
 result = await engine.assess_universal_compliance(
     data={"patient_id": "P123"},
@@ -119,6 +130,7 @@ result = await engine.assess_universal_compliance(
 No modo HYBRID/UNIVERSAL, `SEVEEthicsModule` utiliza o `UniversalEthicsEngine` para obter contexto amplo (score e recomendações) e sempre executa as políticas críticas do GuardFlow. O resultado final combina as duas avaliações, mantendo a segurança e conformidade.
 
 Pontos-chave:
+
 - Universal fornece visão global e recomendações de mitigação
 - GuardFlow aplica políticas obrigatórias e auditoria
 - Fallback seguro: caso Universal falhe, GuardFlow continua ativo
@@ -144,6 +156,7 @@ Pontos-chave:
 ---
 
 ## Referências
+
 - ADR-008: Integração dos Módulos Universais
 - WHY_I_CREATED_SEVE (princípio "Watch, not judge")
 - BEST_PRACTICES (Seção de ética)
