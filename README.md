@@ -44,7 +44,7 @@ The SEVE Framework is the **computational translation** and **technological exte
 
 ### **Why SEVE?**
 
-✅ **Ethics-First Design**: Automatic ethical decision validation via GuardFlow  
+✅ **Ethics-First Design**: Automatic ethical decision validation via SEVE-Ethics Module  
 ✅ **Privacy by Design**: Native anonymization, pseudonymization, and data protection  
 ✅ **Blockchain-Native**: Smart contracts for governance, licensing, and tokenomics  
 ✅ **Decentralized**: DAO for community governance  
@@ -63,7 +63,7 @@ The SEVE Framework is the **computational translation** and **technological exte
 | **SEVE-Core** | Modular and extensible core | **Individual (I)** |
 | **SEVE-Vision** | Computer vision with privacy protection | **Energy & Materials (E)** |
 | **SEVE-Sense** | Multi-sensor fusion and multimodal processing | **Energy & Materials (E)** |
-| **SEVE-Ethics** | GuardFlow for automated ethical validation | **Society (S)** |
+| **SEVE-Ethics** | Automated ethical validation and compliance | **Society (S)** |
 | **SEVE-Link** | Secure and decentralized connectivity | **Life (L)** |
 
 📊 **[See complete SiD ↔ SEVE correlation matrix →](./docs/SID_SEVE_INTEGRATION.md#3-matriz-de-simetria-funcional-elsi--seve)**
@@ -115,7 +115,7 @@ pytest tests/
 ```python
 from seve_framework import SEVEFramework
 from seve_framework.vision import SEVEVision
-from seve_framework.ethics import GuardFlow
+from seve_framework.ethics import SEVEEthicsModule
 
 # Initialize framework
 seve = SEVEFramework(config_path="config/default.yaml")
@@ -125,7 +125,7 @@ vision = SEVEVision(seve.core)
 result = vision.process_image("path/to/image.jpg")
 
 # Validate ethics
-ethics = GuardFlow(seve.core)
+ethics = SEVEEthicsModule(seve.core)
 is_ethical = ethics.validate_action(action_data)
 ```
 
@@ -161,7 +161,7 @@ npm run deploy:polygon
 │                            │                                  │
 │                  ┌─────────▼──────────┐                       │
 │                  │   SEVE-Ethics      │                       │
-│                  │   (GuardFlow)      │                       │
+│                  │   (Ethics Module)  │                       │
 │                  └─────────┬──────────┘                       │
 │                            │                                  │
 │                  ┌─────────▼──────────┐                       │
@@ -456,7 +456,7 @@ O SEVE Framework é a **tradução computacional** e **extensão tecnológica** 
 
 ### **Por que SEVE?**
 
-✅ **Ética-First Design**: Validação automática de decisões éticas via GuardFlow  
+✅ **Ética-First Design**: Validação automática de decisões éticas via Módulo SEVE-Ethics  
 ✅ **Privacy by Design**: Anonimização, pseudonimização e proteção de dados nativa  
 ✅ **Blockchain-Native**: Smart contracts para governança, licenciamento e tokenomics  
 ✅ **Descentralizado**: DAO para governança comunitária  
@@ -474,7 +474,7 @@ O SEVE Framework é a **tradução computacional** e **extensão tecnológica** 
 | **SEVE-Core** | Núcleo modular e extensível | **Individual (I)** |
 | **SEVE-Vision** | Computer vision com proteção de privacidade | **Energy & Materials (E)** |
 | **SEVE-Sense** | Multi-sensor fusion e processamento multimodal | **Energy & Materials (E)** |
-| **SEVE-Ethics** | GuardFlow para validação ética automatizada | **Society (S)** |
+| **SEVE-Ethics** | Validação ética automatizada e conformidade | **Society (S)** |
 | **SEVE-Link** | Conectividade segura e descentralizada | **Life (L)** |
 
 📊 **[Ver matriz completa de correlação SiD ↔ SEVE →](./docs/SID_SEVE_INTEGRATION.md#3-matriz-de-simetria-funcional-elsi--seve)**
@@ -526,7 +526,7 @@ pytest tests/
 ```python
 from seve_framework import SEVEFramework
 from seve_framework.vision import SEVEVision
-from seve_framework.ethics import GuardFlow
+from seve_framework.ethics import SEVEEthicsModule
 
 # Inicializar framework
 seve = SEVEFramework(config_path="config/default.yaml")
@@ -536,7 +536,7 @@ vision = SEVEVision(seve.core)
 result = vision.process_image("path/to/image.jpg")
 
 # Validar ética
-ethics = GuardFlow(seve.core)
+ethics = SEVEEthicsModule(seve.core)
 is_ethical = ethics.validate_action(action_data)
 ```
 
@@ -572,7 +572,7 @@ npm run deploy:polygon
 │                            │                                  │
 │                  ┌─────────▼──────────┐                       │
 │                  │   SEVE-Ethics      │                       │
-│                  │   (GuardFlow)      │                       │
+│                  │   (Ethics Module)  │                       │
 │                  └─────────┬──────────┘                       │
 │                            │                                  │
 │                  ┌─────────▼──────────┐                       │
@@ -787,7 +787,7 @@ A **SEVE DAO** permite:
 - ✅ Verificação formal de contratos
 - ✅ Monitoramento contínuo de segurança
 - ✅ Privacy by Design implementado
-- ✅ GuardFlow para validação ética
+- ✅ SEVE-Ethics Module para validação ética
 
 ### **Reportar Vulnerabilidades**
 
