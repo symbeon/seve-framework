@@ -135,5 +135,3 @@ flowchart TD
 - **Site**: <https://seve-framework.ai>  
 - **GitHub**: <https://github.com/symbeon/seve-framework>  
 - **Discord/Telegram**: <https://community.seve-framework.ai>
-
-
