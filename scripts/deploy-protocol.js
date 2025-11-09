@@ -3,27 +3,40 @@ const hre = require("hardhat");
 async function main() {
   console.log("🚀 Deploying SEVE Protocol...");
   
-  // Get token address from command line or deployments
-  const tokenAddress = process.env.TOKEN_ADDRESS || process.argv[2];
+  // Get token address from command line, env, or deployments file
+  let tokenAddress = process.env.TOKEN_ADDRESS || process.argv[2];
+  
+  // If not provided, try to read from deployments file
+  if (!tokenAddress) {
+    const fs = require('fs');
+    const deploymentsFile = `deployments/${hre.network.name}_deployments.json`;
+    if (fs.existsSync(deploymentsFile)) {
+      const deployments = JSON.parse(fs.readFileSync(deploymentsFile, 'utf8'));
+      tokenAddress = deployments.SEVEToken?.address;
+    }
+  }
   
   if (!tokenAddress) {
-    throw new Error("Token address is required");
+    throw new Error("Token address is required. Deploy token first or provide TOKEN_ADDRESS env var.");
   }
   
   const SEVEProtocol = await hre.ethers.getContractFactory("SEVEProtocol");
   const seveProtocol = await SEVEProtocol.deploy(tokenAddress);
   
-  await seveProtocol.deployed();
+  await seveProtocol.waitForDeployment();
   
-  console.log("✅ SEVE Protocol deployed to:", seveProtocol.address);
-  console.log("📊 Transaction hash:", seveProtocol.deployTransaction.hash);
+  const seveProtocolAddress = await seveProtocol.getAddress();
+  const deployTx = seveProtocol.deploymentTransaction();
+  
+  console.log("✅ SEVE Protocol deployed to:", seveProtocolAddress);
+  console.log("📊 Transaction hash:", deployTx?.hash || "N/A");
   console.log("🔗 Token address:", tokenAddress);
   
   // Save deployment info
   const deploymentInfo = {
     contract: "SEVEProtocol",
-    address: seveProtocol.address,
-    transactionHash: seveProtocol.deployTransaction.hash,
+    address: seveProtocolAddress,
+    transactionHash: deployTx?.hash || "N/A",
     tokenAddress: tokenAddress,
     network: hre.network.name,
     timestamp: new Date().toISOString()
