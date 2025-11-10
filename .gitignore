@@ -70,3 +70,12 @@ models/
 
 # Desktop paths (não versionar)
 Desktop/
+
+# Scripts sensíveis (podem conter referências a chaves)
+scripts/update-private-key.ps1
+
+# Arquivos de status temporários
+docs/STATUS_EXECUCAO.md
+
+# Diretórios duplicados/nested
+SEVE-FRAMEWORK/
