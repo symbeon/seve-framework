@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Pedido de Patente - SEVE Framework
+  Sistema de Validação Ética Automatizada com Blockchain
+  Formato: e-Depósito INPI
+-->
+
+<PedidoPatente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <!-- DADOS BÁSICOS -->
+  <DadosBasicos>
+    <Titulo>
+      SISTEMA COMPUTACIONAL PARA VALIDAÇÃO ÉTICA AUTOMATIZADA DE DECISÕES 
+      DE INTELIGÊNCIA ARTIFICIAL COM REGISTRO IMUTÁVEL EM BLOCKCHAIN E 
+      COMPLIANCE REGULATÓRIO INTEGRADO
+    </Titulo>
+    
+    <Resumo>
+      A presente invenção refere-se a um sistema computacional para validação 
+      ética automatizada de decisões de inteligência artificial, compreendendo 
+      um motor de regras éticas configurável capaz de traduzir requisitos 
+      regulatórios (LGPD, GDPR, EU AI Act) em regras executáveis, um módulo 
+      de validação em tempo real integrado ao pipeline de inferência de IA 
+      com latência inferior a 120 milissegundos, um sistema de registro 
+      imutável em blockchain para armazenamento de decisões éticas e 
+      evidências de compliance, e um loop de validação ética que intercepta 
+      decisões de IA antes, durante e após o processamento. O sistema resolve 
+      o problema técnico da falta de validação ética automatizada em tempo 
+      real em sistemas de IA, garantindo compliance regulatório automático 
+      com 98% de cobertura e auditabilidade imutável através de smart 
+      contracts.
+    </Resumo>
+    
+    <Abstract>
+      The present invention relates to a computational system for automated 
+      ethical validation of artificial intelligence decisions, comprising a 
+      configurable ethical rules engine capable of translating regulatory 
+      requirements (LGPD, GDPR, EU AI Act) into executable rules, a real-time 
+      validation module integrated into the AI inference pipeline with latency 
+      below 120 milliseconds, an immutable blockchain registration system for 
+      storing ethical decisions and compliance evidence, and an ethical 
+      validation loop that intercepts AI decisions before, during, and after 
+      processing. The system solves the technical problem of lack of real-time 
+      automated ethical validation in AI systems, ensuring automatic regulatory 
+      compliance with 98% coverage and immutable auditability through smart 
+      contracts.
+    </Abstract>
+  </DadosBasicos>
+  
+  <!-- DESCRIÇÃO -->
+  <Descricao>
+    <CampoTecnico>
+      A presente invenção refere-se ao campo da inteligência artificial e 
+      ética computacional, especificamente a sistemas computacionais para 
+      validação ética automatizada de decisões de inteligência artificial, 
+      integrando tecnologias de blockchain para auditabilidade imutável, 
+      processamento em tempo real para validação de baixa latência, e engines 
+      de regras configuráveis para tradução de requisitos regulatórios em 
+      controles executáveis.
+    </CampoTecnico>
+    
+    <EstadoTecnica>
+      [Ver documento 02_CAMPO_TECNICO_ESTADO_ARTE.md para texto completo]
+    </EstadoTecnica>
+    
+    <ProblemaSolucionado>
+      [Ver documento 02_CAMPO_TECNICO_ESTADO_ARTE.md para texto completo]
+    </ProblemaSolucionado>
+    
+    <DescricaoDetalhada>
+      [Ver documento 03_DESCRICAO_DETALHADA.md para texto completo]
+    </DescricaoDetalhada>
+  </Descricao>
+  
+  <!-- REIVINDICAÇÕES -->
+  <Reivindicacoes>
+    <Reivindicacao numero="1">
+      Sistema computacional para validação ética automatizada de decisões de 
+      inteligência artificial, caracterizado por compreender: (a) um motor de 
+      regras éticas configurável, capaz de traduzir requisitos regulatórios 
+      selecionados do grupo consistindo em LGPD, GDPR e EU AI Act em regras 
+      executáveis; (b) um módulo de validação em tempo real, integrado ao 
+      pipeline de inferência de inteligência artificial, configurado para 
+      interceptar decisões de IA em pelo menos um ponto selecionado do grupo 
+      consistindo em pré-processamento, durante processamento e pós-processamento, 
+      onde o módulo avalia regras aplicáveis com latência inferior a 120 
+      milissegundos; (c) um sistema de registro imutável em blockchain, 
+      compreendendo pelo menos um smart contract configurado para armazenar hash 
+      de decisões éticas, timestamps, status de aprovação ou bloqueio, 
+      identificadores de regras avaliadas, e hash de evidências de compliance; 
+      (d) um loop de validação integrado, configurado para executar validação 
+      ética antes, durante e após o processamento de dados pela inteligência 
+      artificial; (e) um módulo de compliance regulatório, configurado para 
+      mapear automaticamente requisitos de LGPD, GDPR e EU AI Act para regras 
+      executáveis, gerar evidências de compliance, e fornecer cobertura 
+      automatizada de pelo menos 98% dos requisitos regulatórios críticos.
+    </Reivindicacao>
+    
+    <Reivindicacao numero="2">
+      Sistema conforme reivindicação 1, caracterizado por o motor de regras 
+      éticas ser configurado para carregar regras de um repositório configurável, 
+      compilar regras em expressões executáveis, armazenar regras compiladas em 
+      cache para otimização de performance, e resolver regras aplicáveis baseadas 
+      em contexto de processamento.
+    </Reivindicacao>
+    
+    <Reivindicacao numero="3">
+      Sistema conforme reivindicação 1, caracterizado por o módulo de validação 
+      em tempo real ser configurado para construir contexto de validação a partir 
+      de payload de dados e metadados, resolver regras aplicáveis ao contexto, 
+      avaliar regras em paralelo quando independentes, e terminar avaliação 
+      prematuramente quando regra bloqueante for encontrada.
+    </Reivindicacao>
+    
+    <Reivindicacao numero="4">
+      Sistema conforme reivindicação 1, caracterizado por o sistema de registro 
+      imutável em blockchain utilizar smart contracts em blockchain selecionada 
+      do grupo consistindo em Ethereum, Polygon e Arbitrum, onde o smart contract 
+      armazena hash SHA-256 de decisões éticas, endereço do validador, timestamp 
+      do bloco, status de aprovação, identificador de regra, e hash de evidências 
+      armazenadas off-chain.
+    </Reivindicacao>
+    
+    <Reivindicacao numero="5">
+      Sistema conforme reivindicação 1, caracterizado por o loop de validação 
+      integrado ser configurado para validar dados de entrada verificando 
+      consentimento e propósito de processamento no pré-processamento, validar 
+      dados intermediários e detectar vieses em tempo real durante processamento, 
+      e validar resultado final verificando impacto ético no pós-processamento.
+    </Reivindicacao>
+    
+    <!-- Reivindicações 6-10 seguem o mesmo padrão -->
+  </Reivindicacoes>
+  
+  <!-- DESENHOS -->
+  <Desenhos>
+    <Desenho numero="1" descricao="Arquitetura Geral do Sistema" arquivo="figura1_arquitetura.pdf"/>
+    <Desenho numero="2" descricao="Fluxograma de Validação Ética" arquivo="figura2_fluxo_validacao.pdf"/>
+    <Desenho numero="3" descricao="Integração Blockchain" arquivo="figura3_blockchain.pdf"/>
+    <Desenho numero="4" descricao="Compliance Regulatório" arquivo="figura4_compliance.pdf"/>
+  </Desenhos>
+  
+  <!-- INVENTORES -->
+  <Inventores>
+    <Inventor>
+      <Nome>[NOME COMPLETO DO INVENTOR 1]</Nome>
+      <Nacionalidade>[NACIONALIDADE]</Nacionalidade>
+      <CPF>[CPF]</CPF>
+      <Endereco>
+        <Logradouro>[RUA/AVENIDA]</Logradouro>
+        <Numero>[NÚMERO]</Numero>
+        <Complemento>[COMPLEMENTO]</Complemento>
+        <Bairro>[BAIRRO]</Bairro>
+        <Cidade>[CIDADE]</Cidade>
+        <Estado>[ESTADO]</Estado>
+        <CEP>[CEP]</CEP>
+        <Pais>Brasil</Pais>
+      </Endereco>
+      <Email>[EMAIL]</Email>
+      <Telefone>[TELEFONE]</Telefone>
+    </Inventor>
+    <!-- Adicionar mais inventores se necessário -->
+  </Inventores>
+  
+  <!-- DEPOSITANTE -->
+  <Depositante>
+    <Tipo>Pessoa Juridica</Tipo>
+    <!-- OU <Tipo>Pessoa Fisica</Tipo> -->
+    <Nome>[NOME DA EMPRESA/PESSOA]</Nome>
+    <CNPJ>[CNPJ]</CNPJ>
+    <!-- OU <CPF>[CPF]</CPF> se pessoa física -->
+    <Endereco>
+      <Logradouro>[RUA/AVENIDA]</Logradouro>
+      <Numero>[NÚMERO]</Numero>
+      <Complemento>[COMPLEMENTO]</Complemento>
+      <Bairro>[BAIRRO]</Bairro>
+      <Cidade>[CIDADE]</Cidade>
+      <Estado>[ESTADO]</Estado>
+      <CEP>[CEP]</CEP>
+      <Pais>Brasil</Pais>
+    </Endereco>
+    <Email>[EMAIL]</Email>
+    <Telefone>[TELEFONE]</Telefone>
+  </Depositante>
+  
+  <!-- PRIORIDADE -->
+  <Prioridade>
+    <Tipo>Nacional</Tipo>
+    <Data>[DATA DO DEPÓSITO]</Data>
+  </Prioridade>
+  
+</PedidoPatente>
+

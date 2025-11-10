@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Pedido de Patente - SEVE Framework
+  Universal Empathy Engine com Adaptação Cultural SiD ELSI
+  Formato: e-Depósito INPI
+-->
+
+<PedidoPatente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <!-- DADOS BÁSICOS -->
+  <DadosBasicos>
+    <Titulo>
+      SISTEMA DE GERAÇÃO DE RESPOSTAS EMPÁTICAS CULTURALMENTE ADAPTADAS PARA 
+      SISTEMAS DE INTELIGÊNCIA ARTIFICIAL BASEADO EM FRAMEWORK ELSI E VALIDAÇÃO 
+      ÉTICA INTEGRADA
+    </Titulo>
+    
+    <Resumo>
+      A presente invenção refere-se a um sistema computacional para geração de 
+      respostas empáticas culturalmente adaptadas em sistemas de inteligência 
+      artificial, compreendendo um módulo multimodal de percepção emocional capaz 
+      de processar sinais de texto, fala e visão, uma camada de interpretação 
+      cultural baseada no framework ELSI (Energy & Materials, Life, Society, 
+      Individual) do SiD Framework, um motor de geração de templates empáticos 
+      adaptativos configuráveis por domínio, e um módulo de validação ética 
+      integrado que previne manipulação emocional e garante respostas 
+      culturalmente apropriadas. O sistema resolve o problema técnico da falta 
+      de adaptação cultural em sistemas de empatia computacional, permitindo que 
+      sistemas de IA gerem respostas empáticas que respeitam normas culturais, 
+      comunicação preferencial e valores específicos de diferentes contextos 
+      culturais, enquanto mantém validação ética para prevenir manipulação. 
+      A invenção alcança 89% de precisão em reconhecimento emocional, 92% de 
+      alinhamento cultural validado por especialistas, e latência de resposta 
+      inferior a 150 milissegundos.
+    </Resumo>
+    
+    <Abstract>
+      The present invention relates to a computational system for generating 
+      culturally-adapted empathetic responses in artificial intelligence systems, 
+      comprising a multimodal emotional perception module capable of processing 
+      text, speech, and vision signals, a cultural interpretation layer based on 
+      the ELSI framework (Energy & Materials, Life, Society, Individual) from 
+      the SiD Framework, an adaptive empathetic template generation engine 
+      configurable by domain, and an integrated ethical validation module that 
+      prevents emotional manipulation and ensures culturally appropriate responses. 
+      The system solves the technical problem of lack of cultural adaptation in 
+      computational empathy systems, enabling AI systems to generate empathetic 
+      responses that respect cultural norms, communication preferences, and specific 
+      values of different cultural contexts, while maintaining ethical validation 
+      to prevent manipulation. The invention achieves 89% accuracy in emotional 
+      recognition, 92% cultural alignment validated by experts, and response latency 
+      below 150 milliseconds.
+    </Abstract>
+  </DadosBasicos>
+  
+  <!-- DESCRIÇÃO -->
+  <Descricao>
+    <CampoTecnico>
+      A presente invenção refere-se ao campo da inteligência artificial e 
+      computação afetiva, especificamente a sistemas computacionais para geração 
+      de respostas empáticas culturalmente adaptadas em sistemas de inteligência 
+      artificial, integrando processamento multimodal de sinais emocionais (texto, 
+      fala, visão), frameworks de adaptação cultural baseados em estruturas 
+      ontológicas (SiD ELSI), engines de geração de templates empáticos adaptativos, 
+      e módulos de validação ética para prevenir manipulação emocional.
+    </CampoTecnico>
+    
+    <EstadoTecnica>
+      [Ver documento 02_CAMPO_TECNICO_ESTADO_ARTE.md para texto completo]
+    </EstadoTecnica>
+    
+    <ProblemaSolucionado>
+      [Ver documento 02_CAMPO_TECNICO_ESTADO_ARTE.md para texto completo]
+    </ProblemaSolucionado>
+    
+    <DescricaoDetalhada>
+      [Ver documento 03_DESCRICAO_DETALHADA.md para texto completo]
+    </DescricaoDetalhada>
+  </Descricao>
+  
+  <!-- REIVINDICAÇÕES -->
+  <Reivindicacoes>
+    <Reivindicacao numero="1">
+      Sistema computacional para geração de respostas empáticas culturalmente 
+      adaptadas em sistemas de inteligência artificial, caracterizado por 
+      compreender: (a) um módulo multimodal de percepção emocional, configurado 
+      para processar simultaneamente sinais de texto, fala e visão; (b) uma camada 
+      de interpretação cultural, baseada no framework ELSI (Energy & Materials, 
+      Life, Society, Individual) do SiD Framework, configurada para mapear contexto 
+      cultural e determinar preferências de comunicação; (c) um motor de geração de 
+      templates empáticos adaptativos, configurado para manter biblioteca de 
+      templates por domínio e estado emocional, selecionar e adaptar templates ao 
+      contexto cultural; (d) um módulo de validação ética integrada, configurado 
+      para validar respostas empáticas prevenindo manipulação emocional, detectando 
+      viés cultural, e verificando apropriação cultural; (e) um sistema de geração 
+      de respostas, configurado para combinar percepção emocional multimodal, 
+      interpretação cultural ELSI, templates adaptativos e validação ética para 
+      gerar respostas empáticas culturalmente adaptadas com latência inferior a 150 
+      milissegundos e precisão de reconhecimento emocional superior a 89%.
+    </Reivindicacao>
+    
+    <!-- Reivindicações 2-10 seguem o mesmo padrão -->
+  </Reivindicacoes>
+  
+  <!-- DESENHOS -->
+  <Desenhos>
+    <Desenho numero="1" descricao="Arquitetura do Universal Empathy Engine" arquivo="figura1_arquitetura.pdf"/>
+    <Desenho numero="2" descricao="Processamento Multimodal" arquivo="figura2_multimodal.pdf"/>
+    <Desenho numero="3" descricao="Adaptação Cultural ELSI" arquivo="figura3_elsi.pdf"/>
+    <Desenho numero="4" descricao="Validação Ética" arquivo="figura4_validacao.pdf"/>
+  </Desenhos>
+  
+  <!-- INVENTORES -->
+  <Inventores>
+    <Inventor>
+      <Nome>[NOME COMPLETO DO INVENTOR 1]</Nome>
+      <Nacionalidade>[NACIONALIDADE]</Nacionalidade>
+      <CPF>[CPF]</CPF>
+      <Endereco>
+        <Logradouro>[RUA/AVENIDA]</Logradouro>
+        <Numero>[NÚMERO]</Numero>
+        <Complemento>[COMPLEMENTO]</Complemento>
+        <Bairro>[BAIRRO]</Bairro>
+        <Cidade>[CIDADE]</Cidade>
+        <Estado>[ESTADO]</Estado>
+        <CEP>[CEP]</CEP>
+        <Pais>Brasil</Pais>
+      </Endereco>
+      <Email>[EMAIL]</Email>
+      <Telefone>[TELEFONE]</Telefone>
+    </Inventor>
+  </Inventores>
+  
+  <!-- DEPOSITANTE -->
+  <Depositante>
+    <Tipo>Pessoa Juridica</Tipo>
+    <Nome>[NOME DA EMPRESA/PESSOA]</Nome>
+    <CNPJ>[CNPJ]</CNPJ>
+    <Endereco>
+      <Logradouro>[RUA/AVENIDA]</Logradouro>
+      <Numero>[NÚMERO]</Numero>
+      <Complemento>[COMPLEMENTO]</Complemento>
+      <Bairro>[BAIRRO]</Bairro>
+      <Cidade>[CIDADE]</Cidade>
+      <Estado>[ESTADO]</Estado>
+      <CEP>[CEP]</CEP>
+      <Pais>Brasil</Pais>
+    </Endereco>
+    <Email>[EMAIL]</Email>
+    <Telefone>[TELEFONE]</Telefone>
+  </Depositante>
+  
+  <!-- PRIORIDADE -->
+  <Prioridade>
+    <Tipo>Nacional</Tipo>
+    <Data>[DATA DO DEPÓSITO]</Data>
+  </Prioridade>
+  
+</PedidoPatente>
+
