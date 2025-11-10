@@ -29,6 +29,11 @@ describe("SEVE Contracts - Sepolia Integration Tests", function () {
 
     deployments = JSON.parse(fs.readFileSync(deploymentsPath, "utf8"));
     
+    // Verificar se deployments existem
+    if (!deployments.SEVEToken || !deployments.SEVEProtocol || !deployments.SVEDAO) {
+      this.skip(); // Pula testes se deployments não estiverem completos
+    }
+    
     [owner, addr1, addr2] = await ethers.getSigners();
 
     // Conectar aos contratos deployados
