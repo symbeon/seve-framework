@@ -13,7 +13,11 @@
     "verify:sepolia": "hardhat verify --network sepolia",
     "verify:mumbai": "hardhat verify --network mumbai",
     "verify:polygon": "hardhat verify --network polygon",
-    "verify:arbitrum": "hardhat verify --network arbitrum"
+    "verify:arbitrum": "hardhat verify --network arbitrum",
+    "monetization:add-version": "hardhat run scripts/add-version-v1.js --network sepolia",
+    "monetization:dao-proposal": "hardhat run scripts/create-dao-proposal.js --network sepolia",
+    "monetization:register-agent": "hardhat run scripts/register-first-agent.js --network sepolia",
+    "monetization:activate": "npm run monetization:add-version && npm run monetization:dao-proposal && npm run monetization:register-agent"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
