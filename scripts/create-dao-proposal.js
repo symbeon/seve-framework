@@ -10,8 +10,9 @@ const path = require("path");
 async function main() {
   console.log("🗳️  Criando Proposta no SEVE DAO...\n");
 
-  // Carregar deployments
-  const deploymentsPath = path.join(__dirname, "../deployments/sepolia_deployments.json");
+  // Carregar deployments (suporta múltiplas redes)
+  const networkName = hre.network.name;
+  const deploymentsPath = path.join(__dirname, `../deployments/${networkName}_deployments.json`);
   
   if (!fs.existsSync(deploymentsPath)) {
     console.error("❌ Arquivo de deployments não encontrado!");
