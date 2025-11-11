@@ -1,6 +1,7 @@
+<!-- markdownlint-disable MD022 MD032 MD012 MD040 -->
 # 📋 Plano de Commits Sistemáticos
 
-**Data**: 09 de Novembro de 2025  
+**Data**: 09 de Novembro de 2025
 **Objetivo**: Organizar commits de forma sistemática e profissional
 
 ---
@@ -8,9 +9,11 @@
 ## 🎯 **ESTRUTURA DE COMMITS**
 
 ### **1. Commit: Blockchain Infrastructure**
+
 **Mensagem**: `feat(blockchain): add smart contracts and deployment infrastructure`
 
 **Arquivos**:
+
 - `contracts/SEVEToken.sol`
 - `contracts/SEVEProtocol.sol`
 - `contracts/SEVEDAO.sol`
@@ -27,9 +30,11 @@
 ---
 
 ### **2. Commit: Deployment Documentation**
+
 **Mensagem**: `docs(deploy): add comprehensive deployment guides and troubleshooting`
 
 **Arquivos**:
+
 - `docs/DEPLOYMENT_SUCCESS.md`
 - `docs/GUIA_DEPLOY_TESTNET.md`
 - `docs/PASSO_A_PASSO_DEPLOY.md`
@@ -45,9 +50,11 @@
 ---
 
 ### **3. Commit: Strategic Analysis**
+
 **Mensagem**: `docs(strategy): add strategic analysis and cost evaluation`
 
 **Arquivos**:
+
 - `docs/ANALISE_ESTRATEGICA_DEPLOY.md`
 - `docs/ANALISE_CUSTO_MAINNET.md`
 - `docs/ESTRATEGIA_SALDO_ATUAL.md`
@@ -61,9 +68,11 @@
 ---
 
 ### **4. Commit: Testing Infrastructure**
+
 **Mensagem**: `test(blockchain): add test scripts for deployed contracts`
 
 **Arquivos**:
+
 - `scripts/test-sepolia-contracts.js`
 - `scripts/check-balance.js`
 - `scripts/check-balance-mainnet.js`
@@ -75,9 +84,11 @@
 ---
 
 ### **5. Commit: Hugging Face Preparation**
+
 **Mensagem**: `feat(distribution): add Hugging Face publication preparation`
 
 **Arquivos**:
+
 - `scripts/prepare_huggingface.py`
 - `CHECKLIST_PUBLICACAO_HF.md`
 - `docs/GUIA_PUBLICACAO_HUGGING_FACE.md`
@@ -89,9 +100,11 @@
 ---
 
 ### **6. Commit: Strategic Positioning**
+
 **Mensagem**: `docs(strategy): add strategic positioning and foundation roadmap`
 
 **Arquivos**:
+
 - `docs/ESTRATEGIA_FUNDACAO_IA_ETICA.md`
 - `docs/ESTRATEGIA_PUBLICACAO_ACADEMICA.md`
 - `docs/MANIFESTO_IA_ETICA.md`
@@ -109,6 +122,7 @@
 ## 🚀 **EXECUÇÃO DOS COMMITS**
 
 ### **Ordem Recomendada:**
+
 1. Blockchain Infrastructure (base)
 2. Testing Infrastructure (validação)
 3. Deployment Documentation (guia)
@@ -120,7 +134,7 @@
 
 ## 📝 **FORMATO DE COMMIT**
 
-```
+```text
 <tipo>(<escopo>): <descrição curta>
 
 <descrição detalhada (opcional)>
@@ -129,6 +143,7 @@
 ```
 
 **Tipos**:
+
 - `feat`: Nova funcionalidade
 - `fix`: Correção de bug
 - `docs`: Documentação
@@ -137,6 +152,7 @@
 - `chore`: Tarefas de manutenção
 
 **Escopos**:
+
 - `blockchain`: Smart contracts
 - `deploy`: Deploy e infraestrutura
 - `strategy`: Estratégia e análise
@@ -156,6 +172,5 @@
 
 ---
 
-**Última Atualização**: 09 de Novembro de 2025  
+**Última Atualização**: 09 de Novembro de 2025
 **Mantido por**: Equipe EON - Symbeon Tech
-

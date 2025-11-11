@@ -1,6 +1,7 @@
-# 💰 Guia: Verificar Saldo e Deploy na Mainnet
+<!-- markdownlint-disable MD032 MD031 MD036 MD034 MD012 -->
+# Guia de Saldo na MetaMask para Deploy do SEVE Framework
 
-**Data**: 09 de Novembro de 2025  
+**Data**: 09 de Novembro de 2025
 **Objetivo**: Verificar saldo na MetaMask e decidir onde fazer deploy
 
 ---
@@ -20,11 +21,14 @@
 ### **Opção 2: Via Script (Mais Detalhado)**
 
 ```bash
+
 # Verificar saldo em todas as mainnets
+
 npx hardhat run scripts/check-balance-mainnet.js
 ```
 
 Este script verifica:
+
 - ✅ Saldo em cada rede
 - ✅ Se é suficiente para deploy
 - ✅ Links para explorer
@@ -39,18 +43,24 @@ Este script verifica:
 **Saldo necessário**: ~0.01 MATIC ($0.20)
 
 **O que fazer:**
+
 1. ✅ **Deploy em Polygon Mainnet** (recomendado!)
    - Custo: $0.20 para deploy completo
    - Transações: $0.001-0.02 cada
    - **Melhor custo-benefício**
 
 **Comandos:**
+
 ```bash
+
 # 1. Configurar Polygon no hardhat.config.js (já está!)
+
 # 2. Verificar saldo
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 3. Deploy em Polygon
+
 npx hardhat run scripts/deploy-token.js --network polygon
 npx hardhat run scripts/deploy-protocol.js --network polygon
 npx hardhat run scripts/deploy-dao.js --network polygon
@@ -63,7 +73,9 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 **Saldo necessário**: ~0.25 ETH ($500-1,245)
 
 **O que fazer:**
+
 1. ⚠️ **Deploy em Ethereum Mainnet** (caro!)
+
    - Custo: $500-1,245 para deploy completo
    - Transações: $5-20 cada
    - **Não recomendado para começar**
@@ -74,11 +86,15 @@ npx hardhat run scripts/deploy-dao.js --network polygon
    - Deploy em Polygon é 100-1000x mais barato!
 
 **Comandos (se quiser usar Ethereum mesmo):**
+
 ```bash
+
 # 1. Verificar saldo
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 2. Deploy em Ethereum (CUIDADO: CARO!)
+
 npx hardhat run scripts/deploy-token.js --network ethereum
 npx hardhat run scripts/deploy-protocol.js --network ethereum
 npx hardhat run scripts/deploy-dao.js --network ethereum
@@ -91,17 +107,22 @@ npx hardhat run scripts/deploy-dao.js --network ethereum
 **Saldo necessário**: ~0.001 ETH ($1.66)
 
 **O que fazer:**
+
 1. ✅ **Deploy em Arbitrum Mainnet**
    - Custo: $1.66 para deploy completo
    - Transações: $0.10-0.50 cada
    - **Balance entre custo e segurança**
 
 **Comandos:**
+
 ```bash
+
 # 1. Verificar saldo
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 2. Deploy em Arbitrum
+
 npx hardhat run scripts/deploy-token.js --network arbitrum
 npx hardhat run scripts/deploy-protocol.js --network arbitrum
 npx hardhat run scripts/deploy-dao.js --network arbitrum
@@ -114,17 +135,22 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 **Saldo necessário**: ~0.003 BNB ($0.75)
 
 **O que fazer:**
+
 1. ✅ **Deploy em BSC Mainnet**
    - Custo: $0.75 para deploy completo
    - Transações: $0.02-0.10 cada
    - **Boa alternativa ao Polygon**
 
 **Comandos:**
+
 ```bash
+
 # 1. Verificar saldo
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 2. Deploy em BSC
+
 npx hardhat run scripts/deploy-token.js --network bsc
 npx hardhat run scripts/deploy-protocol.js --network bsc
 npx hardhat run scripts/deploy-dao.js --network bsc
@@ -136,21 +162,23 @@ npx hardhat run scripts/deploy-dao.js --network bsc
 
 ### **Se você tem:**
 
-| Token | Saldo | Recomendação |
-|-------|-------|--------------|
-| **MATIC** | > 0.01 | ✅ **Deploy em Polygon** (melhor opção!) |
-| **ETH (Ethereum)** | > 0.25 | ⚠️ Pode fazer, mas Polygon é melhor |
-| **ETH (Arbitrum)** | > 0.001 | ✅ Deploy em Arbitrum (boa opção) |
-| **BNB** | > 0.003 | ✅ Deploy em BSC (alternativa) |
+| Token              | Saldo   | Recomendação                             |
+| ------------------ | ------- | ---------------------------------------- |
+| **MATIC**          | > 0.01  | ✅ **Deploy em Polygon** (melhor opção!) |
+| **ETH (Ethereum)** | > 0.25  | ⚠️ Pode fazer, mas Polygon é melhor      |
+| **ETH (Arbitrum)** | > 0.001 | ✅ Deploy em Arbitrum (boa opção)        |
+| **BNB**            | > 0.003 | ✅ Deploy em BSC (alternativa)           |
 
 ### **Se você não tem saldo suficiente:**
 
 **Opção 1: Comprar tokens**
+
 - **MATIC**: Compre em exchange (Binance, Coinbase, etc.)
 - **ETH**: Compre em exchange
 - **BNB**: Compre em exchange
 
 **Opção 2: Usar testnet primeiro**
+
 - Deploy em Sepolia (gratuito)
 - Testar funcionalidades
 - Depois migrar para mainnet
@@ -161,21 +189,21 @@ npx hardhat run scripts/deploy-dao.js --network bsc
 
 ### **Deploy Completo (3 Contratos)**
 
-| Rede | Custo | Recomendação |
-|------|-------|--------------|
-| **Polygon** | $0.20 | ✅ **MELHOR** |
-| **BSC** | $0.75 | ✅ Boa alternativa |
-| **Arbitrum** | $1.66 | ✅ Balance custo/segurança |
-| **Ethereum** | $500-1,245 | ❌ Muito caro |
+| Rede         | Custo      | Recomendação               |
+| ------------ | ---------- | -------------------------- |
+| **Polygon**  | $0.20      | ✅ **MELHOR**              |
+| **BSC**      | $0.75      | ✅ Boa alternativa         |
+| **Arbitrum** | $1.66      | ✅ Balance custo/segurança |
+| **Ethereum** | $500-1,245 | ❌ Muito caro              |
 
 ### **Custo por Transação**
 
-| Rede | Custo | Volume |
-|------|-------|--------|
-| **Polygon** | $0.001-0.02 | ✅ Alto volume |
-| **BSC** | $0.02-0.10 | ✅ Alto volume |
-| **Arbitrum** | $0.10-0.50 | ✅ Médio volume |
-| **Ethereum** | $5-20 | ❌ Baixo volume |
+| Rede         | Custo       | Volume          |
+| ------------ | ----------- | --------------- |
+| **Polygon**  | $0.001-0.02 | ✅ Alto volume  |
+| **BSC**      | $0.02-0.10  | ✅ Alto volume  |
+| **Arbitrum** | $0.10-0.50  | ✅ Médio volume |
+| **Ethereum** | $5-20       | ❌ Baixo volume |
 
 ---
 
@@ -197,7 +225,9 @@ npx hardhat run scripts/check-balance-mainnet.js
 ### **3. Fazer Deploy**
 
 ```bash
+
 # Exemplo Polygon
+
 npx hardhat run scripts/deploy-token.js --network polygon
 npx hardhat run scripts/deploy-protocol.js --network polygon
 npx hardhat run scripts/deploy-dao.js --network polygon
@@ -205,10 +235,10 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 
 ### **4. Verificar no Explorer**
 
-- **Polygon**: https://polygonscan.com
-- **Ethereum**: https://etherscan.io
-- **Arbitrum**: https://arbiscan.io
-- **BSC**: https://bscscan.com
+- **Polygon**: [https://polygonscan.com](https://polygonscan.com)
+- **Ethereum**: [https://etherscan.io](https://etherscan.io)
+- **Arbitrum**: [https://arbiscan.io](https://arbiscan.io)
+- **BSC**: [https://bscscan.com](https://bscscan.com)
 
 ---
 
@@ -220,6 +250,5 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 
 ---
 
-**Última Atualização**: 09 de Novembro de 2025  
+**Última Atualização**: 09 de Novembro de 2025
 **Mantido por**: Equipe EON - Symbeon Tech
-

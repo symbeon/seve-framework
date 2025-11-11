@@ -1,7 +1,8 @@
-# 💰 Estratégia Baseada no Seu Saldo Atual
+<!-- markdownlint-disable MD022 MD032 MD036 MD031 MD034 MD012 MD024 -->
+# 🎯 Estratégia para Uso do Saldo Atual na MetaMask
 
-**Data**: 09 de Novembro de 2025  
-**Saldo Atual**: $9.99 USD (0.00279 ETH)  
+**Data**: 09 de Novembro de 2025
+**Saldo Atual**: $9.99 USD (0.00279 ETH)
 **Rede**: Ethereum Mainnet
 
 ---
@@ -9,6 +10,7 @@
 ## 📊 **SITUAÇÃO ATUAL**
 
 ### **Seu Saldo**
+
 - **Total**: $9.99 USD
 - **Ethereum (Stake)**: 0.00279 ETH (~$9.98)
 - **Ethereum**: 0 ETH
@@ -16,6 +18,7 @@
 - **Endereço**: 0x863de...6DA76
 
 ### **Análise**
+
 - ✅ Você tem **$9.99** em ETH
 - ❌ **NÃO é suficiente** para deploy em Ethereum Mainnet ($500-1,245)
 - ✅ **É suficiente** para deploy em Polygon ou Arbitrum (após conversão)
@@ -27,6 +30,7 @@
 ### **OPÇÃO 1: Converter para MATIC e Deploy em Polygon** ✅ **RECOMENDADO**
 
 #### **Por quê?**
+
 - ✅ **Custo mínimo**: $0.20 para deploy completo
 - ✅ **Seu saldo é suficiente**: $9.99 em MATIC cobre deploy + operações
 - ✅ **Transações baratas**: $0.001-0.02 cada
@@ -35,17 +39,19 @@
 #### **Como Fazer:**
 
 **Passo 1: Adicionar Rede Polygon na MetaMask**
+
 1. Abra MetaMask
 2. Clique no ícone de rede (topo direito)
 3. Clique em "Add Network" ou "Adicionar Rede"
 4. Adicione Polygon Mainnet:
    - **Network Name**: Polygon Mainnet
-   - **RPC URL**: `https://polygon-rpc.com`
+   - **RPC URL**: `[https://polygon-rpc.com`](https://polygon-rpc.com`)
    - **Chain ID**: 137
    - **Currency Symbol**: MATIC
-   - **Block Explorer**: `https://polygonscan.com`
+   - **Block Explorer**: `[https://polygonscan.com`](https://polygonscan.com`)
 
 **Passo 2: Converter ETH para MATIC**
+
 1. Na MetaMask, clique em "Swap"
 2. Selecione:
    - **De**: ETH (Ethereum)
@@ -55,6 +61,7 @@
 5. Aguarde a confirmação
 
 **Passo 3: Bridge ETH para Polygon (Alternativa)**
+
 1. Na MetaMask, clique em "Bridge"
 2. Selecione:
    - **De**: Ethereum
@@ -64,17 +71,22 @@
 5. Aguarde a confirmação (~10-20 minutos)
 
 **Passo 4: Deploy em Polygon**
+
 ```bash
+
 # 1. Verificar saldo em Polygon
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 2. Deploy em Polygon
+
 npx hardhat run scripts/deploy-token.js --network polygon
 npx hardhat run scripts/deploy-protocol.js --network polygon
 npx hardhat run scripts/deploy-dao.js --network polygon
 ```
 
 **Custo Total:**
+
 - Bridge/Swap: ~$1-3 (taxa de conversão)
 - Deploy: ~$0.20
 - **Total**: ~$1.20-3.20
@@ -84,6 +96,7 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 ### **OPÇÃO 2: Bridge para Arbitrum e Deploy** ✅ **BOA OPÇÃO**
 
 #### **Por quê?**
+
 - ✅ **Custo baixo**: $1.66 para deploy completo
 - ✅ **Seu saldo é suficiente**: $9.99 cobre deploy + operações
 - ✅ **Segurança do Ethereum**: Layer 2 do Ethereum
@@ -92,17 +105,19 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 #### **Como Fazer:**
 
 **Passo 1: Adicionar Rede Arbitrum na MetaMask**
+
 1. Abra MetaMask
 2. Clique no ícone de rede
 3. Clique em "Add Network"
 4. Adicione Arbitrum One:
    - **Network Name**: Arbitrum One
-   - **RPC URL**: `https://arb1.arbitrum.io/rpc`
+   - **RPC URL**: `[https://arb1.arbitrum.io/rpc`](https://arb1.arbitrum.io/rpc`)
    - **Chain ID**: 42161
    - **Currency Symbol**: ETH
-   - **Block Explorer**: `https://arbiscan.io`
+   - **Block Explorer**: `[https://arbiscan.io`](https://arbiscan.io`)
 
 **Passo 2: Bridge ETH para Arbitrum**
+
 1. Na MetaMask, clique em "Bridge"
 2. Selecione:
    - **De**: Ethereum
@@ -112,17 +127,22 @@ npx hardhat run scripts/deploy-dao.js --network polygon
 5. Aguarde a confirmação (~10-20 minutos)
 
 **Passo 3: Deploy em Arbitrum**
+
 ```bash
+
 # 1. Verificar saldo em Arbitrum
+
 npx hardhat run scripts/check-balance-mainnet.js
 
 # 2. Deploy em Arbitrum
+
 npx hardhat run scripts/deploy-token.js --network arbitrum
 npx hardhat run scripts/deploy-protocol.js --network arbitrum
 npx hardhat run scripts/deploy-dao.js --network arbitrum
 ```
 
 **Custo Total:**
+
 - Bridge: ~$1-3 (taxa de bridge)
 - Deploy: ~$1.66
 - **Total**: ~$2.66-4.66
@@ -132,11 +152,13 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 ### **OPÇÃO 3: Comprar Mais ETH e Deploy em Ethereum** ❌ **NÃO RECOMENDADO**
 
 #### **Por quê não?**
+
 - ❌ **Muito caro**: Precisa de ~0.25 ETH ($500-1,245)
 - ❌ **Gas fees altos**: $5-20 por transação
 - ❌ **Não necessário**: Polygon/Arbitrum são suficientes
 
 #### **Se ainda quiser fazer:**
+
 1. Compre ~0.25 ETH ($500-1,245)
 2. Deploy em Ethereum Mainnet
 3. **Custo total**: $500-1,245 + operações
@@ -147,11 +169,11 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 
 ## 📊 **COMPARAÇÃO DAS OPÇÕES**
 
-| Opção | Custo Deploy | Custo Total | Recomendação |
-|-------|--------------|-------------|--------------|
-| **Polygon** | $0.20 | $1.20-3.20 | ✅ **MELHOR** |
-| **Arbitrum** | $1.66 | $2.66-4.66 | ✅ Boa opção |
-| **Ethereum** | $500-1,245 | $500-1,245+ | ❌ Muito caro |
+| Opção        | Custo Deploy | Custo Total | Recomendação  |
+| ------------ | ------------ | ----------- | ------------- |
+| **Polygon**  | $0.20        | $1.20-3.20  | ✅ **MELHOR** |
+| **Arbitrum** | $1.66        | $2.66-4.66  | ✅ Boa opção  |
+| **Ethereum** | $500-1,245   | $500-1,245+ | ❌ Muito caro |
 
 ---
 
@@ -160,6 +182,7 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 ### **✅ COMECE COM POLYGON**
 
 **Por quê?**
+
 1. ✅ **Custo mínimo**: $0.20 para deploy
 2. ✅ **Seu saldo cobre**: $9.99 é mais que suficiente
 3. ✅ **Melhor custo-benefício**: 100-1000x mais barato que Ethereum
@@ -167,6 +190,7 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 5. ✅ **Compatível**: Mesma infraestrutura do Ethereum
 
 **Próximos Passos:**
+
 1. ✅ Adicionar Polygon na MetaMask
 2. ✅ Converter/Bridge ETH → MATIC
 3. ✅ Verificar saldo em Polygon
@@ -186,23 +210,26 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 - [ ] Deploy Token: `npx hardhat run scripts/deploy-token.js --network polygon`
 - [ ] Deploy Protocol: `npx hardhat run scripts/deploy-protocol.js --network polygon`
 - [ ] Deploy DAO: `npx hardhat run scripts/deploy-dao.js --network polygon`
-- [ ] Verificar no explorer: https://polygonscan.com
+- [ ] Verificar no explorer: [https://polygonscan.com](https://polygonscan.com)
 
 ---
 
 ## 💡 **DICAS IMPORTANTES**
 
 ### **Sobre Bridge/Swap:**
+
 - ⚠️ **Taxas**: Bridge/Swap tem taxas (~$1-3)
 - ⚠️ **Tempo**: Bridge leva 10-20 minutos
 - ⚠️ **Swap**: Mais rápido, mas pode ter taxas maiores
 
 ### **Sobre Deploy:**
+
 - ✅ **Teste primeiro**: Use testnet se quiser testar
 - ✅ **Verifique saldo**: Sempre verifique antes de deploy
 - ✅ **Gas price**: Polygon tem gas muito baixo
 
 ### **Sobre Segurança:**
+
 - ✅ **Chave privada**: Já configurada no `.env`
 - ✅ **Backup**: Faça backup do `.env`
 - ✅ **Explorer**: Verifique contratos no Polygonscan
@@ -218,7 +245,6 @@ npx hardhat run scripts/deploy-dao.js --network arbitrum
 
 ---
 
-**Última Atualização**: 09 de Novembro de 2025  
-**Mantido por**: Equipe EON - Symbeon Tech  
+**Última Atualização**: 09 de Novembro de 2025
+**Mantido por**: Equipe EON - Symbeon Tech
 **Status**: ✅ **ESTRATÉGIA DEFINIDA**
-
