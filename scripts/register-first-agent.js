@@ -68,15 +68,23 @@ async function main() {
 
   try {
     // Verificar se agente já está registrado
+    // O contrato verifica: require(!agents[msg.sender].verified, "Agent already registered")
+    // Isso significa que se o agente já foi registrado (mesmo não verificado), não pode ser registrado novamente
     const existingAgent = await protocol.agents(owner.address);
+    
+    // Verificar se agente já existe (hash diferente de zero)
     if (existingAgent.agentHash !== "0x0000000000000000000000000000000000000000000000000000000000000000") {
       console.log("⚠️  Agente já está registrado para este endereço!");
       console.log("   Agent Hash:", existingAgent.agentHash);
       console.log("   Capabilities:", existingAgent.capabilities);
+      console.log("   Verificado:", existingAgent.verified);
+      console.log("   Performance Score:", existingAgent.performanceScore.toString());
+      console.log("\n💡 Para registrar um novo agente, use um endereço diferente.");
       return;
     }
   } catch (error) {
-    // Agente não existe, continuar
+    // Erro ao verificar - pode ser que agente não exista, continuar
+    console.log("ℹ️  Verificando se agente existe...");
   }
 
   // Registrar agente
