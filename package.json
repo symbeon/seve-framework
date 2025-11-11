@@ -17,7 +17,9 @@
     "monetization:add-version": "hardhat run scripts/add-version-v1.js --network sepolia",
     "monetization:dao-proposal": "hardhat run scripts/create-dao-proposal.js --network sepolia",
     "monetization:register-agent": "hardhat run scripts/register-first-agent.js --network sepolia",
-    "monetization:activate": "npm run monetization:add-version && npm run monetization:dao-proposal && npm run monetization:register-agent"
+    "monetization:activate": "npm run monetization:add-version && npm run monetization:dao-proposal && npm run monetization:register-agent",
+    "deploy:polygon:complete": "hardhat run scripts/deploy-token.js --network polygon && hardhat run scripts/deploy-protocol.js --network polygon && hardhat run scripts/deploy-dao.js --network polygon",
+    "monetization:polygon:activate": "hardhat run scripts/add-version-v1.js --network polygon && hardhat run scripts/create-dao-proposal.js --network polygon && hardhat run scripts/register-first-agent.js --network polygon"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
