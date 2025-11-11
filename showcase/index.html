@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVE Framework - Symbiotic Ethical Vision Engine</title>
+    <meta name="description" content="Framework completo de IA Ética com governança blockchain. Transparência, privacidade e compliance nativos.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --dark: #1e1b4b;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Status Section */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .status-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .status-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .status-label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🤝 SEVE Framework</div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#status">Status</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SEVE Framework</h1>
+            <div class="subtitle">Symbiotic Ethical Vision Engine</div>
+            <div class="description">
+                O primeiro framework completo de IA Ética com governança blockchain.
+                Transparência, privacidade e compliance nativos.
+            </div>
+            <div class="cta-buttons">
+                <a href="https://github.com/symbeon/seve-framework" class="btn btn-primary" target="_blank">
+                    Ver no GitHub
+                </a>
+                <a href="#contato" class="btn btn-secondary">
+                    Falar Conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2 class="section-title">O Problema que Resolvemos</h2>
+        <p class="section-subtitle">
+            A IA enfrenta desafios críticos que custam $2.6 trilhões em perdas anuais
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Falta de Transparência</h3>
+                <p>Algoritmos são "caixas pretas" sem auditoria. SEVE torna todas as decisões auditáveis via blockchain.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>Viés e Discriminação</h3>
+                <p>Sistemas perpetuam desigualdades. SEVE detecta e corrige viés automaticamente.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Privacidade Comprometida</h3>
+                <p>Dados sensíveis expostos. SEVE implementa privacidade por design (LGPD/GDPR nativo).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Compliance Complexo</h3>
+                <p>LGPD, GDPR, EU AI Act difíceis de implementar. SEVE é compliance-ready desde o início.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologia -->
+    <section id="tecnologia">
+        <h2 class="section-title">Nossa Solução</h2>
+        <p class="section-subtitle">
+            Tecnologia de ponta combinando IA, Blockchain e Compliance
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Validação Automática de Ética</h3>
+                <p>Blockchain garante transparência total. Todas as decisões éticas são validadas e auditáveis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Privacidade por Design</h3>
+                <p>LGPD/GDPR nativo. Anonimização, pseudonimização e proteção de dados integrados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Motor de Empatia Universal</h3>
+                <p>Adaptação automática a diferentes culturas. Respostas contextualmente apropriadas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗳️</div>
+                <h3>Governança Descentralizada</h3>
+                <p>DAO para tomada de decisões. Comunidade participa da evolução do framework.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>Licenciamento Transparente</h3>
+                <p>Blockchain para licenciamento. Transparência total em todas as transações.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Pronto para Produção</h3>
+                <p>Deploy em testnet funcionando. Pronto para mainnet. Documentação completa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status -->
+    <section id="status">
+        <h2 class="section-title">Status Atual</h2>
+        <p class="section-subtitle">
+            Framework completo e pronto para crescimento
+        </p>
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="status-number">100%</div>
+                <div class="status-label">Framework Completo</div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">3</div>
+                <div class="status-label">Artigos Acadêmicos</div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">2</div>
+                <div class="status-label">Patentes em Preparação</div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">50+</div>
+                <div class="status-label">Documentos Técnicos</div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">95%+</div>
+                <div class="status-label">Cobertura de Testes</div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">✅</div>
+                <div class="status-label">Monetização Ativa</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <h2>Vamos Construir o Futuro da IA Ética Juntos</h2>
+        <p>
+            Estamos buscando investidores, parceiros e colaboradores para levar o SEVE Framework ao próximo nível.
+        </p>
+        <div class="cta-buttons">
+            <a href="https://github.com/symbeon/seve-framework" class="btn btn-primary" target="_blank">
+                Ver Código no GitHub
+            </a>
+            <a href="mailto:contato@seve-framework.ai" class="btn btn-secondary">
+                Falar Conosco
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/symbeon/seve-framework" target="_blank">GitHub</a>
+            <a href="/docs">Documentação</a>
+            <a href="/docs/pitch/PITCH_DECK.md">Pitch Deck</a>
+            <a href="/docs/executive/EXECUTIVE_SUMMARY.md">Executive Summary</a>
+        </div>
+        <p>&copy; 2025 SEVE Framework. Todos os direitos reservados.</p>
+        <p style="margin-top: 1rem; opacity: 0.7;">
+            Symbiotic Ethical Vision Engine - Framework de IA Ética com Governança Blockchain
+        </p>
+    </footer>
+</body>
+</html>
+
