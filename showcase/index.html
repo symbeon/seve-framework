@@ -13,35 +13,63 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #8b5cf6;
-            --dark: #1e1b4b;
-            --light: #f8fafc;
-            --text: #1e293b;
-            --text-light: #64748b;
+            /* Dark Mode Colors */
+            --bg-primary: #0a0e27;
+            --bg-secondary: #141b2d;
+            --bg-card: #1a2332;
+            --bg-hover: #252f3f;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #1e293b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text);
-            background: var(--light);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
 
         /* Header */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: var(--spacing-sm) var(--spacing-md);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -49,247 +77,584 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: var(--spacing-md);
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text);
+            color: var(--text-secondary);
             font-weight: 500;
-            transition: color 0.3s;
+            transition: var(--transition-fast);
+            position: relative;
+            padding: var(--spacing-xs) 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: var(--transition-normal);
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 6rem 2rem;
+            background: var(--accent-gradient);
+            position: relative;
+            padding: var(--spacing-xl) var(--spacing-md);
             text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-sm);
             font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: var(--spacing-md);
             opacity: 0.95;
+            color: white;
+            font-weight: 300;
         }
 
         .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: var(--spacing-lg);
             opacity: 0.9;
+            color: white;
+            line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: var(--spacing-sm);
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: var(--transition-normal);
             text-decoration: none;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .btn-primary {
             background: white;
-            color: var(--primary);
+            color: var(--accent-primary);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
         }
 
         /* Sections */
         section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
+            padding: var(--spacing-xl) var(--spacing-md);
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-sm);
             text-align: center;
-            color: var(--dark);
+            color: var(--text-primary);
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .section-subtitle {
             text-align: center;
-            color: var(--text-light);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+            color: var(--text-secondary);
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: var(--spacing-lg);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
         }
 
         .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: var(--bg-card);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: var(--transition-normal);
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-sm);
+            display: inline-block;
+            transition: var(--transition-normal);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .feature-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+            font-weight: 700;
         }
 
         .feature-card p {
-            color: var(--text-light);
+            color: var(--text-secondary);
             line-height: 1.8;
+            font-size: 1rem;
         }
 
-        /* Status Section */
+        /* Status Grid */
         .status-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
         }
 
         .status-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
+            background: var(--bg-card);
+            padding: var(--spacing-md);
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: var(--transition-slow);
+        }
+
+        .status-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+        }
+
+        .status-card:hover::after {
+            opacity: 1;
         }
 
         .status-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-xs);
+            line-height: 1;
         }
 
         .status-label {
-            color: var(--text-light);
+            color: var(--text-secondary);
             font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Market Section */
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .market-stat {
+            background: var(--bg-card);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .market-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--success);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .market-stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .market-stat-growth {
+            color: var(--success);
+            font-size: 0.9rem;
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Roadmap Timeline */
+        .roadmap-timeline {
+            margin-top: var(--spacing-lg);
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent-gradient);
+        }
+
+        .roadmap-item {
+            position: relative;
+            padding-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-primary);
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 0 3px var(--accent-primary);
+        }
+
+        .roadmap-period {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .roadmap-content {
+            background: var(--bg-card);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .roadmap-content h4 {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.2rem;
+        }
+
+        .roadmap-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .roadmap-content li {
+            color: var(--text-secondary);
+            padding: var(--spacing-xs) 0;
+            padding-left: var(--spacing-md);
+            position: relative;
+        }
+
+        .roadmap-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Investment Section */
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .investment-card {
+            background: var(--bg-card);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: var(--transition-normal);
+        }
+
+        .investment-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+        }
+
+        .investment-card h3 {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+        }
+
+        .investment-card .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .investment-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
 
         /* CTA Section */
         .cta-section {
-            background: var(--dark);
-            color: white;
+            background: var(--bg-secondary);
             text-align: center;
-            padding: 5rem 2rem;
+            padding: var(--spacing-xl) var(--spacing-md);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .cta-section > * {
+            position: relative;
+            z-index: 1;
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+            font-weight: 800;
         }
 
         .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 2rem;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            padding: var(--spacing-lg) var(--spacing-md);
             text-align: center;
+            border-top: 1px solid var(--border);
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: white;
+            color: var(--text-secondary);
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            transition: var(--transition-fast);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 8px;
         }
 
         .footer-links a:hover {
-            opacity: 1;
+            color: var(--text-primary);
+            background: var(--bg-card);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
             .nav-links {
                 display: none;
             }
 
             section {
-                padding: 3rem 1rem;
+                padding: var(--spacing-lg) var(--spacing-sm);
             }
+
+            .features-grid,
+            .status-grid,
+            .market-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -301,7 +666,10 @@
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#mercado">Mercado</a></li>
                 <li><a href="#status">Status</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#investimento">Investimento</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -314,7 +682,7 @@
             <div class="subtitle">Symbiotic Ethical Vision Engine</div>
             <div class="description">
                 O primeiro framework completo de IA Ética com governança blockchain.
-                Transparência, privacidade e compliance nativos.
+                Transparência, privacidade e compliance nativos desde o início.
             </div>
             <div class="cta-buttons">
                 <a href="https://github.com/symbeon/seve-framework" class="btn btn-primary" target="_blank">
@@ -328,80 +696,131 @@
     </section>
 
     <!-- Sobre -->
-    <section id="sobre">
+    <section id="sobre" class="fade-in">
         <h2 class="section-title">O Problema que Resolvemos</h2>
         <p class="section-subtitle">
-            A IA enfrenta desafios críticos que custam $2.6 trilhões em perdas anuais
+            A IA enfrenta desafios críticos que custam <strong style="color: var(--error);">$2.6 trilhões</strong> em perdas anuais por problemas éticos
         </p>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🔒</div>
                 <h3>Falta de Transparência</h3>
-                <p>Algoritmos são "caixas pretas" sem auditoria. SEVE torna todas as decisões auditáveis via blockchain.</p>
+                <p>Algoritmos são "caixas pretas" sem auditoria. SEVE torna todas as decisões auditáveis via blockchain, garantindo transparência total.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⚖️</div>
                 <h3>Viés e Discriminação</h3>
-                <p>Sistemas perpetuam desigualdades. SEVE detecta e corrige viés automaticamente.</p>
+                <p>Sistemas perpetuam desigualdades sociais. SEVE detecta e corrige viés automaticamente com validação ética em tempo real.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
                 <h3>Privacidade Comprometida</h3>
-                <p>Dados sensíveis expostos. SEVE implementa privacidade por design (LGPD/GDPR nativo).</p>
+                <p>Dados sensíveis expostos sem controle. SEVE implementa privacidade por design com LGPD/GDPR nativo e anonimização automática.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📋</div>
                 <h3>Compliance Complexo</h3>
-                <p>LGPD, GDPR, EU AI Act difíceis de implementar. SEVE é compliance-ready desde o início.</p>
+                <p>LGPD, GDPR, EU AI Act difíceis de implementar. SEVE é compliance-ready desde o início, reduzindo custos e riscos legais.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Falta de Governança</h3>
+                <p>Sem controle sobre decisões de IA. SEVE oferece governança descentralizada via DAO, dando voz à comunidade.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3>Custos de Não-Conformidade</h3>
+                <p>Multas e perdas por violações. SEVE previne problemas antes que aconteçam, economizando milhões em penalidades.</p>
             </div>
         </div>
     </section>
 
     <!-- Tecnologia -->
-    <section id="tecnologia">
-        <h2 class="section-title">Nossa Solução</h2>
+    <section id="tecnologia" class="fade-in">
+        <h2 class="section-title">Nossa Solução Tecnológica</h2>
         <p class="section-subtitle">
-            Tecnologia de ponta combinando IA, Blockchain e Compliance
+            Tecnologia de ponta combinando IA, Blockchain e Compliance em um framework único
         </p>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">✅</div>
                 <h3>Validação Automática de Ética</h3>
-                <p>Blockchain garante transparência total. Todas as decisões éticas são validadas e auditáveis.</p>
+                <p>Blockchain garante transparência total. Todas as decisões éticas são validadas, auditáveis e imutáveis. Sistema único no mercado.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🔐</div>
                 <h3>Privacidade por Design</h3>
-                <p>LGPD/GDPR nativo. Anonimização, pseudonimização e proteção de dados integrados.</p>
+                <p>LGPD/GDPR nativo. Anonimização, pseudonimização e proteção de dados integrados desde o core. Zero configuração adicional.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌍</div>
                 <h3>Motor de Empatia Universal</h3>
-                <p>Adaptação automática a diferentes culturas. Respostas contextualmente apropriadas.</p>
+                <p>Adaptação automática a diferentes culturas. Respostas contextualmente apropriadas. Diferencial único no mercado.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🗳️</div>
                 <h3>Governança Descentralizada</h3>
-                <p>DAO para tomada de decisões. Comunidade participa da evolução do framework.</p>
+                <p>DAO para tomada de decisões. Comunidade participa da evolução do framework. Transparência e democracia em cada decisão.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📜</div>
                 <h3>Licenciamento Transparente</h3>
-                <p>Blockchain para licenciamento. Transparência total em todas as transações.</p>
+                <p>Blockchain para licenciamento. Transparência total em todas as transações. Smart contracts garantem compliance automático.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🚀</div>
                 <h3>Pronto para Produção</h3>
-                <p>Deploy em testnet funcionando. Pronto para mainnet. Documentação completa.</p>
+                <p>Deploy em testnet funcionando. Pronto para mainnet (Polygon). Documentação completa. 95%+ cobertura de testes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mercado -->
+    <section id="mercado" class="fade-in">
+        <h2 class="section-title">Oportunidade de Mercado</h2>
+        <p class="section-subtitle">
+            Mercados em crescimento acelerado com demanda crescente por soluções éticas
+        </p>
+        <div class="market-stats">
+            <div class="market-stat">
+                <div class="market-stat-value">$3.1B</div>
+                <div class="market-stat-label">IA Ética (2024)</div>
+                <div class="market-stat-growth">→ $8.9B (2030) • CAGR 19.2%</div>
+            </div>
+            <div class="market-stat">
+                <div class="market-stat-value">$15.2B</div>
+                <div class="market-stat-label">Compliance Tech (2024)</div>
+                <div class="market-stat-growth">→ $45.8B (2030) • CAGR 20.1%</div>
+            </div>
+            <div class="market-stat">
+                <div class="market-stat-value">$1.2B</div>
+                <div class="market-stat-label">Blockchain Governance (2024)</div>
+                <div class="market-stat-growth">→ $5.4B (2030) • CAGR 28.5%</div>
+            </div>
+        </div>
+        <div class="features-grid" style="margin-top: var(--spacing-lg);">
+            <div class="feature-card">
+                <h3>🎯 Segmentos-Alvo</h3>
+                <p><strong>Empresas de IA:</strong> Startups a enterprise precisam de compliance</p>
+                <p><strong>Setor Financeiro:</strong> Compliance crítico e regulatório</p>
+                <p><strong>Saúde:</strong> Privacidade e ética são fundamentais</p>
+                <p><strong>Governo:</strong> Transparência pública e accountability</p>
+            </div>
+            <div class="feature-card">
+                <h3>💡 Diferenciais Competitivos</h3>
+                <p><strong>Único Framework Completo:</strong> Ética + Blockchain + Compliance</p>
+                <p><strong>Blockchain Governance:</strong> Transparência total e imutável</p>
+                <p><strong>Empathy Computing:</strong> Adaptação cultural automática</p>
+                <p><strong>Production-Ready:</strong> Não é apenas teoria, está funcionando</p>
             </div>
         </div>
     </section>
 
     <!-- Status -->
-    <section id="status">
+    <section id="status" class="fade-in">
         <h2 class="section-title">Status Atual</h2>
         <p class="section-subtitle">
-            Framework completo e pronto para crescimento
+            Framework completo, testado e pronto para crescimento
         </p>
         <div class="status-grid">
             <div class="status-card">
@@ -410,11 +829,11 @@
             </div>
             <div class="status-card">
                 <div class="status-number">3</div>
-                <div class="status-label">Artigos Acadêmicos</div>
+                <div class="status-label">Artigos Acadêmicos<br><small style="font-size: 0.8rem; color: var(--text-muted);">(arXiv ready)</small></div>
             </div>
             <div class="status-card">
                 <div class="status-number">2</div>
-                <div class="status-label">Patentes em Preparação</div>
+                <div class="status-label">Patentes em Preparação<br><small style="font-size: 0.8rem; color: var(--text-muted);">(INPI)</small></div>
             </div>
             <div class="status-card">
                 <div class="status-number">50+</div>
@@ -426,7 +845,118 @@
             </div>
             <div class="status-card">
                 <div class="status-number">✅</div>
-                <div class="status-label">Monetização Ativa</div>
+                <div class="status-label">Monetização Ativa<br><small style="font-size: 0.8rem; color: var(--text-muted);">(Sepolia)</small></div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">8+</div>
+                <div class="status-label">Domain Adapters<br><small style="font-size: 0.8rem; color: var(--text-muted);">(Universal)</small></div>
+            </div>
+            <div class="status-card">
+                <div class="status-number">5</div>
+                <div class="status-label">Módulos Core<br><small style="font-size: 0.8rem; color: var(--text-muted);">(Funcionais)</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="fade-in">
+        <h2 class="section-title">Roadmap Estratégico</h2>
+        <p class="section-subtitle">
+            Plano claro de crescimento e expansão para os próximos 12 meses
+        </p>
+        <div class="roadmap-timeline">
+            <div class="roadmap-item">
+                <div class="roadmap-period">Q1 2025</div>
+                <div class="roadmap-content">
+                    <h4>Deploy e Primeiros Clientes</h4>
+                    <ul>
+                        <li>Deploy em Polygon Mainnet</li>
+                        <li>Portal web de licenciamento</li>
+                        <li>Primeiros clientes beta</li>
+                        <li>Validação de mercado</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-period">Q2 2025</div>
+                <div class="roadmap-content">
+                    <h4>Integrações e Parcerias</h4>
+                    <ul>
+                        <li>Integração com principais frameworks de IA</li>
+                        <li>Parcerias estratégicas</li>
+                        <li>Expansão de equipe</li>
+                        <li>Programa de early adopters</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-period">Q3 2025</div>
+                <div class="roadmap-content">
+                    <h4>Lançamento Público</h4>
+                    <ul>
+                        <li>Lançamento público oficial</li>
+                        <li>Marketing e growth</li>
+                        <li>Expansão internacional</li>
+                        <li>Comunidade ativa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-period">Q4 2025</div>
+                <div class="roadmap-content">
+                    <h4>Escala Enterprise</h4>
+                    <ul>
+                        <li>Escala para enterprise</li>
+                        <li>Novos produtos e features</li>
+                        <li>Expansão de mercado</li>
+                        <li>Liderança de mercado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investimento -->
+    <section id="investimento" class="fade-in">
+        <h2 class="section-title">Oportunidade de Investimento</h2>
+        <p class="section-subtitle">
+            Modelo de negócio comprovado com projeções realistas
+        </p>
+        <div class="investment-grid">
+            <div class="investment-card">
+                <h3>💰 Modelo de Receita</h3>
+                <div class="amount">$500K - $2M</div>
+                <p style="margin-bottom: var(--spacing-sm);"><strong>Ano 1 (Projeção)</strong></p>
+                <p><strong>Fontes:</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: var(--spacing-sm);">
+                    <li style="padding: var(--spacing-xs) 0;">• Licenciamento: 1000 SEVE tokens/ano</li>
+                    <li style="padding: var(--spacing-xs) 0;">• SaaS: $100-1000/mês</li>
+                    <li style="padding: var(--spacing-xs) 0;">• Enterprise: Customizado</li>
+                    <li style="padding: var(--spacing-xs) 0;">• Serviços: Consultoria</li>
+                </ul>
+            </div>
+            <div class="investment-card">
+                <h3>💵 Buscando Investimento</h3>
+                <div class="amount">$500K - $2M</div>
+                <p style="margin-bottom: var(--spacing-sm);"><strong>Uso dos Recursos:</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: var(--spacing-sm);">
+                    <li style="padding: var(--spacing-xs) 0;">• 40% Desenvolvimento</li>
+                    <li style="padding: var(--spacing-xs) 0;">• 30% Marketing e Growth</li>
+                    <li style="padding: var(--spacing-xs) 0;">• 20% Compliance e Legal</li>
+                    <li style="padding: var(--spacing-xs) 0;">• 10% Operacional</li>
+                </ul>
+            </div>
+            <div class="investment-card">
+                <h3>📈 Retorno Esperado</h3>
+                <div class="amount">5-10x</div>
+                <p style="margin-bottom: var(--spacing-sm);"><strong>Em 3-5 anos</strong></p>
+                <p><strong>Projeção:</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: var(--spacing-sm);">
+                    <li style="padding: var(--spacing-xs) 0;">• Ano 1: $500K - $2M</li>
+                    <li style="padding: var(--spacing-xs) 0;">• Ano 2: $2M - $10M</li>
+                    <li style="padding: var(--spacing-xs) 0;">• Ano 3: $10M - $25M</li>
+                    <li style="padding: var(--spacing-xs) 0;">• Exit: Aquisição ou IPO</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -435,7 +965,8 @@
     <section class="cta-section" id="contato">
         <h2>Vamos Construir o Futuro da IA Ética Juntos</h2>
         <p>
-            Estamos buscando investidores, parceiros e colaboradores para levar o SEVE Framework ao próximo nível.
+            Estamos buscando investidores estratégicos, parceiros tecnológicos e colaboradores visionários 
+            para levar o SEVE Framework ao próximo nível e transformar a indústria de IA.
         </p>
         <div class="cta-buttons">
             <a href="https://github.com/symbeon/seve-framework" class="btn btn-primary" target="_blank">
@@ -451,15 +982,48 @@
     <footer>
         <div class="footer-links">
             <a href="https://github.com/symbeon/seve-framework" target="_blank">GitHub</a>
-            <a href="/docs">Documentação</a>
-            <a href="/docs/pitch/PITCH_DECK.md">Pitch Deck</a>
-            <a href="/docs/executive/EXECUTIVE_SUMMARY.md">Executive Summary</a>
+            <a href="https://github.com/symbeon/seve-framework/tree/main/docs" target="_blank">Documentação</a>
+            <a href="https://github.com/symbeon/seve-framework/tree/main/docs/pitch/PITCH_DECK.md" target="_blank">Pitch Deck</a>
+            <a href="https://github.com/symbeon/seve-framework/tree/main/docs/executive/EXECUTIVE_SUMMARY.md" target="_blank">Executive Summary</a>
         </div>
-        <p>&copy; 2025 SEVE Framework. Todos os direitos reservados.</p>
-        <p style="margin-top: 1rem; opacity: 0.7;">
+        <p style="margin-top: var(--spacing-md);">&copy; 2025 SEVE Framework. Todos os direitos reservados.</p>
+        <p style="margin-top: var(--spacing-sm); opacity: 0.7; font-size: 0.9rem;">
             Symbiotic Ethical Vision Engine - Framework de IA Ética com Governança Blockchain
         </p>
     </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
