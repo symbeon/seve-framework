@@ -1,26 +1,49 @@
-# Dependencies
-node_modules/
-package-lock.json
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytype/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Hardhat files
-cache/
-artifacts/
-typechain/
-typechain-types/
-
-# Deployment files (manter apenas sepolia como exemplo)
-deployments/*.json
-!deployments/sepolia_deployments.json.example
-
-# Logs
-logs/
-*.log
-npm-debug.log*
+# Virtual Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
 
 # IDE
 .vscode/
@@ -28,54 +51,67 @@ npm-debug.log*
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
-Thumbs.db
 
-# Temporary files
-tmp/
-temp/
-*.tmp
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Build outputs
-build/
-dist/
-out/
+# Environment
+.env
+.env.local
+.env.*.local
 
-# Test coverage
-coverage/
-.nyc_output/
+# Logs
+logs/
+*.log
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-env/
-ENV/
-
-# Hugging Face upload
-hf_upload/
-
-# Legacy
-legacy/
-
-# Data
-data/
+# Build artifacts
+artifacts/
+cache/
+deployments/
 outputs/
 models/
 
-# Desktop paths (não versionar)
+# Hardhat
+hardhat.config.js
+contracts/
+test/
+scripts/deploy/
+
+# Project specific
 Desktop/
+showcase/
+showcase-vite/
+.github/workflows/
+legacy/guardflow_code/
+seve_financial_report_*.json
+*.lock
 
-# Scripts sensíveis (podem conter referências a chaves)
-scripts/update-private-key.ps1
+# Documentation builds
+docs/_build/
+docs/site/
 
-# Arquivos de status temporários
-docs/STATUS_EXECUCAO.md
+# Testing
+test-network-connection.js
+test_*.py
+conftest.py
 
-# Diretórios duplicados/nested
-SEVE-FRAMEWORK/
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+.~*
+
+# OS
+Thumbs.db
+Desktop.ini

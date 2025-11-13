@@ -18,6 +18,12 @@
     "monetization:dao-proposal": "hardhat run scripts/create-dao-proposal.js --network sepolia",
     "monetization:register-agent": "hardhat run scripts/register-first-agent.js --network sepolia",
     "monetization:activate": "npm run monetization:add-version && npm run monetization:dao-proposal && npm run monetization:register-agent",
+    "verify:ready:polygon": "hardhat run scripts/verify-ready-polygon.js --network polygon",
+    "bridge:matic": "node scripts/bridge-matic-to-polygon.js",
+    "bridge:simple": "node scripts/bridge-simple.js",
+    "bridge:socket": "node scripts/bridge-socket-api.js",
+    "bridge:info": "node scripts/bridge-via-api.js",
+    "faucet:matic": "node scripts/get-free-matic.js",
     "deploy:polygon": "hardhat run scripts/deploy-token.js --network polygon && hardhat run scripts/deploy-protocol.js --network polygon && hardhat run scripts/deploy-dao.js --network polygon",
     "monetization:activate:polygon": "hardhat run scripts/add-version-v1.js --network polygon && hardhat run scripts/create-dao-proposal.js --network polygon && hardhat run scripts/register-first-agent.js --network polygon"
   },
