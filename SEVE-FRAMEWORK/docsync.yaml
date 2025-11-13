@@ -1,0 +1,225 @@
+# DOCSYNC Configuration for SEVE Framework
+# Symbiotic Ethical Vision Engine v1.0.0
+version: "1.0"
+
+# Configurações Globais
+global:
+  project: "SEVE-FRAMEWORK"
+  environment: "production"
+  language: "pt_BR"
+  backup_enabled: true
+  quantum_sync: false
+
+# Diretórios Monitorados e Organizados
+directories:
+  # Documentação Principal
+  - path: "docs"
+    type: "documentation"
+    sync_enabled: true
+    patterns:
+      - "*.md"
+      - "*.yaml"
+      - "*.yml"
+      - "*.json"
+    exclude:
+      - "**/__pycache__"
+      - "**/.git"
+      - "**/node_modules"
+      - "**/.venv"
+      - "**/cache"
+      - "**/logs"
+    organization:
+      structure:
+        - "docs/technical/** -> docs/technical/"
+        - "docs/api/** -> docs/api/"
+        - "docs/user-guides/** -> docs/user-guides/"
+        - "docs/development/** -> docs/development/"
+        - "docs/universal/** -> docs/universal/"
+        - "docs/adr/** -> docs/adr/"
+        - "docs/performance/** -> docs/performance/"
+        - "docs/governance/** -> docs/governance/"
+
+  # Código Fonte
+  - path: "src"
+    type: "source"
+    sync_enabled: true
+    patterns:
+      - "*.py"
+      - "*.pyi"
+    exclude:
+      - "**/__pycache__"
+      - "**/.pytest_cache"
+      - "**/*.pyc"
+    organization:
+      structure:
+        - "src/seve_framework/** -> src/seve_framework/"
+        - "src/seve_framework/universal/** -> src/seve_framework/universal/"
+
+  # Testes
+  - path: "tests"
+    type: "testing"
+    sync_enabled: true
+    patterns:
+      - "*.py"
+      - "conftest.py"
+    exclude:
+      - "**/__pycache__"
+      - "**/.pytest_cache"
+
+  # Exemplos
+  - path: "examples"
+    type: "examples"
+    sync_enabled: true
+    patterns:
+      - "*.py"
+      - "*.md"
+    exclude:
+      - "**/__pycache__"
+
+  # Contratos Blockchain
+  - path: "contracts"
+    type: "blockchain"
+    sync_enabled: true
+    patterns:
+      - "*.sol"
+      - "*.js"
+    exclude:
+      - "**/node_modules"
+      - "**/artifacts"
+      - "**/cache"
+
+  # Configurações
+  - path: "config"
+    type: "configuration"
+    sync_enabled: true
+    patterns:
+      - "*.yaml"
+      - "*.yml"
+      - "*.json"
+      - "*.toml"
+      - "*.ini"
+
+  # Scripts
+  - path: "scripts"
+    type: "scripts"
+    sync_enabled: true
+    patterns:
+      - "*.py"
+      - "*.sh"
+      - "*.ps1"
+      - "*.bat"
+
+# Arquivos de Documentação na Raiz
+root_files:
+  files:
+    - "README.md"
+    - "CHANGELOG.md"
+    - "CONTRIBUTING.md"
+    - "CODE_OF_CONDUCT.md"
+    - "LICENSE"
+    - "LICENSE_Symbeon_Vault.md"
+    - "*.md"
+  organization:
+    move_to: "docs/root/"
+    keep_in_root:
+      - "README.md"
+      - "LICENSE"
+      - "LICENSE_Symbeon_Vault.md"
+
+# Validação Global
+validation:
+  enabled: true
+  rules:
+    - check_metadata
+    - validate_links
+    - verify_structure
+    - ensure_consistency
+    - check_markdown_lint
+  frequency: "on_sync"
+  markdownlint:
+    enabled: true
+    config: ".markdownlint.json"
+
+# Monitoramento
+monitoring:
+  enabled: true
+  metrics:
+    - file_changes
+    - sync_status
+    - validation_results
+    - organization_status
+  logging:
+    level: "INFO"
+    retention: "90d"
+    format: "json"
+    file: "logs/docsync.log"
+
+# Organização Automática
+organization:
+  enabled: true
+  rules:
+    # Documentação por tipo
+    - pattern: "docs/**/*.md"
+      organize_by: "type"
+      structure:
+        technical: "docs/technical/"
+        api: "docs/api/"
+        guides: "docs/user-guides/"
+        development: "docs/development/"
+        universal: "docs/universal/"
+        adr: "docs/adr/"
+        performance: "docs/performance/"
+        governance: "docs/governance/"
+    
+    # Arquivos de configuração
+    - pattern: "*.yaml"
+      organize_by: "location"
+      keep_in_place: true
+    
+    # Scripts
+    - pattern: "scripts/**/*.py"
+      organize_by: "function"
+      structure:
+        deployment: "scripts/deployment/"
+        testing: "scripts/testing/"
+        utilities: "scripts/utilities/"
+
+# Backup
+backup:
+  frequency: "before_organization"
+  retention: "30d"
+  type: "incremental"
+  location: ".docsync/backups"
+
+# Performance
+performance:
+  optimization: true
+  caching: true
+  compression: false
+  parallel_processing: true
+  max_workers: 4
+
+# Exclusões Globais
+exclude_globally:
+  - "**/__pycache__"
+  - "**/.git"
+  - "**/.gitignore"
+  - "**/node_modules"
+  - "**/.venv"
+  - "**/venv"
+  - "**/env"
+  - "**/.pytest_cache"
+  - "**/.mypy_cache"
+  - "**/dist"
+  - "**/build"
+  - "**/*.pyc"
+  - "**/*.pyo"
+  - "**/*.pyd"
+  - "**/.DS_Store"
+  - "**/Thumbs.db"
+  - "**/cache"
+  - "**/logs"
+  - "**/artifacts"
+  - "**/Desktop/**"
+  - "**/legacy/guardflow_code/SEVE-UNIVERSAL/_git_legacy/**"
+
