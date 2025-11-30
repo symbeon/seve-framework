@@ -122,6 +122,26 @@ pip install seve-framework
 
 ---
 
+## 🚀 **Quick Start (5 Minutos)**
+
+Quer ver o SEVE em ação agora mesmo?
+
+1. **Instale**: `pip install -r requirements.txt`
+2. **Rode o Demo**: `python examples/healthcare_demo.py`
+3. **Use a CLI**: `python seve_cli.py init`
+
+📖 **[Guia Completo de Início Rápido](QUICKSTART.md)**
+
+---
+
+## 💼 **Para Investidores e Parceiros**
+
+- 📄 **[One-Pager Executivo](docs/ONE_PAGER.md)** - Resumo estratégico do projeto
+- 📊 **[Pitch Deck](docs/PITCH_DECK.md)** - Apresentação de negócio e mercado
+- 💰 **[Análise de Mercado](ANALISE_ESTRATEGICA_MERCADO.md)** - Potencial e valuation
+
+---
+
 ## 💻 **Uso Básico**
 
 ```python

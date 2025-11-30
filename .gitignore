@@ -90,7 +90,7 @@ scripts/deploy/
 Desktop/
 showcase/
 showcase-vite/
-.github/workflows/
+
 legacy/guardflow_code/
 seve_financial_report_*.json
 *.lock
