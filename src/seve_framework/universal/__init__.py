@@ -1,60 +1,80 @@
-"""Universal adaptive components for the SEVE Framework.
+"""
+SEVE Universal - Universal Adaptive Intelligence Engine
 
-This package consolidates the legacy SEVE-Universal implementation inside the
-modern v1.0.0 codebase, exposing domain adapters, the universal core, empathy
-engine and ethics engine so that the hybrid runtime can operate without
-external dependencies.
+Framework de IA adaptativa universal que transcende contextos específicos,
+oferecendo capacidades de personalização, empatia e ética para qualquer domínio.
 """
 
 from .core import (
     SEVEUniversalCore,
-    DomainAdapter,
-    DomainAdapterRegistry,
     DomainConfig,
     DomainType,
     UniversalContext,
-    UniversalContextManager,
-    UniversalLearningModule,
+    AdaptationLevel
 )
-from .adapters import UniversalAdapterRegistry
+
+from .adapters import (
+    UniversalAdapterRegistry,
+    HealthcareAdapter,
+    EducationAdapter,
+    BusinessAdapter,
+    SmartCityAdapter,
+    GamingAdapter,
+    RetailAdapter,
+    FinanceAdapter,
+    ManufacturingAdapter
+)
+
+from .ethics import (
+    UniversalEthicsEngine,
+    EthicalPrinciple,
+    EthicalComplianceLevel,
+    EthicalRule,
+    EthicalAssessment
+)
+
 from .empathy import (
     UniversalEmpathyEngine,
-    DomainEmpathyEngine,
-    EmpathyContext,
-    EmpathyResponse,
     EmpathyType,
     EmotionalState,
+    EmpathyContext,
+    EmpathyResponse
 )
-from .ethics import (
-    DomainEthicsEngine,
-    EthicalAssessment,
-    EthicalComplianceLevel,
-    EthicalPrinciple,
-    EthicalRule,
-    UniversalEthicsEngine,
-)
+
+__version__ = "1.0.0"
+__author__ = "SEVE Universal Team"
+__email__ = "research@seve-universal.ai"
 
 __all__ = [
+    # Core components
     "SEVEUniversalCore",
-    "DomainAdapter",
-    "DomainAdapterRegistry",
-    "DomainConfig",
+    "DomainConfig", 
     "DomainType",
     "UniversalContext",
-    "UniversalContextManager",
-    "UniversalLearningModule",
+    "AdaptationLevel",
+    
+    # Adapters
     "UniversalAdapterRegistry",
+    "HealthcareAdapter",
+    "EducationAdapter", 
+    "BusinessAdapter",
+    "SmartCityAdapter",
+    "GamingAdapter",
+    "RetailAdapter",
+    "FinanceAdapter",
+    "ManufacturingAdapter",
+    
+    # Ethics
+    "UniversalEthicsEngine",
+    "EthicalPrinciple",
+    "EthicalComplianceLevel",
+    "EthicalRule",
+    "EthicalAssessment",
+    
+    # Empathy
     "UniversalEmpathyEngine",
-    "DomainEmpathyEngine",
-    "EmpathyContext",
-    "EmpathyResponse",
     "EmpathyType",
     "EmotionalState",
-    "UniversalEthicsEngine",
-    "DomainEthicsEngine",
-    "EthicalAssessment",
-    "EthicalComplianceLevel",
-    "EthicalPrinciple",
-    "EthicalRule",
+    "EmpathyContext",
+    "EmpathyResponse"
 ]
-
