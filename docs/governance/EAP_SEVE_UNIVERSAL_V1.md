@@ -65,7 +65,9 @@
   - **1.2.1.6** Retail Adapter (Original) ✅
   - **1.2.1.7** Finance Adapter ✅
   - **1.2.1.8** Manufacturing Adapter ✅
-  - **1.2.1.9** Custom Domain Adapter ✅
+  - **1.2.1.9** Mobility Adapter ✅
+  - **1.2.1.10** Scientific Research Adapter ✅
+  - **1.2.1.11** Custom Domain Adapter ✅
 
 - **1.2.2** Cross-Domain Learning ✅
   - **1.2.2.1** Transfer Learning Engine ✅

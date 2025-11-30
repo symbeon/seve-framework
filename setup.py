@@ -15,7 +15,7 @@ from pathlib import Path
 def read_readme():
     readme_path = Path(__file__).parent / "README.md"
     if readme_path.exists():
-        return read_readme().read_text(encoding="utf-8")
+        return readme_path.read_text(encoding="utf-8")
     return "SEVE Framework - Symbiotic Ethical Vision Engine"
 
 # Read requirements
@@ -56,7 +56,7 @@ setup(
         "Changelog": "https://github.com/symbeon-tech/seve-framework/blob/main/CHANGELOG.md",
         "License": "https://github.com/symbeon-tech/seve-framework/blob/main/LICENSE_Symbeon_Vault.md"
     },
-    packages=find_packages(where="src"),
+    packages=find_packages(where="src", exclude=["seve_legacy", "seve_legacy.*"]),
     package_dir={"": "src"},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
