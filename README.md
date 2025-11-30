@@ -155,25 +155,6 @@ else:
 Este repositório contém a documentação técnica completa do framework:
 
 - **`docs/technical/`** - Arquitetura técnica detalhada
-- **`docs/api/`** - Referência da API
-- **`docs/adr/`** - Decisões arquiteturais
-- **`docs/artigos/`** - Papers acadêmicos
-- **`docs/patentes/`** - Documentação de patentes
-- **`docs/SID_SEVE_INTEGRATION.md`** - Relação com SiD Framework
-
-### **Documentação do Produto e Ecossistema**
-
-Para documentação sobre o produto, monetização, deploy e showcase, consulte:
-👉 **[SYMBEON-ECOSYSTEM](https://github.com/symbeon/symbeon-ecosystem)**
-
----
-
-## 🧪 **Testes**
-
-```bash
-# Executar todos os testes
-pytest
-
 # Testes com cobertura
 pytest --cov=seve_framework
 
