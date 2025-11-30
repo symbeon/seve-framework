@@ -1,24 +1,22 @@
-"""Universal adaptive core for the SEVE Framework.
+"""
+SEVE Universal Core - Núcleo Adaptativo Universal
 
-This module was migrated from the legacy SEVE-Universal implementation and
-provides domain adaptation, transfer learning and context management features
-that can operate across different industries.
+Componente central que gerencia adaptação contextual e orquestração
+de componentes para qualquer domínio de aplicação.
 """
 
-from __future__ import annotations
-
-import logging
-from abc import ABC, abstractmethod
+from typing import Dict, List, Any, Optional, Type, Union
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Dict, List, Optional
+import asyncio
+import logging
+from abc import ABC, abstractmethod
 
 logger = logging.getLogger(__name__)
 
 
 class DomainType(Enum):
-    """Supported domain types."""
-
+    """Tipos de domínios suportados"""
     HEALTHCARE = "healthcare"
     EDUCATION = "education"
     BUSINESS = "business"
@@ -31,8 +29,7 @@ class DomainType(Enum):
 
 
 class AdaptationLevel(Enum):
-    """Levels of adaptation."""
-
+    """Níveis de adaptação"""
     BASIC = "basic"
     INTERMEDIATE = "intermediate"
     ADVANCED = "advanced"
@@ -41,8 +38,7 @@ class AdaptationLevel(Enum):
 
 @dataclass
 class DomainConfig:
-    """Domain configuration descriptor."""
-
+    """Configuração de domínio"""
     domain_type: DomainType
     domain_name: str
     cultural_context: str = "global"
@@ -56,8 +52,7 @@ class DomainConfig:
 
 @dataclass
 class UniversalContext:
-    """Runtime context transported across domains."""
-
+    """Contexto universal adaptável"""
     domain: DomainType
     user_profile: Dict[str, Any]
     environmental_data: Dict[str, Any]
@@ -67,164 +62,231 @@ class UniversalContext:
 
 
 class DomainAdapter(ABC):
-    """Base contract for domain adapters."""
-
+    """Adaptador base para domínios"""
+    
     @abstractmethod
     def adapt_to_context(self, context: UniversalContext) -> UniversalContext:
-        """Adapt context for a specific domain."""
-
+        """Adapta contexto para domínio específico"""
+        pass
+    
     @abstractmethod
     def extract_domain_features(self, data: Any) -> Dict[str, Any]:
-        """Extract domain specific features from data."""
-
+        """Extrai características específicas do domínio"""
+        pass
+    
     @abstractmethod
     def apply_domain_rules(self, decision: Any) -> Any:
-        """Apply domain specific rules to a decision."""
+        """Aplica regras específicas do domínio"""
+        pass
 
 
 class DomainAdapterRegistry:
-    """Registry of available domain adapters."""
-
-    def __init__(self) -> None:
+    """Registro de adaptadores de domínio"""
+    
+    def __init__(self):
         self._adapters: Dict[DomainType, DomainAdapter] = {}
         self._custom_adapters: Dict[str, DomainAdapter] = {}
-
+    
     def register_adapter(self, domain: DomainType, adapter: DomainAdapter) -> None:
+        """Registra adaptador para domínio"""
         self._adapters[domain] = adapter
-        logger.info("Adaptador registrado para domínio: %s", domain.value)
-
+        logger.info(f"Adaptador registrado para domínio: {domain.value}")
+    
     def register_custom_adapter(self, name: str, adapter: DomainAdapter) -> None:
+        """Registra adaptador customizado"""
         self._custom_adapters[name] = adapter
-        logger.info("Adaptador customizado registrado: %s", name)
-
+        logger.info(f"Adaptador customizado registrado: {name}")
+    
     def get_adapter(self, domain: DomainType) -> Optional[DomainAdapter]:
+        """Recupera adaptador para domínio"""
         return self._adapters.get(domain)
-
+    
     def get_custom_adapter(self, name: str) -> Optional[DomainAdapter]:
+        """Recupera adaptador customizado"""
         return self._custom_adapters.get(name)
 
 
 class SEVEUniversalCore:
-    """Universal orchestration engine for adaptive scenarios."""
-
+    """
+    Núcleo universal do SEVE Framework
+    
+    Gerencia adaptação contextual e orquestração de componentes
+    para qualquer domínio de aplicação.
+    """
+    
     def __init__(self, config: DomainConfig):
+        """
+        Inicializa o SEVE Universal Core
+        
+        Args:
+            config: Configuração do domínio
+        """
         self.config = config
         self.domain_adapter_registry = DomainAdapterRegistry()
-        self.knowledge_graph: Dict[str, Any] = {}
+        self.knowledge_graph = {}
         self.learning_module = UniversalLearningModule()
         self.context_manager = UniversalContextManager()
         self._initialize_components()
-
+    
     def _initialize_components(self) -> None:
+        """Inicializa componentes universais"""
+        # Carregar adaptadores padrão
         self._load_default_adapters()
+        
+        # Carregar adaptadores customizados
         self._load_custom_adapters()
+        
+        # Inicializar módulos específicos do domínio
         self._initialize_domain_modules()
-        register_default_adapters(self.domain_adapter_registry)
-
+    
     def _load_default_adapters(self) -> None:
-        # Adapters are registered explicitly via UniversalAdapterRegistry helper
+        """Carrega adaptadores padrão"""
+        # Placeholder para carregamento de adaptadores padrão
         pass
-
+    
     def _load_custom_adapters(self) -> None:
+        """Carrega adaptadores customizados"""
         for adapter_name in self.config.custom_adapters:
-            _ = adapter_name  # Placeholder for loading logic
-
+            # Placeholder para carregamento de adaptadores customizados
+            pass
+    
     def _initialize_domain_modules(self) -> None:
-        # Placeholder for domain specific initialization hooks
+        """Inicializa módulos específicos do domínio"""
+        # Placeholder para inicialização de módulos específicos
         pass
-
+    
     async def process_universal_context(
         self,
         context: UniversalContext,
-        data: Any,
+        data: Any
     ) -> Dict[str, Any]:
-        adapter = self.domain_adapter_registry.get_adapter(context.domain)
-        adapted_context = adapter.adapt_to_context(context) if adapter else context
-        domain_features = (
-            adapter.extract_domain_features(data) if adapter else {"raw_data": data}
-        )
-        domain_result = (
-            adapter.apply_domain_rules(domain_features) if adapter else domain_features
-        )
+        """
+        Processa contexto universal
+        
+        Args:
+            context: Contexto universal
+            data: Dados para processamento
+            
+        Returns:
+            Resultado do processamento adaptado
+        """
+        # Adaptar contexto para domínio específico
+        adapted_context = await self._adapt_context(context)
+        
+        # Extrair características do domínio
+        domain_features = await self._extract_domain_features(data, adapted_context)
+        
+        # Aplicar regras do domínio
+        domain_result = await self._apply_domain_rules(domain_features, adapted_context)
+        
+        # Aplicar aprendizado universal
         learning_result = await self.learning_module.update_knowledge(
             domain_result, adapted_context
         )
+        
         return {
             "domain_result": domain_result,
             "learning_result": learning_result,
             "adapted_context": adapted_context,
-            "domain_features": domain_features,
+            "domain_features": domain_features
         }
-
+    
+    async def _adapt_context(self, context: UniversalContext) -> UniversalContext:
+        """Adapta contexto para domínio específico"""
+        adapter = self.domain_adapter_registry.get_adapter(context.domain)
+        if adapter:
+            return adapter.adapt_to_context(context)
+        return context
+    
+    async def _extract_domain_features(
+        self, 
+        data: Any, 
+        context: UniversalContext
+    ) -> Dict[str, Any]:
+        """Extrai características específicas do domínio"""
+        adapter = self.domain_adapter_registry.get_adapter(context.domain)
+        if adapter:
+            return adapter.extract_domain_features(data)
+        return {"raw_data": data}
+    
+    async def _apply_domain_rules(
+        self, 
+        features: Dict[str, Any], 
+        context: UniversalContext
+    ) -> Dict[str, Any]:
+        """Aplica regras específicas do domínio"""
+        adapter = self.domain_adapter_registry.get_adapter(context.domain)
+        if adapter:
+            return adapter.apply_domain_rules(features)
+        return features
+    
     def switch_domain(self, new_config: DomainConfig) -> None:
+        """
+        Muda para novo domínio
+        
+        Args:
+            new_config: Nova configuração de domínio
+        """
         self.config = new_config
         self._initialize_components()
-        logger.info("Domínio alterado para: %s", new_config.domain_type.value)
-
+        logger.info(f"Domínio alterado para: {new_config.domain_type.value}")
+    
     def get_domain_metrics(self) -> Dict[str, Any]:
+        """Retorna métricas do domínio atual"""
         return {
             "domain": self.config.domain_type.value,
             "adaptation_level": self.config.adaptation_level.value,
             "cultural_context": self.config.cultural_context,
             "registered_adapters": len(self.domain_adapter_registry._adapters),
-            "custom_adapters": len(self.domain_adapter_registry._custom_adapters),
+            "custom_adapters": len(self.domain_adapter_registry._custom_adapters)
         }
 
 
 class UniversalLearningModule:
-    """Transfer learning across domains."""
-
-    def __init__(self) -> None:
-        self.knowledge_base: Dict[str, Any] = {}
+    """Módulo de aprendizado universal"""
+    
+    def __init__(self):
+        self.knowledge_base = {}
         self.transfer_learning = TransferLearningEngine()
-
+    
     async def update_knowledge(
-        self,
-        result: Dict[str, Any],
-        context: UniversalContext,
+        self, 
+        result: Dict[str, Any], 
+        context: UniversalContext
     ) -> Dict[str, Any]:
-        transfer = await self.transfer_learning.apply_transfer(result, context)
-        return {"knowledge_updated": True, "transfer_learning": transfer}
+        """Atualiza conhecimento baseado em resultado"""
+        # Placeholder para aprendizado universal
+        return {
+            "knowledge_updated": True,
+            "transfer_learning": await self.transfer_learning.apply_transfer(result, context)
+        }
 
 
 class TransferLearningEngine:
-    """Cross-domain transfer logic placeholder."""
-
+    """Motor de aprendizado trans-domínio"""
+    
     async def apply_transfer(
-        self,
-        result: Dict[str, Any],
-        context: UniversalContext,
+        self, 
+        result: Dict[str, Any], 
+        context: UniversalContext
     ) -> Dict[str, Any]:
-        _ = (result, context)
+        """Aplica transferência de aprendizado"""
+        # Placeholder para transferência de aprendizado
         return {"transfer_applied": True}
 
 
 class UniversalContextManager:
-    """Stores and analyses historical contexts."""
-
-    def __init__(self) -> None:
-        self.context_history: List[UniversalContext] = []
-        self.context_patterns: Dict[str, Any] = {}
-
+    """Gerenciador de contexto universal"""
+    
+    def __init__(self):
+        self.context_history = []
+        self.context_patterns = {}
+    
     def store_context(self, context: UniversalContext) -> None:
+        """Armazena contexto na história"""
         self.context_history.append(context)
-
+    
     def analyze_patterns(self) -> Dict[str, Any]:
+        """Analisa padrões de contexto"""
+        # Placeholder para análise de padrões
         return {"patterns_detected": True}
-
-
-# Helper for dynamic adapter registration
-def register_default_adapters(registry: DomainAdapterRegistry) -> None:
-    """Populate the registry with built-in adapters if available."""
-
-    try:
-        from .adapters import UniversalAdapterRegistry as _LegacyRegistry
-
-        legacy_registry = _LegacyRegistry()
-        for domain in legacy_registry.list_available_domains():
-            adapter = legacy_registry.get_adapter(domain)
-            if adapter:
-                registry.register_adapter(domain, adapter)
-    except Exception as exc:  # pragma: no cover - defensive
-        logger.warning("Falha ao registrar adaptadores padrão: %s", exc)
-
