@@ -7,7 +7,7 @@
 
 ## Visão Geral
 
-Os Domain Adapters permitem adaptar o comportamento do SEVE para diferentes nichos (Healthcare, Education, Business, Smart City, Gaming, Retail, Finance, Manufacturing). Fornecem:
+Os Domain Adapters permitem adaptar o comportamento do SEVE para diferentes nichos (Healthcare, Education, Business, Smart City, Gaming, Retail, Finance, Manufacturing, Mobility, Scientific Research). Fornecem:
 
 - Adaptação de contexto (`adapt_to_context`)
 - Extração de features específicas do domínio (`extract_domain_features`)
@@ -106,6 +106,18 @@ class DomainAdapter(ABC):
 - Metadados: segurança industrial
 - Features: `production_line`, `quality_metrics`, `maintenance`
 - Regras: segurança, qualidade, downtime
+
+### MobilityAdapter
+
+- Metadados: `driver_safety=True`, `passenger_privacy=True`, `route_optimization=True`
+- Features: `driver_profile`, `vehicle_status`, `route_data`, `traffic_conditions`, `passenger_feedback`
+- Regras: segurança no trânsito, privacidade de localização, otimização ética de rotas
+
+### ScientificResearchAdapter
+
+- Metadados: `research_ethics=True`, `data_integrity=True`, `reproducibility=True`, `peer_review=True`
+- Features: `experiment_design`, `data_provenance`, `methodology`, `statistical_analysis`, `collaboration_network`, `publication_status`
+- Regras: integridade de dados, compliance ético (CONEP/IRB), reprodutibilidade, detecção de p-hacking, prevenção de viés
 
 ---
 
