@@ -96,22 +96,6 @@ SEVE-Core (Orquestrador Central)
 ├── SEVE-Sense (Sensores IoT e Dados Multimodais)
 ├── SEVE-Link (Conectividade Segura e Blockchain)
 └── SEVE-Universal (Adaptação de Domínio)
-    ├── Healthcare Adapter
-    ├── Retail Adapter
-    ├── Education Adapter
-    └── Custom Domain Adapters
-```
-
-📖 **Mapa Interno**: [INTERNAL_ARCHITECTURE_MAP.md](INTERNAL_ARCHITECTURE_MAP.md)
-
----
-
-## 🚀 **Instalação**
-
-```bash
-# Clone o repositório
-git clone https://github.com/symbeon/seve-framework.git
-cd seve-framework
 
 # Instale as dependências
 pip install -r requirements.txt
