@@ -36,12 +36,12 @@
 
 - [x] **Bug setup.py corrigido** ✅ (feito durante auditoria)
 
-- [ ] **Resolver conflito seve vs seve_framework**
-  - Decisão: Qual diretório usar?
-  - Ação: Remover o outro
-  - Atualizar imports em todos os arquivos
+- [x] **Resolver conflito seve vs seve_framework** ✅
+  - Decisão: `seve_framework` é o oficial (v3.0)
+  - Ação: `seve` movido para `seve_legacy`
+  - Criado alias de compatibilidade em `src/seve`
 
-- [ ] **Atualizar README.md com status real**
+- [x] **Atualizar README.md com status real** ✅
   ```markdown
   # Adicionar seção de status:
   ## 🚧 Status de Desenvolvimento
@@ -52,6 +52,11 @@
   
   ⚠️ NÃO RECOMENDADO PARA PRODUÇÃO ainda
   ```
+
+- [x] **Integrar código Universal Legacy** ✅
+  - Identificado código em `legacy/guardflow_code`
+  - Migrado para `src/seve_framework/universal`
+  - Validado com testes
 
 ### Git - IMPORTANTE
 

@@ -15,7 +15,11 @@ from dataclasses import dataclass, field
 from enum import Enum
 import numpy as np
 from PIL import Image
-import cv2
+try:
+    import cv2
+except ImportError:
+    cv2 = None
+    # Logger ainda não está definido aqui, será logado na inicialização se necessário
 
 from .config import SEVEConfig, PrivacyLevel
 
@@ -88,6 +92,11 @@ class SEVEVisionModule:
     async def initialize(self) -> None:
         """Initialize vision models and components"""
         try:
+            if cv2 is None:
+                logger.warning("OpenCV not available. Vision module functionality will be limited.")
+                self.is_initialized = True # Marca como inicializado mas limitado
+                return
+
             # Initialize detection models (placeholder)
             await self._load_detection_models()
             
@@ -101,7 +110,8 @@ class SEVEVisionModule:
             
         except Exception as e:
             logger.error(f"Error initializing SEVE Vision Module: {e}")
-            raise
+            # Não lança exceção para não impedir o boot do resto do framework
+            # raise
     
     async def _load_detection_models(self) -> None:
         """Load detection models (placeholder implementation)"""
