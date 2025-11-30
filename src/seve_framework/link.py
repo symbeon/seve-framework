@@ -16,8 +16,15 @@ from typing import Dict, List, Any, Optional, Union, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime
-import httpx
-import aiofiles
+try:
+    import httpx
+except ImportError:
+    httpx = None
+
+try:
+    import aiofiles
+except ImportError:
+    aiofiles = None
 
 from .config import SEVEConfig
 
@@ -179,6 +186,11 @@ class SEVELinkModule:
     
     async def _initialize_http_client(self) -> None:
         """Initialize HTTP client"""
+        if httpx is None:
+            logger.warning("httpx not available. HTTP connectivity disabled.")
+            self.http_client = None
+            return
+
         # Create HTTP client with security context
         self.http_client = httpx.AsyncClient(
             timeout=httpx.Timeout(30.0),
@@ -318,6 +330,14 @@ class SEVELinkModule:
         connection: ConnectionConfig
     ) -> TransmissionResult:
         """Transmit data via HTTP/HTTPS"""
+        if self.http_client is None:
+            return TransmissionResult(
+                status=TransmissionStatus.FAILED,
+                connection_name=connection.name,
+                endpoint=connection.endpoint,
+                error_message="HTTP client not available (httpx missing)"
+            )
+
         headers = connection.headers.copy()
         
         # Add authentication if configured
@@ -409,6 +429,14 @@ class SEVELinkModule:
         connection: ConnectionConfig
     ) -> TransmissionResult:
         """Transmit data to file (placeholder)"""
+        if aiofiles is None:
+            return TransmissionResult(
+                status=TransmissionStatus.FAILED,
+                connection_name=connection.name,
+                endpoint=connection.endpoint,
+                error_message="aiofiles not available"
+            )
+
         try:
             # Write data to file
             filename = connection.endpoint
