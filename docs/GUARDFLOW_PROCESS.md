@@ -2,6 +2,10 @@
 
 ## Diagrama de Fluxo
 
+![GuardFlow Process](../assets/images/guardflow_process.png)
+
+### Diagrama Interativo (Mermaid)
+
 ```mermaid
 flowchart LR
     A[📥 Input<br/>Transação/Dados] --> B[🔍 Análise<br/>Contexto]
