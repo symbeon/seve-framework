@@ -58,6 +58,11 @@
   - Migrado para `src/seve_framework/universal`
   - Validado com testes
 
+- [x] **Consolidar e Mapear Arquitetura** ✅
+  - Código legado movido para `_ARCHIVE/`
+  - Criado `INTERNAL_ARCHITECTURE_MAP.md`
+  - Estrutura limpa e unificada
+
 ### Git - IMPORTANTE
 
 - [ ] **Resolver commits pendentes**
